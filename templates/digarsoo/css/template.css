@@ -1,0 +1,22 @@
+body
+{
+	color: #333;
+	background-color: #eee;
+}
+
+a , a:visited
+{
+	color: #1976D2;
+	text-decoration: none;
+}
+
+a:hover { color: #2196F3; }
+
+@media(min-width: 769px){
+}
+
+@media(min-width: 993px){
+}
+
+@media(min-width: 1201px){
+}

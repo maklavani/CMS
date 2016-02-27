@@ -1,0 +1,58 @@
+{
+	"check":
+	{
+		"name":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"alias":
+		{
+			"kind": "text_with_space_utf8",
+			"empty": "true"
+		},
+		"type":
+		{
+			"kind": "text",
+			"empty": "true"
+		},
+		"link":
+		{
+			"kind": "link",
+			"empty": "true"
+		},
+		"status": { "kind": "tf" },
+		"homepage": { "kind": "text" },
+		"permission": { "kind": "numeric" },
+		"languages": { "kind": "text_with_space" },
+		"icon":
+		{
+			"kind": "text",
+			"empty": "true"
+		},
+		"parent": { "kind": "numeric" },
+		"index": { "kind": "numeric" },
+		"title":
+		{
+			"kind": "text_with_space_utf8",
+			"empty": "true"
+		},
+		"show_status": { "kind": "tf" },
+		"class":
+		{
+			"kind": "text_with_space_utf8",
+			"empty": "true"
+		},
+		"meta_tag":
+		{
+			"kind": "tinymce",
+			"empty": "true"
+		},
+		"meta_description":
+		{
+			"kind": "tinymce",
+			"empty": "true"
+		}
+	}
+}

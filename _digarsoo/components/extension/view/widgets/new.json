@@ -1,0 +1,19 @@
+{
+	"check":
+	{
+		"name":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"status": { "kind": "tf" },
+		"show_name": { "kind": "tf" },
+		"permission": { "kind": "numeric" },
+		"position": { "kind": "text_with_space" },
+		"languages": { "kind": "text_with_space" },
+		"type":{ "defined": "true" },
+		"menu_type":{ "defined": "true" },
+		"menus":{ "defined": "true" }
+	}
+}

@@ -1,0 +1,10 @@
+﻿@font-face {
+	font-family: 'Poiret One';
+	font-style: normal;
+	font-weight: 400;
+	src:	local('Poiret One'), 
+			url(../../fonts/poiret_one.woff2) format('woff2'), 
+			url(../../fonts/poiret_one.woff) format('woff');
+}
+
+body { font-family: 'Poiret One' , Arial , Sans-serif; }

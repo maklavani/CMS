@@ -1,0 +1,49 @@
+{
+	"type": "component",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "users",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_USERS_DESC",
+
+	"permission": "5",
+
+	"files": 
+	{
+		"0": "details.json",
+		"1": "users.php"
+	},
+
+	"folders": 
+	{
+		"0": "model",
+		"1": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_users.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_users.json"
+		},
+		"2":
+		{
+			"name": "en-gb",
+			"src": "com_users_url.json"
+		},
+		"3":
+		{
+			"name": "fa-ir",
+			"src": "com_users_url.json"
+		}
+	}
+}

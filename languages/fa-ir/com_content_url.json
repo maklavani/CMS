@@ -1,0 +1,19 @@
+{
+	"COM_CONTENT_COMPONENT_CONTENT": "محتوا",
+	"COM_CONTENT_VIEW_CATEGORY": "مجموعه",
+	"COM_CONTENT_VIEW_ARTICLE": "مطلب",
+
+	"COM_CONTENT_CONTENT_CATEGORY": {
+		"0": "component",
+		"1": "view",
+		"2": "id",
+		"3": "title"
+	},
+
+	"COM_CONTENT_CONTENT_ARTICLE": {
+		"0": "component",
+		"1": "view",
+		"2": "id",
+		"3": "title"
+	}
+}

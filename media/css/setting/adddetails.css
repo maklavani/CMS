@@ -1,0 +1,55 @@
+.adddetails-button
+{
+	line-height: 30px;
+	color: #D1C4E9;
+	background-color: #512DA8;
+	text-align: center;
+}
+
+.adddetails-button:hover
+{
+	cursor: pointer;
+	color: #f5f5f5;
+	background-color: #673AB7;
+}
+
+.adddetails-item
+{
+	cursor: default;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+	color: #F8BBD0;
+	background-color: #C2185B;
+}
+
+.adddetails-item:nth-child(even)
+{
+	color: #f5f5f5;
+	background-color: #E91E63;
+}
+
+.adddetails-item.move
+{
+	color: #eee;
+	background-color: #444;
+}
+
+.adddetails-item .icon-move , .adddetails-item .icon-delete { cursor: pointer; }
+
+.adddetails-item .icon-move:hover , .adddetails-item .icon-delete:hover
+{
+	font-size: 12px;
+	background-color: rgba(255 , 255 , 255 , 0.2);
+}
+
+.adddetails-item .name { min-height: 1px; }
+
+.adddetails-item input
+{
+	color: rgba(255 , 255 , 255 , 0.5);
+	background-color: transparent;
+	border: 0;
+}
+
+.adddetails-item input:focus { color: #fff; }

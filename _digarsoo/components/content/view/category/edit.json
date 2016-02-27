@@ -1,0 +1,23 @@
+{
+	"check":
+	{
+		"title":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"category": { "kind": "numeric" },
+		"permission": { "kind": "numeric" },
+		"code": { "defined": "true" },
+		"setting_special": { "kind": "tf_b" },
+		"setting_special_related": { "kind": "tf_b" },
+		"setting_special_limit": { "kind": "numeric" },
+		"setting_limit": { "kind": "numeric" },
+		"setting_countdesc": { "kind": "numeric" },
+		"setting_pagination": { "kind": "tf_b" },
+		"setting_article_heading": { "kind": "tf_b" },
+		"setting_newsfeed": { "kind": "tf_b" },
+		"setting_sort": { "kind": "numeric" }
+	}
+}

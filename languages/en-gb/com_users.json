@@ -1,0 +1,49 @@
+{
+	"COM_USERS": "Users",
+	"COM_USERS_DESC": "Users Component Create by Digarsoo",
+
+	"COM_USERS_SIGNIN": "Signin",
+	"COM_USERS_SIGNIN_FORM_INPUT_1": "Username",
+	"COM_USERS_SIGNIN_FORM_INPUT_2": "Passwrod",
+	"COM_USERS_SIGNIN_FORM_INPUT_3": "Captcha",
+	"COM_USERS_SIGNIN_FORM_INPUT_4": "Remember me",
+
+	"COM_USERS_SIGNUP": "Signin",
+	"COM_USERS_SIGNUP_FORM_INPUT_1": "Name",
+	"COM_USERS_SIGNUP_FORM_INPUT_2": "Family",
+	"COM_USERS_SIGNUP_FORM_INPUT_3": "Username",
+	"COM_USERS_SIGNUP_FORM_INPUT_4": "Email",
+	"COM_USERS_SIGNUP_FORM_INPUT_5": "Passwrod",
+	"COM_USERS_SIGNUP_FORM_INPUT_6": "Repeat Password",
+	"COM_USERS_SIGNUP_FORM_INPUT_7": "Captcha",
+
+	"COM_USERS_FORGET": "Forget",
+	"COM_USERS_FORGET_FORM_INPUT_1": "Email",
+	"COM_USERS_FORGET_FORM_INPUT_2": "Mobile",
+	"COM_USERS_SEND_PASSWORD": "Send password",
+
+	"COM_USERS_SIGNOUT": "Signout",
+
+	"COM_USERS_EMAIL_USERNAME": "Username of Email",
+	"COM_USERS_CHECK": "Check",
+
+	"COM_USERS_WELCOME": "%s Welcome to the site",
+	"COM_USERS_FIRST_SIGNOUT": "First exit so you can create your username",
+	"COM_USERS_FIRST_SIGNIN": "You are not logged in you want to exit",
+
+	"COM_USERS_IDENTIFICATION": "Identification",
+	"COM_USERS_SIGNUP_COMPELETE": "You have successfully completed the registration process.",
+
+	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "Passwords are not the same",
+	"COM_USERS_ERROR_EXIST_USERSNAME": "Please enter a valid username another name",
+	"COM_USERS_ERROR_EXIST_EMAIL": "Please enter another email",
+	"COM_USERS_ERROR_BANNED_IP": "Due to frequent errors Your IP blocked for %s minutes, please check back again soon.",
+
+	"COM_USERS_SUCCESS": "You have successfully registered information in the database system, to activate your account check email.",
+	"COM_USERS_SIGNOUT_SUCCESS": "You have successfully logged out of the site",
+
+	"COM_USERS_MESSAGE_SIGNUP_HELLO": "Hello %s, Thank you for your registration on %s.",
+	"COM_USERS_MESSAGE_IDENTIFICATION": "To activate your account click on the following link.<br><small>%s<small>",
+	"COM_USERS_MESSAGE_VALIDITY": "This link is valid for %s days from the date %s.",
+	"COM_USERS_MESSAGE_AUTOMATIC": "This email is sent automatically to avoid answering."
+}

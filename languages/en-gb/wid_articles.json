@@ -1,0 +1,26 @@
+{
+	"WID_ARTICLES": "Articles",
+	"WID_ARTICLES_DESC": "Articles Widget Create by Digarsoo",
+
+	"WID_ARTICLES_CATEGORIES": "Categories",
+	"WID_ARTICLES_SETTING_LIMIT": "Article Limit",
+	"WID_ARTICLES_SETTING_COUNTDESC": "Number of characters for the summary",
+	"WID_ARTICLES_SETTING_ARTICLE_HEADING": "Article Heading",
+	"WID_ARTICLES_SETTING_SHOW": "Show",
+	"WID_ARTICLES_SETTING_HIDE": "Hide",
+	"WID_ARTICLES_SETTING_SORT": "Sort",
+	"WID_ARTICLES_SETTING_LAST_PUBLISH": "Last Publish",
+	"WID_ARTICLES_SETTING_FIRST_PUBLISH": "First Publish",
+	"WID_ARTICLES_SETTING_ALPHABET_TITLE_ASC": "Alphabetical",
+	"WID_ARTICLES_SETTING_ALPHABET_TITLE_DESC": "Reverse Alphabetical",
+	"WID_ARTICLES_SETTING_VIEWS_DESC": "Most Views",
+	"WID_ARTICLES_SETTING_VIEWS_ASC": "Least Views",
+	"WID_ARTICLES_SETTING_LAST_ID": "Last ID",
+	"WID_ARTICLES_SETTING_FIRST_ID": "First ID",
+	"WID_ARTICLES_SETTING_LIMIT": "Article Limit",
+
+	"WID_ARTICLES_WD_SETTING_LIMIT": "Article Limit",
+	"WID_ARTICLES_WD_SETTING_COUNTDESC": "Number of characters for the summary",
+
+	"WID_ARTICLES_ALL": "All Article"
+}

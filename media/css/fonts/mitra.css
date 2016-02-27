@@ -1,0 +1,9 @@
+﻿@font-face {
+	font-family: 'Mitra';
+	font-style: normal;
+	font-weight: 400;
+	src:	url(../../fonts/mitra.woff2) format('woff2'), 
+			url(../../fonts/mitra.woff) format('woff');
+}
+
+body { font-family: 'Mitra' , Arial , Sans-serif; }

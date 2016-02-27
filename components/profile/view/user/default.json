@@ -1,0 +1,54 @@
+{
+	"check":
+	{
+		"name":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"family":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"username":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "username"
+		},
+		"password":
+		{ 
+			"min": "6",
+			"max": "32",
+			"kind": "password",
+			"empty": "true"
+		},
+		"repassword":
+		{ 
+			"min": "6",
+			"max": "32",
+			"kind": "password",
+			"empty": "true"
+		},
+		"mobile": { "kind": "tel_b" },
+		"tel":
+		{
+			"kind": "tel_b",
+			"empty": "true"
+		},
+		"address":
+		{
+			"kind": "textarea",
+			"empty": "true"
+		},
+		"favorites":
+		{
+			"kind": "textarea",
+			"empty": "true"
+		},
+		"code": { "defined": "true" }
+	}
+}

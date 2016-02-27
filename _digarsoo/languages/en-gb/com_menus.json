@@ -1,0 +1,67 @@
+{
+	"COM_MENUS": "Menus",
+	"COM_MENUS_DESC": "Menus Component Create by Digarsoo",
+
+	"COM_MENUS_SHOW": "display settings",
+	"COM_MENUS_TITLE": "Browser page title",
+	"COM_MENUS_SHOW_STATUS": "Status",
+	"COM_MENUS_CLASS": "Class for menu",
+
+	"COM_MENUS_HIDE": "Hide",
+	"COM_MENUS_SHOW": "Show",
+
+	"COM_MENUS_GROUPS": "Menu's groups",
+	"COM_MENUS_NAME": "Name",
+	"COM_MENUS_WIDGET": "Widget",
+
+	"COM_MENUS_ADD_WIDGET": "Add to the menu widget",
+
+	"COM_MENUS_GROUPS_FIELD_INPUT_SETTING": "Setting",
+	"COM_MENUS_GROUPS_FIELD_INPUT_NAME": "Name",
+	"COM_MENUS_GROUPS_FIELD_INPUT_LOCATION": "Location",
+
+	"COM_MENUS_MENU": "Menu",
+	"COM_MENUS_GROUP": "Group",
+	"COM_MENUS_STATUS": "Status",
+	"COM_MENUS_HOMEPAGE": "Homepage",
+	"COM_MENUS_LANGUAGES": "Languages",
+	"COM_MENUS_INDEX": "Index",
+	"COM_MENUS_ID": "ID",
+
+	"COM_MENUS_GROUP_FIELD_INPUT_MENU": "Menu",
+	"COM_MENUS_GROUP_FIELD_INPUT_NAME": "Name",
+	"COM_MENUS_GROUP_FIELD_INPUT_ALIAS": "Alias",
+	"COM_MENUS_GROUP_FIELD_INPUT_STATUS": "Status",
+	"COM_MENUS_GROUP_FIELD_INPUT_HIDE": "Hide",
+	"COM_MENUS_GROUP_FIELD_INPUT_SHOW": "Show",
+	"COM_MENUS_GROUP_FIELD_INPUT_PERMISSION": "Permission",
+	"COM_MENUS_GROUP_FIELD_INPUT_LANGUAGES": "Languages",
+	"COM_MENUS_GROUP_FIELD_INPUT_TYPE": "Type",
+	"COM_MENUS_GROUP_FIELD_INPUT_LINK": "Link",
+	"COM_MENUS_GROUP_FIELD_INPUT_HOMEPAGE": "Homepage",
+	"COM_MENUS_GROUP_FIELD_INPUT_ICON": "Icon",
+	"COM_MENUS_GROUP_FIELD_INPUT_POSITION": "Position",
+	"COM_MENUS_GROUP_FIELD_INPUT_PARENT": "Parent",
+	"COM_MENUS_GROUP_FIELD_INPUT_INDEX": "Index",
+	"COM_MENUS_GROUP_FIELD_INPUT_SHOW_B": "Display settings",
+	"COM_MENUS_GROUP_FIELD_INPUT_TITLE": "Browser page title",
+	"COM_MENUS_GROUP_FIELD_INPUT_SHOW_STATUS": "Status",
+	"COM_MENUS_GROUP_FIELD_INPUT_CLASS": "Class",
+	"COM_MENUS_GROUP_FIELD_INPUT_DETAILS": "Details",
+	"COM_MENUS_GROUP_FIELD_INPUT_LOCATION": "Location",
+
+	"COM_MENUS_GROUP_FIELD_INPUT_META": "Meta",
+	"COM_MENUS_GROUP_FIELD_INPUT_ROBOTS_INDEX": "Robots Index",
+	"COM_MENUS_GROUP_FIELD_INPUT_ROBOTS_FOLLOW": "Robots Follow",
+	"COM_MENUS_GROUP_FIELD_INPUT_META_TAG": "Meta Tag",
+	"COM_MENUS_GROUP_FIELD_INPUT_META_DESCRIPTION": "Meta Description",
+
+	"COM_MENUS_LINKS": "Links",
+	"COM_MENUS_OUTER_LINK": "External Link",
+	"COM_MENUS_LINK": "Link",
+
+	"COM_MENU_ERROR_AT_LEAST_HOMEPAGE": "At least one menu is homepage.",
+	"COM_MENU_ERROR_TWO_HOMEPAGE": "Two main page of the menu can not be in a group, please change the menu and then group it with the original page.",
+	"COM_MENU_ERROR_CONTAIN_HOMEPAGE": "Options include the main page, please delete it first then supplier of your choice.",
+	"COM_MENU_ERROR_TWO_HOMEPAGE_LANGUAGE": "In another menu with this type of language you Home."
+}

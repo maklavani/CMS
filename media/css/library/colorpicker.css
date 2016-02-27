@@ -1,0 +1,12 @@
+.color-field , .color-field:hover , .color-field:focus
+{
+	direction: ltr;
+	font-size: 13px;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.cp-color-picker
+{
+	direction: ltr;
+}

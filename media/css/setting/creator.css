@@ -1,0 +1,51 @@
+.creator-button
+{
+	line-height: 30px;
+	color: #D1C4E9;
+	background-color: #512DA8;
+	text-align: center;
+}
+
+.creator-button:hover
+{
+	cursor: pointer;
+	color: #f5f5f5;
+	background-color: #673AB7;
+}
+
+.creator-item
+{
+	cursor: default;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+	color: #F8BBD0;
+	background-color: #C2185B;
+}
+
+
+.creator-item:nth-child(even)
+{
+	color: #f5f5f5;
+	background-color: #E91E63;
+}
+
+.creator-item.move
+{
+	color: #eee;
+	background-color: #444;
+}
+
+.creator-item .icon-move , .creator-item .icon-edit , .creator-item .icon-delete
+{
+	cursor: pointer;
+	font-size: 10px;
+}
+
+.creator-item .icon-move:hover , .creator-item .icon-edit:hover , .creator-item .icon-delete:hover
+{
+	font-size: 12px;
+	background-color: rgba(255 , 255 , 255 , 0.2);
+}
+
+.creator-item .name { min-height: 1px; }

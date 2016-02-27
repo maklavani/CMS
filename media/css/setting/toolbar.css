@@ -1,0 +1,224 @@
+.toolbar
+{
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.toolbar-title
+{
+	padding: 0px;
+	margin: 0px;
+	font-size: 20px;
+	color: #555;
+}
+
+.toolbar-button
+{
+	display: inline-block;
+	margin-top: 5px;
+	padding: 0px 5px;
+	font-size: 13px;
+	line-height: 40px;
+	color: #777;
+	background-color: #eee;
+	border: 0px;
+	cursor: pointer;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+[dir="rtl"] .toolbar-button { float: left; margin-right: 5px; }
+[dir="ltr"] .toolbar-button { float: right; margin-left: 5px; }
+
+.toolbar-button span
+{
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+.toolbar-button:hover
+{
+	color: #222;
+	background-color: #fff;
+}
+
+.toolbar-button:hover .icon-save { color: #4CAF50; }
+.toolbar-button:hover .icon-new { color: #4CAF50; }
+.toolbar-button:hover .icon-edit { color: #03A9F4; }
+.toolbar-button:hover .icon-delete { color: #F44336; }
+.toolbar-button:hover .icon-block { color: #D32F2F; }
+.toolbar-button:hover .icon-unblock { color: #8BC34A; }
+.toolbar-button:hover .icon-savenew { color: #FFEB3B; }
+.toolbar-button:hover .icon-saveclose { color: #CDDC39; }
+.toolbar-button:hover .icon-close { color: #FF5252; }
+
+[dir="rtl"] .toolbar-div
+{
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+[dir="ltr"] .toolbar-div
+{
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.toolbar-search select
+{
+	display: inline-block;
+	height: 30px;
+	font-size: 13px;
+	line-height: 30px;
+	color: #555;
+	background-color: rgba(255 , 255 , 255 , 0.9);
+	border: 1px solid rgba(0 , 0 , 0 , 0.2);
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.toolbar-search-input-parent { width: 200px; }
+
+.toolbar-clean
+{
+	cursor: pointer;
+	display: inline-block;
+	padding: 0px 5px;
+	font-size: 13px;
+	line-height: 30px;
+	color: #eee;
+	background-color: #D32F2F;
+	border: 1px solid #D32F2F;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.toolbar-clean:hover
+{
+	color: #fff;
+	background-color: #F44336;
+}
+
+.thead-button
+{
+	cursor: pointer;
+	color: #1976D2;
+}
+
+.thead-button:hover { color: #03A9F4; }
+
+.pagination , .form-result
+{
+	position: relative;
+	line-height: 30px;
+	margin-top: 5px;
+}
+
+[dir=rtl] .pagination { text-align: left; }
+[dir=ltr] .pagination { text-align: right; }
+
+.pagination-item , .found-all
+{
+	display: inline-block;
+	min-width: 30px;
+	margin: 0px;
+	position: relative;
+	font-size: 12px;
+	line-height: 30px;
+	color: #444;
+	background: #eee;
+	border: 1px solid #eee;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.found-all { padding: 0px 5px; }
+.found-all span { color: #FF5722; }
+
+[dir="rtl"] .found-all { float: left; }
+[dir="ltr"] .found-all { float: right; }
+
+.pagination-item:first-child , .pagination-item:last-child
+{
+	background: #d5d5d5;
+	border: 1px solid #d5d5d5;
+}
+
+.pagination-item:hover
+{
+	color: white;
+	background: #00BCD4;
+	border: 1px solid #00BCD4;
+}
+
+.pagination-item.item-false
+{
+	color: #444;
+	background: #e0e0e0;
+	border: 1px solid #e0e0e0;
+	cursor: default;
+}
+
+.pagination-item.item-current
+{
+	color: #f5f5f5;
+	background: #03A9F4;
+	border: 1px solid #03A9F4;
+	cursor: default;
+}
+
+.toolbar-div input[type="text"] , .toolbar-div input[type="password"]
+{
+	width: 100%;
+	line-height: 29px;
+}
+
+@media(max-width: 767px){ .pagination-item.item-false { display: none; } }
+
+@media(max-width: 1200px){
+	.toolbar-button
+	{
+		margin-top: 2px;
+		padding: 0px 3px;
+		font-size: 12px;
+		line-height: 30px;
+	}
+
+	.toolbar-button span { width: 25px; }
+}
+
+@media(max-width: 992px){
+	.toolbar-button
+	{
+		margin-top: 2px;
+		padding: 0px 3px;
+		font-size: 11px;
+		line-height: 30px;
+	}
+
+	.toolbar-button span { width: 20px; }
+}
+
+@media(max-width: 768px){
+	.toolbar-button
+	{
+		margin-top: 2px;
+		padding: 0px 3px;
+		font-size: 9px;
+		line-height: 25px;
+	}
+
+	.toolbar-button span { width: 15px; }
+}

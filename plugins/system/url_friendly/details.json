@@ -1,0 +1,33 @@
+ {
+	"type": "plugin",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "url_friendly",
+	"creation_date": "August 16 , 2015",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "PLG_SYSTEM_URL_FRIENDLY_DESC",
+
+	"category": "system",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "url_friendly.php"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "plg_system_url_friendly.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "plg_system_url_friendly.json"
+		}
+	}
+}

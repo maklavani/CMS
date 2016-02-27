@@ -1,0 +1,9 @@
+{
+	"WID_VISIT": "Stats",
+	"WID_VISIT_DESC": "Stats Widget Create by Digarsoo",
+
+	"WID_VISIT_COUNT": "Views",
+	"WID_VISIT_COUNT_ALL": "Total Request",
+	"WID_VISIT_USERS_ONLINE": "Users Online",
+	"WID_VISIT_VISITOR_ONLINE": "Visitors Online"
+}

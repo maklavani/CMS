@@ -1,0 +1,86 @@
+{
+	"type": "widget",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "articles",
+	"creation_date": "January 04 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "WID_ARTICLES_DESC",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "articles.php"
+	},
+
+	"folders":
+	{
+		"0": "css"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "wid_articles.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "wid_articles.json"
+		}
+	},
+
+	"fields":
+	{
+		"0":
+		{
+			"name": "categories" ,
+			"type": "category",
+			"attributes": "multiple"
+		},
+		"1":
+		{
+			"name": "setting_limit" ,
+			"type": "text",
+			"default": "10"
+		},
+		"2":
+		{
+			"name": "setting_countdesc",
+			"type": "text",
+			"default": "150"
+		},
+		"3":
+		{
+			"name": "setting_article_heading",
+			"type": "radio",
+			"default": "0",
+			"children":
+			{
+				"0": "setting_show",
+				"1": "setting_hide"
+			}
+		},
+		"4":
+		{
+			"name": "setting_sort",
+			"type": "list",
+			"default": "0",
+			"children":
+			{
+				"0": "setting_last_publish",
+				"1": "setting_first_publish",
+				"2": "setting_alphabet_title_asc",
+				"3": "setting_alphabet_title_desc",
+				"4": "setting_views_desc",
+				"5": "setting_views_asc",
+				"6": "setting_last_id",
+				"7": "setting_first_id"
+			}
+		}
+	}
+}

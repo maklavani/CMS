@@ -1,0 +1,32 @@
+.flag
+{
+	width: 30px;
+	height: 20px;
+	margin: 0px 5px;
+	top: 5px;
+	position: absolute;
+	font-size: 10px;
+	line-height: 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+[dir="rtl"] .flag { left: 0px; }
+[dir="ltr"] .flag { right: 0px; }
+
+.flag[flag="flag-all"]:before
+{
+	content: '\e621';
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	font-family: 'Icon Digarsoo';
+	text-align: center;
+	color: #FFA000;
+	background-color: transparent;
+}
+
+.flag[flag="flag-fa-ir"] { background-image: url(../../images/flags/ir.jpg); }
+.flag[flag="flag-en-gb"] { background-image: url(../../images/flags/uk.jpg); }

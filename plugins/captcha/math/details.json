@@ -1,0 +1,40 @@
+ {
+	"type": "plugin",
+	"location": "all",
+	"method": "upgrade",
+
+	"name": "math",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "PLG_CAPTCHA_MATH_DESC",
+
+	"category": "captcha",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "math.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "images",
+		"2": "js"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "plg_captcha_math.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "plg_captcha_math.json"
+		}
+	}
+}

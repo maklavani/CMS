@@ -1,0 +1,80 @@
+.pay
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: rgba(0 , 0 , 0 , 0.05);
+	border: 3px solid rgba(0 , 0 , 0 , 0.075);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.pay h2
+{
+	font-size: 17px;
+	font-weight: normal;
+	line-height: 40px;
+	color: #666;
+	border-bottom: 1px solid rgba(0 , 0 , 0 , 0.1);
+}
+
+.pay .group
+{
+	cursor: default;
+	margin-top: 5px;
+	font-size: 13px;
+	line-height: 40px;
+}
+
+.pay .label
+{
+	padding: 0px 5px;
+	color: #888;
+	background-color: rgba(0 , 0 , 0 , 0.02);
+}
+
+.pay .value
+{
+	padding: 0px 5px;
+	color: #111;
+	background-color: rgba(0 , 0 , 0 , 0.04);
+	text-align: center;
+}
+
+.pay .value span { color: #D32F2F; }
+.pay .value small { color: #1976D2; }
+
+.pay .logo
+{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top: 8px;
+	margin-right: 5px;
+	background-image: url(../images/bankmellat.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.pay button
+{
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 30px;
+	color: #eee;
+	background-color: #4CAF50;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0px 0px 1px rgba(0 , 0 , 0 , 0.2) , inset 0px 0px 5px rgba(255 , 255 , 255 , 0.5);
+	border: 1px solid #388E3C;
+}
+
+.pay button:hover
+{
+	color: #e2e2e2;
+	box-shadow: 0px 0px 5px rgba(0 , 0 , 0 , 0.2) , inset 0px 0px 5px rgba(0 , 0 , 0 , 0.15);
+}

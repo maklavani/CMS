@@ -1,0 +1,41 @@
+{
+	"COM_CONTENT": "محتوا",
+	"COM_CONTENT_DESC": "کامپوننت محتوای ساخته شده توسط دیگرسو",
+
+	"COM_CONTENT_ARTICLE": "مطلب",
+	"COM_CONTENT_CATEGORY": "مجموعه",
+
+	"COM_CONTENT_CATEGORY_NOT_FOUND": "مجموعه ای یافت نشد",
+	"COM_CONTENT_ARTICLE_PUBLISH_DATE": "تاریخ انتشار",
+	"COM_CONTENT_ARTICLE_VIEW": "تعداد بازدید",
+	"COM_CONTENT_ARTICLE_USER": "نویسنده",
+
+	"COM_CONTENT_PREV": "قبلی",
+	"COM_CONTENT_NEXT": "بعدی",
+	"COM_CONTENT_NEWSFEED": "خوراک اخبار",
+	"COM_CONTENT_SEARCH": "جستجو",
+
+	"COM_CONTENT_NAME": "نام و نام خانوادگی",
+	"COM_CONTENT_EMAIL": "ایمیل",
+	"COM_CONTENT_COMMENT": "نظر",
+	"COM_CONTENT_CAPTCHA": "کد امنیتی",
+	"COM_CONTENT_SEND": "ارسال",
+
+	"COM_CONTENT_SEND_COMMENT": "ارسال نظر",
+	"COM_CONTENT_UNKNOWN": "نا شناس",
+	"COM_CONTENT_COMMMENTS": "تعداد نظرات",
+	"COM_CONTENT_COMMMENTS_VERIFY": "منتشر شده",
+	"COM_CONTENT_COMMMENTS_DELETED": "حذف شده",
+	"COM_CONTENT_COMMMENTS_ANSWER": "پاسخ",
+
+	"COM_CONTENT_ERROR_FIRST_LOGIN": "ابتدا باید وارد شوید",
+	"COM_CONTENT_ERROR_COMMENT": "شما قبلا نظر داده بودید",
+	"COM_CONTENT_ERROR_CAPTCHA": "کد امنیتی اشتباه وارد شده است",
+	"COM_CONTENT_ERROR_COMMENT_INPUT": "در قسمت نظر چیزی وارد نمایید",
+	"COM_CONTENT_ERROR_COMMENT_INPUT_FORMAT": "در قسمت نظر از کاراکترهای غیرمجاز استفاده شده است",
+	"COM_CONTENT_ERROR_COMMENT_FOUND": "نظر پیدا نشد",
+
+	"ERROR_NOT_EXIST_ARTICLE": "مطلب مورد نظر یافت نمی شود.",
+	"ERROR_NOT_EXIST_CATEGORY": "مجموعه مورد نظر یافت نمی شود.",
+	"ERROR_NOT_EMPTY_CATEGORY": "هنوز مطلبی برای این مجموعه ثبت نشده است."
+}

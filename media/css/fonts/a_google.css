@@ -1,0 +1,9 @@
+﻿@font-face {
+	font-family: 'A Google';
+	font-style: normal;
+	font-weight: 400;
+	src:	url(../../fonts/a_google.woff2) format('woff2'), 
+			url(../../fonts/a_google.woff) format('woff');
+}
+
+body { font-family: 'A Google' , Arial , Sans-serif; }

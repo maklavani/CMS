@@ -1,0 +1,92 @@
+.menu_position ul li
+{
+	font-size: 10px;
+	line-height: 25px;
+	list-style-type: none;
+	background-color: rgba(0 , 0 , 0 , 0.035);
+}
+
+.menu_position .parent.showing ul { display: block; }
+.menu_position .parent ul { display: none; }
+
+.position_button
+{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	padding: 0px 5px;
+	line-height: 22px;
+	color: #666;
+}
+
+.position_button:hover { color: #000; }
+
+.menu_position .parent > .position_button:before
+{
+	content: '\e606';
+	font-family: 'Icon Digarsoo';
+	display: inline-block;
+	width: 22px;
+	font-size: 12px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.menu_position .parent.showing > .position_button:before { content: '\e604'; }
+
+.position_button_select
+{
+	display: inline-block;
+	width: 16px;
+	position: relative;
+	top: 1px;
+	line-height: 16px;
+	background-color: #e7e7e7;
+	-webkit-box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.3);
+	box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.3);
+}
+
+[dir="rtl"] .position_button_select { margin-right: 5px; }
+[dir="ltr"] .position_button_select { margin-left: 5px; }
+
+.position_button_select:before
+{
+	content: '\e602';
+	font-family: 'Icon Digarsoo';
+	display: inline-block;
+	width: 16px;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.position_button:hover .position_button_select_in { display: inline-block; }
+
+.position_button_select_in
+{
+	display: none;
+	position: absolute;
+	width: 50px;
+	top: 18px;
+	line-height: 22px;
+	z-index: 10;
+	background-color: #e7e7e7;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.2);
+	box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.2);
+}
+
+.position_button_select_in:hover { background-color: #e2e2e2; }
+.position_button_select_in:nth-child(2) { top: 40px; }
+
+[dir="rtl"] .position_button_select_in { right: 0px; }
+[dir="ltr"] .position_button_select_in { left: 0px; }
+
+.self_button
+{
+	display: inline-block;
+	width: 97.5%;
+	padding-right: 2.5%;
+	color: #F8BBD0;
+	background-color: #C2185B;
+}

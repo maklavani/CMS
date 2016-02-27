@@ -1,0 +1,39 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "newsfeed",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_NEWSFEED_DESC",
+
+	"permission": "3",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "newsfeed.php"
+	},
+
+	"folders":
+	{
+		"0": "model",
+		"1": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_newsfeed.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_newsfeed.json"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"check":
+	{
+		"name":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"status": { "kind": "tf" },
+		"category": 
+		{ 
+			"kind": "numeric",
+			"defined": "false"
+		},
+		"count":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"countdesc":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"sort": { "kind": "numeric" },
+		"image": { "defined": "true" },
+		"description": { "kind": "textarea" }
+	}
+}

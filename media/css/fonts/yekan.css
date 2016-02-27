@@ -1,0 +1,9 @@
+﻿@font-face {
+	font-family: 'Yekan';
+	font-style: normal;
+	font-weight: 400;
+	src:	url(../../fonts/yekan.woff2) format('woff2'), 
+			url(../../fonts/yekan.woff) format('woff');
+}
+
+body { font-family: 'Yekan' , Arial , Sans-serif; }

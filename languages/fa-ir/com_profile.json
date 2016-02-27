@@ -1,0 +1,31 @@
+{
+	"COM_PROFILE": "مشخصات",
+	"COM_PROFILE_DESC": "کامپوننت مشخصات ساخته شده توسط دیگرسو",
+
+	"COM_PROFILE_USER": "کاربر",
+	"COM_PROFILE_DETAILS": "مشخصات",
+	"COM_PROFILE_EDIT": "ویرایش",
+
+	"COM_PROFILE_USER_FIELD_INPUT_USER": "کاربر",
+	"COM_PROFILE_USER_FIELD_INPUT_NAME": "نام",
+	"COM_PROFILE_USER_FIELD_INPUT_FAMILY": "نام خانوادگی",
+	"COM_PROFILE_USER_FIELD_INPUT_USERNAME": "نام کاربری",
+	"COM_PROFILE_USER_FIELD_INPUT_PASSWORD": "گذر واژه",
+	"COM_PROFILE_USER_FIELD_INPUT_REPASSWORD": "تکرار گذر واژه",
+	"COM_PROFILE_USER_FIELD_INPUT_MOBILE": "موبایل",
+	"COM_PROFILE_USER_FIELD_INPUT_TEL": "تلفن",
+	"COM_PROFILE_USER_FIELD_INPUT_ADDRESS": "آدرس",
+	"COM_PROFILE_USER_FIELD_INPUT_FAVORITES": "علاقه مندی ها",
+
+	"COM_CONTENT_UPLOADED": "فایل با موفقیت آپلود شد.",
+
+	"COM_PROFILE_ERROR_EXIST_USERSNAME": "نام کاربری معتبر نیست لطفا نام دیگری وارد کنید.",
+	"COM_PROFILE_ERROR_PASSWORD_DOES_NOT_MATCH": "گذرواژه ها با هم یکسان نیستند.",
+
+	"COM_PROFILE_ERROR_SIZE": "سایز فایل %s باید کمتر از %s باشد.",
+	"COM_PROFILE_ERROR_TYPE": "تایپ فایل %s برای بارگذاری معتبر نیست. تایپ های معتبر عبارتند از : %s",
+
+	"COM_PROFILE_ERROR_UPLOAD": "شکست در آپلود فایل.",
+	"COM_PROFILE_ERROR_RESIZE": "بریدن تصویر با شگست مواجه شد لطفا دوباره بارگذاری نمایید.",
+	"COM_PROFILE_ERROR_RESIZE_SIZE": "سایز نا معتبر برای بریدن تصویر"
+}

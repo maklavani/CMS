@@ -1,0 +1,10 @@
+{
+	"COM_NEWSFEED_COMPONENT_NEWSFEED": "Newsfeed",
+	"COM_NEWSFEED_VIEW_NEWSFEED": "Newsfeed",
+
+	"COM_NEWSFEED_NEWSFEED_NEWSFEED": {
+		"0": "component",
+		"1": "view",
+		"2": "name"
+	}
+}

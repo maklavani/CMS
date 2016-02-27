@@ -1,0 +1,21 @@
+{
+	"type": "language",
+	"location": "all",
+	"method": "upgrade",
+
+	"name": "english",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "LANG_ENGLISH_DESC",
+
+	"direction": "ltr",
+	"label": "en-gb",
+	"abbreviation": "en",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "en-gb.json"
+	}
+}

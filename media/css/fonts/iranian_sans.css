@@ -1,0 +1,9 @@
+﻿@font-face {
+	font-family: 'Iranian Sans';
+	font-style: normal;
+	font-weight: 400;
+	src:	url(../../fonts/iranian_sans.woff2) format('woff2'), 
+			url(../../fonts/iranian_sans.woff) format('woff');
+}
+
+body { font-family: 'Iranian Sans' , Arial , Sans-serif; }

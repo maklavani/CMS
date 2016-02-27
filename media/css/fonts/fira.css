@@ -1,0 +1,12 @@
+﻿@font-face {
+	font-family: 'Fira';
+	font-style: normal;
+	font-weight: 400;
+	src:	local('Fira'), 
+			local('Fira-Regular'), 
+			url(../../fonts/fira.woff2) format('woff2'), 
+			url(../../fonts/fira.woff) format('woff');
+}
+
+
+body { font-family: 'Fira' , Arial , Sans-serif; }

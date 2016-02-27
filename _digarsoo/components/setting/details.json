@@ -1,0 +1,45 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "setting",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_SETTING_DESC",
+
+	"permission": "1",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "setting.php"
+	},
+
+	"folders":
+	{
+		"0": "model",
+		"1": "parameters",
+		"2": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_setting.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_setting.json"
+		}
+	},
+
+	"view":
+	{
+		"default": "setting"
+	}
+}

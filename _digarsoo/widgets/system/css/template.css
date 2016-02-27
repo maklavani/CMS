@@ -1,0 +1,35 @@
+#system-graph
+{
+	background-color: rgba(0 , 0 , 0 , 0.02);
+}
+
+.line-vertical-system , .line-horizontal-system
+{
+	stroke: rgba(0 , 0 , 0 , 0.1);
+	stroke-width: 1;
+}
+
+.polygon-system
+{
+	fill: rgba(0 , 188 , 212 , 0.5);
+	stroke: rgba(0 , 151 , 167 , 0.9);
+	stroke-width: 5;
+}
+
+.system-percentage
+{
+	cursor: default;
+	font-family: 'Poiret One';
+	font-size: 40px;
+	line-height: 60px;
+	direction: ltr;
+	text-align: center;
+}
+
+.system-datetime
+{
+	font-size: 12px;
+	line-height: 40px;
+	color: #777;
+	text-align: center;
+}

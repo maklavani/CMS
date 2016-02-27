@@ -1,0 +1,51 @@
+.tel .select2-container { margin-top: 1px; }
+
+.tel
+{
+	direction: ltr;
+	text-align: left;
+}
+
+.tel-warning
+{
+	font-size: 12px;
+	line-height: 20px;
+	color: #888;
+}
+
+.tel-warning span:before
+{
+	display: inline-block;
+	width: 20px;
+	font-size: 10px;
+	text-align: center;
+	color: #FFC107;
+}
+
+[dir="rtl"] .tel-warning
+{
+	direction: rtl;
+	text-align: right;
+}
+
+input[type="text"].tel-code { width: 100%; }
+.select2-container { width: 100% !important; }
+
+[dir="rtl"] input[type="text"].tel-code { margin-left: 10px; }
+[dir="ltr"] input[type="text"].tel-code { margin-right: 10px; }
+
+[dir="rtl"] .tel .tel-code , .tel .select2-container { float: right; }
+[dir="ltr"] .tel .tel-code , .tel .select2-container { float: right; }
+
+@media(min-width: 768px){
+	input[type="text"].tel-code { width: 50%; }
+	.select2-container { width: 200px !important; }
+}
+
+@media(min-width: 992px){
+	input[type="text"].tel-code { width: 33.33333%; }
+}
+
+@media(min-width: 1200px){
+	input[type="text"].tel-code { width: 25%; }
+}

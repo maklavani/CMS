@@ -1,0 +1,33 @@
+{
+	"type": "component",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "plugins",
+	"creation_ate": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_PLUGINS_DESC",
+
+	"permission": "5",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "plugins.php"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_plugins.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_plugins.json"
+		}
+	}
+}

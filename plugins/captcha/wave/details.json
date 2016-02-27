@@ -1,0 +1,40 @@
+ {
+	"type": "plugin",
+	"location": "all",
+	"method": "upgrade",
+
+	"name": "wave",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "PLG_CAPTCHA_WAVE_DESC",
+
+	"category": "captcha",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "wave.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "images",
+		"2": "js"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "plg_captcha_wave.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "plg_captcha_wave.json"
+		}
+	}
+}

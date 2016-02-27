@@ -1,0 +1,67 @@
+{
+	"COM_MENUS": "منو ها",
+	"COM_MENUS_DESC": "کامپوننت منو ها ساخته شده توسط دیگرسو",
+
+	"COM_MENUS_SHOW": "تنظیمات صفحه نمایش",
+	"COM_MENUS_TITLE": "عنوان صفحه مرورگر",
+	"COM_MENUS_SHOW_STATUS": "وضعیت نمایش",
+	"COM_MENUS_CLASS": "کلاس برای منو",
+
+	"COM_MENUS_HIDE": "مخفی",
+	"COM_MENUS_SHOW": "نمایش",
+
+	"COM_MENUS_GROUPS": "گروه های منو",
+	"COM_MENUS_NAME": "نام",
+	"COM_MENUS_WIDGET": "ویجت های منتصب",
+
+	"COM_MENUS_ADD_WIDGET": "برای این منو ویجت اضافه کنید",
+
+	"COM_MENUS_GROUPS_FIELD_INPUT_SETTING": "تنظیمات",
+	"COM_MENUS_GROUPS_FIELD_INPUT_NAME": "نام",
+	"COM_MENUS_GROUPS_FIELD_INPUT_LOCATION": "موقعیت",
+
+	"COM_MENUS_MENU": "منو",
+	"COM_MENUS_GROUP": "منو",
+	"COM_MENUS_STATUS": "وضعیت",
+	"COM_MENUS_HOMEPAGE": "صفحه اصلی",
+	"COM_MENUS_LANGUAGES": "زبان",
+	"COM_MENUS_INDEX": "شاخص",
+	"COM_MENUS_ID": "شناسه",
+
+	"COM_MENUS_GROUP_FIELD_INPUT_MENU": "منو",
+	"COM_MENUS_GROUP_FIELD_INPUT_NAME": "نام",
+	"COM_MENUS_GROUP_FIELD_INPUT_ALIAS": "نام مستعار",
+	"COM_MENUS_GROUP_FIELD_INPUT_STATUS": "وضعیت",
+	"COM_MENUS_GROUP_FIELD_INPUT_HIDE": "مخفی",
+	"COM_MENUS_GROUP_FIELD_INPUT_SHOW": "نمایش",
+	"COM_MENUS_GROUP_FIELD_INPUT_PERMISSION": "دسترسی",
+	"COM_MENUS_GROUP_FIELD_INPUT_LANGUAGES": "زبان",
+	"COM_MENUS_GROUP_FIELD_INPUT_TYPE": "نوع لینک",
+	"COM_MENUS_GROUP_FIELD_INPUT_LINK": "لینک",
+	"COM_MENUS_GROUP_FIELD_INPUT_HOMEPAGE": "صفحه اصلی",
+	"COM_MENUS_GROUP_FIELD_INPUT_ICON": "آیکون",
+	"COM_MENUS_GROUP_FIELD_INPUT_POSITION": "موقعیت",
+	"COM_MENUS_GROUP_FIELD_INPUT_PARENT": "پدر",
+	"COM_MENUS_GROUP_FIELD_INPUT_INDEX": "شاخص",
+	"COM_MENUS_GROUP_FIELD_INPUT_SHOW_B": "تنظیمات صفحه نمایش",
+	"COM_MENUS_GROUP_FIELD_INPUT_TITLE": "عنوان صفحه مرورگر",
+	"COM_MENUS_GROUP_FIELD_INPUT_SHOW_STATUS": "وضعیت نمایش",
+	"COM_MENUS_GROUP_FIELD_INPUT_CLASS": "کلاس",
+	"COM_MENUS_GROUP_FIELD_INPUT_DETAILS": "جزئیات",
+	"COM_MENUS_GROUP_FIELD_INPUT_LOCATION": "موقعیت",
+
+	"COM_MENUS_GROUP_FIELD_INPUT_META": "متا",
+	"COM_MENUS_GROUP_FIELD_INPUT_ROBOTS_INDEX": "فهرست بندی توسط روبوت ها",
+	"COM_MENUS_GROUP_FIELD_INPUT_ROBOTS_FOLLOW": "پیروی توسط روبوت ها",
+	"COM_MENUS_GROUP_FIELD_INPUT_META_TAG": "تگ های متا",
+	"COM_MENUS_GROUP_FIELD_INPUT_META_DESCRIPTION": "توضیحات متا",
+
+	"COM_MENUS_LINKS": "لینک ها",
+	"COM_MENUS_OUTER_LINK": "لینک خارجی",
+	"COM_MENUS_LINK": "لینک",
+
+	"COM_MENU_ERROR_AT_LEAST_HOMEPAGE": "حداقل باید یک منو صفحه اصلی باشد.",
+	"COM_MENU_ERROR_TWO_HOMEPAGE": "دو صفحه اصلی در یک گروه از منو نمی تواند باشد , لطفا گروه این منو را عوض کرده سپس اقدام به صفحه اصلی کردن آن نمایید.",
+	"COM_MENU_ERROR_CONTAIN_HOMEPAGE": "گزینه های انتخابی شامل صفحه اصلی هستند , لطفا ابتدا آن را از گزینه های انتخابی خود حذف کنید سپس اقدام نمایید.",
+	"COM_MENU_ERROR_TWO_HOMEPAGE_LANGUAGE": "شما در منوی دیگری با این نوع زبان , صفحه اصلی دارید."
+}

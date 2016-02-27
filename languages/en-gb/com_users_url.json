@@ -1,0 +1,34 @@
+{
+	"COM_USERS_COMPONENT_USERS": "Users",
+	"COM_USERS_VIEW_SIGNUP": "Signup",
+	"COM_USERS_VIEW_SIGNIN": "Signin",
+	"COM_USERS_VIEW_FORGET": "Forget",
+	"COM_USERS_VIEW_SIGNOUT": "Signout",
+	"COM_USERS_VIEW_IDENTIFICATION": "Identification",
+
+	"COM_USERS_USERS_SIGNUP": {
+		"0": "component",
+		"1": "view"
+	},
+
+	"COM_USERS_USERS_SIGNIN": {
+		"0": "component",
+		"1": "view"
+	},
+
+	"COM_USERS_USERS_FORGET": {
+		"0": "component",
+		"1": "view"
+	},
+
+	"COM_USERS_USERS_SIGNOUT": {
+		"0": "component",
+		"1": "view"
+	},
+
+	"COM_USERS_USERS_IDENTIFICATION": {
+		"0": "component",
+		"1": "view",
+		"2": "validity"
+	}
+}

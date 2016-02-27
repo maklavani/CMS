@@ -1,0 +1,44 @@
+.captcha small
+{
+	padding: 0px 2px;
+	font-size: 9px;
+}
+
+.captcha-button
+{
+	cursor: pointer;
+	display: inline-block;
+	width: 25px;
+	margin: 0px 2px;
+	font-size: 5px;
+	color: rgba(0 , 0 , 0 , 0.6);
+	background-color: rgba(255 , 255 , 255 , 0.05);
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.1);
+	box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.1);
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3;
+}
+
+.captcha-button:hover
+{
+	color: rgba(0 , 0 , 0 , 0.7);
+	background-color: rgba(255 , 255 , 255 , 0.3);
+	-webkit-box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.2);
+	box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.2);
+}
+
+.captcha-button[class^="icon-"] , .captcha-button[class*=" icon-"]
+{
+	font-size: 10px;
+	line-height: 25px;
+}
+
+.captcha-button:hover[class^="icon-"] , .captcha-button:hover[class*=" icon-"] { font-size: 13px; }
+
+@media(max-width: 768px){
+	.captcha-image img { max-width: 100%; }
+}

@@ -1,0 +1,46 @@
+{
+	"type": "template",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "digarsoo",
+	"creation_date": "January 04 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "TEMP_DIGARSOO_DESC",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "error.php",
+		"2": "favicon.png",
+		"3": "index.php",
+		"4": "logic.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "js",
+		"2": "images"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "temp_digarsoo.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "temp_digarsoo.json"
+		}
+	},
+
+	"positions":
+	{
+		"0": "menu"
+	}
+}

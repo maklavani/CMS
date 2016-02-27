@@ -1,0 +1,38 @@
+{
+	"type": "widget",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "system",
+	"creation_date": "January 04 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "WID_SYSTEM_DESC",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "system.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "js",
+		"2": "svg"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "wid_system.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "wid_system.json"
+		}
+	}
+}

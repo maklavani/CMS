@@ -1,0 +1,33 @@
+body
+{
+	color: #212121;
+	background-color: #AFB42B;
+}
+
+a , a:visited
+{
+	color: #607D8B;
+	text-decoration: none;
+}
+
+a:hover { color: #00BCD4; }
+
+button
+{
+	color: #C8E6C9;
+	background-color: #388E3C;
+	border: 0px;
+}
+
+button:hover
+{
+	color: #fff;
+	background-color: #8BC34A;
+}
+
+#footer
+{
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+}

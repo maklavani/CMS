@@ -1,0 +1,137 @@
+.special , .article
+{
+	margin-bottom: 10px;
+	padding: 5px;
+	font-size: 15px;
+	line-height: 30px;
+	border-bottom: 1px solid #ddd;
+	color: #111;
+}
+
+.special { background-color: #f2f2f2; }
+.article:last-child { border-bottom: 0; }
+
+.special-pic , .article-pic
+{
+	text-align: center;
+	padding: 5px;
+	border: 1px solid #ddd;
+	background-color: #eee;
+}
+
+.special-pic img , .article-pic img
+{
+	display: inline-block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 120px;
+}
+
+.special-heading
+{
+	font-size: 15px;
+	color: #888;
+}
+
+.special h3 , .article h4
+{
+	margin: 0;
+	color: #671D1E;
+}
+
+.special h3 { font-size: 19px; }
+.article h4 { font-size: 17px; }
+.special h3:hover , .article h4:hover { color: #BB0003; }
+.article-content { text-align: justify; }
+
+.special-related
+{
+	width: 100%;
+	padding: 0 20px;
+	margin: 0;
+}
+
+.special-related li
+{
+	display: list-item;
+	width: 100%;
+	list-style-type: circle;
+	position: relative;
+}
+
+.special-related li a
+{
+	display: inline;
+	position: relative;
+}
+
+/* Newsfeed */
+.newsfeed , .newsfeed:visited
+{
+	padding: 0 5px;
+	position: absolute;
+	top: 0;
+	color: #444;
+	font-size: 13px;
+	line-height: 30px;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	z-index: 10;
+}
+
+.newsfeed span { color: #E64A19; }
+.newsfeed:hover { color: #000; }
+.newsfeed:hover span { color: #FF5722; }
+[dir="rtl"] .newsfeed { left: 0; }
+[dir="ltr"] .newsfeed { right: 0; }
+
+/* Pagination */
+#pagination
+{
+	position: relative;
+	text-align: center;
+}
+
+.pagination-item
+{
+	display: inline-block;
+	min-width: 24px;
+	margin: 0 1px;
+	padding: 0 3px;
+	position: relative;
+	font-size: 14px;
+	line-height: 30px;
+	color: #666;
+	background-color: #ddd;
+	border: 0;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	text-align: center;
+}
+
+[dir="rtl"] .pagination-item { float: right; }
+[dir="ltr"] .pagination-item { float: left; }
+
+.pagination-item:first-child , .pagination-item:last-child {}
+
+.pagination-item:hover
+{
+	cursor: pointer;
+	color: #fff;
+	background-color: #8D530A;
+}
+
+.pagination-item.item-false
+{
+	cursor: default;
+	color: #888;
+	background: #bbb;
+}
+
+.pagination-item.item-current
+{
+	cursor: default;
+	color: #444;
+	background-color: #E39E26;
+}

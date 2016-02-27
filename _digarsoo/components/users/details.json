@@ -1,0 +1,59 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "users",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_USERS_DESC",
+
+	"permission": "2",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "users.php"
+	},
+
+	"folders":
+	{
+		"0": "jobs",
+		"1": "model",
+		"2": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_users.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_users.json"
+		}
+	},
+
+	"jobs":
+	{
+		"0":
+		{
+			"title": "AllVisitUsers",
+			"source": "jobs/all_visit.php"
+		},
+		"1":
+		{
+			"title": "DeleteIPUsers",
+			"source": "jobs/delete_ip.php"
+		},
+		"2":
+		{
+			"title": "IPVisitUsers",
+			"source": "jobs/ip_visit.php"
+		}
+	}
+}

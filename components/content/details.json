@@ -1,0 +1,309 @@
+{
+	"type": "component",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "content",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_CONTENT_DESC",
+
+	"permission": "5",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "content.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "js",
+		"2": "model",
+		"3": "seo",
+		"4": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_content.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_content.json"
+		},
+		"2":
+		{
+			"name": "en-gb",
+			"src": "com_content_url.json"
+		},
+		"3":
+		{
+			"name": "fa-ir",
+			"src": "com_content_url.json"
+		}
+	},
+
+	"seo":
+	{
+		"0":
+		{
+			"title": "article",
+			"source": "seo/article.php"
+		},
+		"1":
+		{
+			"title": "category",
+			"source": "seo/category.php"
+		}
+	},
+
+	"fields":
+	{
+		"article":
+		{
+			"0":
+			{
+				"name": "setting_title",
+				"type": "radio",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"1":
+			{
+				"name": "setting_heading",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"2":
+			{
+				"name": "setting_author",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"3":
+			{
+				"name": "setting_publish_date",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"4":
+			{
+				"name": "setting_views",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"5":
+			{
+				"name": "setting_tags",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"6":
+			{
+				"name": "setting_likes",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"7":
+			{
+				"name": "setting_likes_permission",
+				"type": "list",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_all",
+					"1": "setting_just_users"
+				}
+			},
+			"8":
+			{
+				"name": "setting_comments",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"9":
+			{
+				"name": "setting_comments_permission",
+				"type": "list",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_all",
+					"1": "setting_just_users"
+				}
+			},
+			"10":
+			{
+				"name": "setting_comments_confirmation",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_all",
+					"1": "setting_none"
+				}
+			},
+			"11":
+			{
+				"name": "setting_code",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"12":
+			{
+				"name": "setting_article_info",
+				"type": "list",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_up",
+					"1": "setting_down"
+				}
+			}
+		},
+		"category":
+		{
+			"0":
+			{
+				"name": "setting_special",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"1":
+			{
+				"name": "setting_special_related",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"2":
+			{
+				"name": "setting_special_limit",
+				"type": "text",
+				"default": "3"
+			},
+			"3":
+			{
+				"name": "setting_limit" ,
+				"type": "text",
+				"default": "10"
+			},
+			"4":
+			{
+				"name": "setting_countdesc",
+				"type": "text",
+				"default": "150"
+			},
+			"5":
+			{
+				"name": "setting_pagination",
+				"type": "radio",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"6":
+			{
+				"name": "setting_article_heading",
+				"type": "radio",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"7":
+			{
+				"name": "setting_newsfeed",
+				"type": "radio",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_show",
+					"1": "setting_hide"
+				}
+			},
+			"8":
+			{
+				"name": "setting_sort",
+				"type": "list",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_last_publish",
+					"1": "setting_first_publish",
+					"2": "setting_alphabet_title_asc",
+					"3": "setting_alphabet_title_desc",
+					"4": "setting_views_desc",
+					"5": "setting_views_asc",
+					"6": "setting_last_id",
+					"7": "setting_first_id"
+				}
+			}
+		}
+	}
+}

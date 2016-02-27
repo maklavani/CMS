@@ -1,0 +1,144 @@
+.login
+{
+	min-width: 150px;
+}
+
+.login-button , .login-button:visited
+{
+	display: inline-block;
+	font-size: 12px;
+	padding: 0 5px;
+	margin: 0 2px;
+	position: relative;
+	line-height: 30px;
+	color: #CFD8DC;
+	text-align: center;
+}
+
+.login-button span
+{
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+.login-button:nth-child(1) { margin-right: 10px; }
+.login-button:nth-child(2) span { font-size: 10px; }
+
+.login-button:before , .login-button:after
+{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #455A64;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	z-index: -1;
+}
+
+.login-button:after
+{
+	width: 0%;
+	background-color: #607D8B;
+}
+
+.login-button:hover { color: #fff; }
+.login-button:hover:after { width: 100%; }
+
+.login-setting
+{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #455A64;
+}
+
+.login-setting:before , .login-setting:after
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #CFD8DC;
+	text-align: center;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	z-index: 5;
+}
+
+.login-setting:after
+{
+	content: '';
+	width: 0%;
+	background-color: #607D8B;
+	z-index: 1;
+}
+
+.login-setting:hover { cursor: pointer; }
+.login-setting:hover:before { color: #fff; }
+.login-setting:hover:after { width: 100%; }
+
+.login ul
+{
+	visibility: hidden;
+	opacity: 0;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #ddd;
+	position: absolute;
+	top: 50px;
+	z-index: 1000;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+.login-setting:hover + ul , .login ul:hover
+{
+	visibility: visible;
+	opacity: 1;
+	top: 30px;
+}
+
+.login li
+{
+	display: block;
+	width: 100%;
+	position: relative;
+	list-style-type: none;
+}
+
+.login li a , .login li a:visited
+{
+	display: inline-block;
+	position: relative;
+	width: 95%;
+	padding: 0 2.5%;
+	font-size: 12px;
+	line-height: 30px;
+	color: #666;
+}
+
+.login li a span
+{
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+.login li:hover > a
+{
+	color: #222;
+	background-color: rgba(0 , 0 , 0 , 0.1);
+}
+
+.login-text
+{
+	font-size: 12px;
+	line-height: 30px;
+	color: #555;
+}

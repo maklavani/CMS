@@ -1,0 +1,235 @@
+#popup
+{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	clear: both;
+	top: 0px;
+	right: 0px;
+	background-color: rgba(0 , 0 , 0 , 0.7);
+	background:	-webkit-radial-gradient(center , ellipse cover , rgba(0 , 0 , 0 , 0.7) 60% , rgba(0 , 0 , 0 , 0.9) 100%);
+	background:	   -moz-radial-gradient(center , ellipse cover , rgba(0 , 0 , 0 , 0.7) 60% , rgba(0 , 0 , 0 , 0.9) 100%);
+	background:		-ms-radial-gradient(center , ellipse cover , rgba(0 , 0 , 0 , 0.7) 60% , rgba(0 , 0 , 0 , 0.9) 100%);
+	background:		 -o-radial-gradient(center , ellipse cover , rgba(0 , 0 , 0 , 0.7) 60% , rgba(0 , 0 , 0 , 0.9) 100%);
+	background:		   -webkit-gradient(radial , center center , 0px , center center , 100% , color-stop(60%,rgba(0 , 0 , 0 , 0.7)) , color-stop(100% , rgba(0 , 0 , 0 , 0.9)));
+	background:			radial-gradient(ellipse at center , rgba(0 , 0 , 0 , 0.7) 60% , rgba(0 , 0 , 0 , 0.9) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#b30000' , endColorstr = '#e60000' , GradientType = 1);
+	z-index: 3000;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 500px;
+	perspective: 500px;
+}
+
+#popup.showing { display: inline-block; }
+
+.popup_page
+{
+	visibility: hidden;
+	opacity: 1;
+	height: 0px;
+	position: absolute;
+	background-color: #888;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
+	overflow: hidden;
+}
+
+.popup_page.active-page
+{
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+}
+
+.zindex-3000 { z-index: 3000; }
+.zindex-3001 { z-index: 3001; }
+.zindex-3002 { z-index: 3002; }
+.zindex-3003 { z-index: 3003; }
+.zindex-3004 { z-index: 3004; }
+.zindex-3005 { z-index: 3005; }
+.zindex-3006 { z-index: 3006; }
+.zindex-3007 { z-index: 3007; }
+.zindex-3008 { z-index: 3008; }
+.zindex-3009 { z-index: 3009; }
+
+.popup_page_head
+{
+	padding: 0px 5px;
+	font-size: 20px;
+	line-height: 50px;
+	background-color: rgba(0 , 0 , 0 , 0.1);
+	border-bottom: 1px solid rgba(0 , 0 , 0 , 0.2);
+	text-align: center;
+}
+
+.popup_page_in
+{
+	padding: 10px;
+}
+
+.popup_page_button
+{
+	padding: 0px 5px;
+	line-height: 40px;
+	background-color: rgba(0 , 0 , 0 , 0.1);
+	border-top: 1px solid rgba(0 , 0 , 0 , 0.2);
+}
+
+[dir="rtl"] .popup_page_button { text-align: left; }
+[dir="ltr"] .popup_page_button { text-align: right; }
+
+.popup_button
+{
+	cursor: pointer;
+	display: none;
+	margin: 2px;
+	padding: 0px 10px;
+	font-size: 17px;
+	line-height: 36px;
+	color: #ccc;
+	background-color: rgba(0 , 0 , 0 , 0.3);
+	-webkit-box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.2);
+	box-shadow: 0px 0px 2px rgba(0 , 0 , 0 , 0.2);
+}
+
+.popup_button.showing { display: inline-block; }
+
+.popup_button:hover
+{
+	color: #f5f5f5;
+	background-color: rgba(0 , 0 , 0 , 0.1);
+	-webkit-box-shadow: inset 0px 0px 4px rgba(0 , 0 , 0 , 0.2);
+	box-shadow: inset 0px 0px 4px rgba(0 , 0 , 0 , 0.2);
+}
+
+.popup_button[type="save"] { color: #6C7466; background-color: #7e907f; }
+.popup_button[type="save"]:hover { color: #f5f5f5; background-color: #4CAF50; }
+
+.popup_button[type="cancel"] { color: #A07772; background-color: #b18f8f; }
+.popup_button[type="cancel"]:hover { color: #f5f5f5; background-color: #F44336; }
+
+.zindex { z-index: 3500 !important; }
+
+.selective
+{
+	cursor: pointer;
+	display: inline-block;
+	width: 100%;
+}
+
+.selective.selected
+{
+	background-color: rgba(0 , 0 , 0 , 0.3);
+	text-align: center;
+}
+
+a.selective.selected , a.selective.selected:visited { color: #666; }
+a.selective.selected:hover { color: #000; }
+
+.popup-left
+{
+	direction: ltr;
+	text-align: left;
+}
+
+/* List Menu */
+
+.listmenu
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	background-color: rgba(0 , 0 , 0 , 0.1);
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+.listmenu li
+{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	line-height: 30px;
+	list-style-type: none;
+}
+
+.listmenu li a
+{
+	cursor: pointer;
+	display: inline-block;
+	width: 95%;
+	position: relative;
+	padding: 0px 2.5%;
+	font-size: 15px;
+	line-height: 40px;
+	color: #444;
+	text-decoration: none;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+.listmenu li a:hover { background-color: rgba(255 , 255 , 255 , 0.05); }
+
+.listmenu li a.selected
+{
+	font-size: 16px;
+	color: #222;
+	background-color: #ddd;
+}
+
+.listmenu .parent > a:after
+{
+	content: '\e602';
+	font-family: 'Icon Digarsoo';
+}
+
+.listmenu .parent.showing > a:after { content: '\e600'; }
+
+.listmenu .parent > a:after
+{
+	width: 40px;
+	position: absolute;
+	top: 0px;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+}
+
+[dir="rtl"] .listmenu .parent > a:after { left: 0px; }
+[dir="ltr"] .listmenu .parent > a:after { right: 0px; }
+
+.listmenu .parent ul
+{
+	display: none;
+	width: 95%;
+	margin: 0px;
+	padding: 0px 2.5%;
+	background-color: rgba(0 , 0 , 0 , 0.1);
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+.listmenu .parent.showing ul { display: inline-block; }
+
+/* Icon */
+
+.icon-div
+{
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 50px;
+	color: rgba(0 , 0 , 0 , 0.3);
+	background-color: rgba(0 , 0 , 0 , 0.1);
+	text-align: center;
+}
+
+.icon-div:hover { background-color: rgba(255 , 255 , 255 , 0.05); }
+
+.icon-div.selected
+{
+	font-size: 25px;
+	color: #111;
+	background-color: #ddd;
+}

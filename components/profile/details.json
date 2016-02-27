@@ -1,0 +1,52 @@
+{
+	"type": "component",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "profile",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_PROFILE_DESC",
+
+	"permission": "4",
+
+	"files": 
+	{
+		"0": "details.json",
+		"1": "profile.php"
+	},
+
+	"folders": 
+	{
+		"0": "css",
+		"1": "images",
+		"2": "js",
+		"3": "model",
+		"4": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_profile.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_profile.json"
+		},
+		"2":
+		{
+			"name": "en-gb",
+			"src": "com_profile_url.json"
+		},
+		"3":
+		{
+			"name": "fa-ir",
+			"src": "com_profile_url.json"
+		}
+	}
+}

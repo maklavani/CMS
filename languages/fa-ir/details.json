@@ -1,0 +1,21 @@
+{
+	"type": "language",
+	"location": "all",
+	"method": "upgrade",
+
+	"name": "persian",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "LANG_PERSIAN_DESC",
+
+	"direction": "rtl",
+	"label": "fa-ir",
+	"abbreviation": "fa",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "fa-ir.json"
+	}
+}

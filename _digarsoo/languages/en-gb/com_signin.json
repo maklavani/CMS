@@ -1,0 +1,21 @@
+{
+	"COM_SIGNIN": "Signin",
+	"COM_SIGNIN_DESC": "Signin Component Create by Digarsoo",
+
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_1": "Username",
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_2": "Password",
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_3": "Remember me",
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_4": "Captcha",
+
+	"COM_SIGNIN_CHECK": "Check",
+	"COM_SIGNIN_EMAIL_USERNAME": "Username or Email",
+
+	"COM_SIGNIN_SIGNOUT": "Logout users",
+
+	"COM_SIGNIN_WELCOME": "Welcome to the site %s",
+	"COM_SIGNIN_FIRST_SIGNIN": "You are not logged in you want to exit",
+	"COM_SIGNIN_SIGNOUT_SUCCESS": "You have successfully logged out of the site",
+
+	"COM_SIGNIN_ERROR_USER_HAVENT_PERMISSION": "You do not have access to backend",
+	"COM_SIGNIN_ERROR_BANNED_IP": "Due to frequent errors Your IP blocked for %s minutes, please check back again soon."
+}

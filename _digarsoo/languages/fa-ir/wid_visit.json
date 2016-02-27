@@ -1,0 +1,9 @@
+{
+	"WID_VISIT": "آمار بازدید کنندگان",
+	"WID_VISIT_DESC": "ویجت آمار بازدید کنندگان ساخته شده توسط دیگرسو",
+
+	"WID_VISIT_COUNT": "تعداد بازدید ها",
+	"WID_VISIT_COUNT_ALL": "تعداد کل درخواست ها",
+	"WID_VISIT_USERS_ONLINE": "کاربران آنلاین",
+	"WID_VISIT_VISITOR_ONLINE": "بازدید کنندگان آنلاین"
+}

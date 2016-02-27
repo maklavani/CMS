@@ -1,0 +1,41 @@
+{
+	"type": "widget",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "menu",
+	"creation_date": "January 04 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "WID_MENU_DESC",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "menu.php"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "wid_menu.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "wid_menu.json"
+		}
+	},
+
+	"fields":
+	{
+		"0":
+		{
+			"type": "menus",
+			"name": "menu",
+			"location": "site"
+		}
+	}
+}

@@ -1,0 +1,483 @@
+#menu-icon-parent
+{
+	width: 100px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+[dir="rtl"] #menu-icon-parent , [dir="rtl"] #menu-icon { float: right; }
+[dir="ltr"] #menu-icon-parent , [dir="ltr"] #menu-icon { float: left; }
+
+#menu .flag { top: 6px; }
+
+#menu-icon-parent.showing
+{
+	width: 300px;
+}
+
+#menu-icon
+{
+	cursor: pointer;
+	display: inline-block;
+	width: 40px;
+	margin: 5px;
+	font-size: 20px;
+	line-height: 40px;
+	color: rgba(255 , 255 , 255 , 0.5);
+	background-color: rgba(255 , 255 , 255 , 0.2);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+#menu-icon.showing { font-size: 15px; }
+
+#menu-icon.showing:before { content: "\e60a"; }
+
+#menu-icon:hover
+{
+	color: rgba(255 , 255 , 255 , 0.5);
+	background-color: rgba(255 , 255 , 255 , 0.3);
+}
+
+#menu { background-color: #e5e5e5; }
+
+#menu ul
+{
+	margin: 0;
+	padding: 0;
+	z-index: 1000;
+}
+
+#menu li
+{
+	display: inline-block;
+	position: relative;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+#menu li a
+{
+	display: inline-block;
+	text-decoration: none;
+	z-index: 1000;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+@media(max-width: 992px){
+	#menu .menu
+	{
+		display: none;
+		width: 100%;
+	}
+
+	#menu.showing .menu
+	{
+		display: inline-block;
+	}
+
+	#menu li
+	{
+		width: 100%;
+		line-height: 24px;
+	}
+
+	#menu li a
+	{
+		width: 95%;
+		padding: 0 2.5%;
+		font-size: 12px;
+		line-height: 24px;
+	}
+
+	#menu li a .link-icon
+	{
+		display: inline-block;
+		text-align: center;
+	}
+
+	#menu li a .link-text { display: inline-block; }
+
+	#menu .menu ul
+	{
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+	#menu .menu ul.showing
+	{
+		visibility: visible;
+		opacity: 1;
+		height: auto;
+	}
+
+	#menu .parent > a > .link-text:before
+	{
+		content: '\e602';
+		width: 24px;
+		font-family: "Icon Digarsoo";
+		position: absolute;
+		top: 0;
+		line-height: 24px;
+		text-align: center;
+	}
+
+	[dir="rtl"] #menu .parent > a > .link-text:before { left: 5px; }
+	[dir="ltr"] #menu .parent > a > .link-text:before { right: 5px; }
+
+	#menu .parent > a.showing-parent > .link-text:before { content: '\e600'; }
+
+	#menu li a { color: #888; }
+	#menu .active a { color: #444; }
+	#menu li a:hover , #menu li:hover a { color: #222; }
+
+	#menu .parent li a { color: #888; }
+	#menu .parent .active a { color: #444; }
+	#menu .parent li a:hover , #menu .parent li:hover a { color: #222; }
+
+	#menu .parent .parent li a { color: #888; }
+	#menu .parent .parent .active a { color: #444; }
+	#menu .parent .parent li a:hover , #menu .parent .parent li:hover a { color: #222; }
+
+	#menu li a .link-icon { width: 20%; }
+	#menu li a .link-text { width: 80%; }
+
+	#menu .parent li a .link-icon { width: 25%; }
+	#menu .parent li a .link-text { width: 75%; }
+
+	#menu .parent .parent li a .link-icon { width: 30%; }
+	#menu .parent .parent li a .link-text { width: 70%; }
+}
+
+@media(min-width: 992px){
+	#menu .menu > li > a
+	{
+		line-height: 50px;
+		color: #777;
+		background-color: #eee;
+	}
+
+	#menu .menu > .active > a
+	{
+		color: #4CAF50;
+		background-color: #f5f5f5;
+	}
+
+	#menu .menu > li > a:hover , #menu .menu > .parent:hover > a
+	{
+		color: #222;
+		background-color: #fff;
+	}
+
+	#menu .menu > .active > a:hover , #menu .menu > .parent.active:hover > a
+	{
+		color: #222;
+		background-color: #4CAF50;
+	}
+
+	#menu .menu > li:hover > a > .link-text
+	{
+		color: #222;
+		background-color: #fff;
+	}
+
+	#menu .menu > .active:hover > a > .link-text
+	{
+		color: #222;
+		background-color: #4CAF50;
+	}
+
+	#menu .menu > li > a > [class^="icon-"] , #menu .menu > li > a > [class*=" icon-"]
+	{
+		width: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	#menu .menu > li > a > .link-text
+	{
+		visibility: hidden;
+		opacity: 0;
+		width: 0;
+		position: absolute;
+		top: 0;
+		font-size: 5px;
+		-webkit-transition: all ease 0.2s;
+		transition: all ease 0.2s;
+	}
+
+	#menu .menu > li:hover > a > .link-text
+	{
+		visibility: visible;
+		opacity: 1;
+		width: 230px;
+		font-size: 15px;
+
+		-webkit-transition: all ease 0.5s;
+		transition: all ease 0.5s;
+	}
+
+	[dir="rtl"] #menu .menu > li > a > .link-text { padding-right: 20px; right: 50px; }
+	[dir="ltr"] #menu .menu > li > a > .link-text { padding-left: 20px; left: 50px; }
+
+	#menu .menu > .parent > a > .link-text:before
+	{
+		content: '\e602';
+		width: 40px;
+		font-family: "Icon Digarsoo";
+		position: absolute;
+		top: 5px;
+		line-height: 40px;
+		text-align: center;
+	}
+
+	[dir="rtl"] #menu .menu > .parent > a > .link-text:before { left: 5px; }
+	[dir="ltr"] #menu .menu > .parent > a > .link-text:before { right: 5px; }
+
+	#menu .menu > .parent > ul
+	{
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		width: 0;
+		top: 50px;
+		font-size: 10px;
+		background-color: #eee;
+
+		-webkit-transition: all ease 0.3s;
+		transition: all ease 0.3s;
+	}
+
+	#menu .menu > .parent:hover > ul
+	{
+		visibility: visible;
+		opacity: 1;
+		width: 250px;
+		font-size: 15px;
+
+		-webkit-transition: all ease 0.7s;
+		transition: all ease 0.7s;
+	}
+
+	[dir="rtl"] #menu .parent ul { right: 50px; }
+	[dir="ltr"] #menu .parent ul { left: 50px; }
+
+	#menu .parent ul li { width: 100%; }
+
+	#menu .menu > li > ul > li > a
+	{
+		display: inline-block;
+		width: 100%;
+		font-size: 0.8em;
+		line-height: 30px;
+	}
+
+	#menu .menu > li > ul > li > a > .link-icon
+	{
+		display: inline-block;
+		width: 10%;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	#menu .menu > .parent > ul > li > a > .link-text
+	{
+		display: inline-block;
+		width: 80%;
+		line-height: 30px;
+	}
+
+	[dir="rtl"] #menu .menu > li > ul > li > a > .link-icon { margin-right: 0.04%; margin-left: 0.04%; }
+	[dir="ltr"] #menu .menu > li > ul > li > a > .link-icon { margin-left: 0.04%; margin-right: 0.04%; }
+
+	#menu .menu > .parent > ul > li > a
+	{
+		color: #777;
+		background-color: #eee;
+	}
+
+	#menu .menu > .parent > ul > .active > a
+	{
+		color: #8BC34A;
+		background-color: #f5f5f5;
+	}
+
+	#menu .menu > .parent > ul > li > a:hover , #menu .menu > .parent > ul > .parent:hover > a
+	{
+		color: #222;
+		background-color: #fff;
+	}
+
+	#menu .menu > .parent > ul > .active > a:hover , #menu .menu > .parent > ul > .active:hover > a
+	{
+		color: #222;
+		background-color: #8BC34A;
+	}
+
+	#menu .menu > .parent > ul > .parent > a > .link-text:before
+	{
+		content: '\e603';
+		width: 30px;
+		font-family: "Icon Digarsoo";
+		position: absolute;
+		top: 0;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	#menu .menu > .parent > ul > .parent:hover > a > .link-text:before { content: '\e601'; }
+
+	[dir="rtl"] #menu .menu > .parent > ul > .parent > a > .link-text:before { left: 5px; }
+	[dir="ltr"] #menu .menu > .parent > ul > .parent > a > .link-text:before { right: 5px; }
+
+	#menu .menu > .parent > ul > .parent > ul
+	{
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		width: 0;
+		top: 0;
+		font-size: 8px;
+		background-color: #eee;
+
+		-webkit-transition: all ease 0.3s;
+		transition: all ease 0.3s;
+	}
+
+	#menu .menu > .parent > ul > .parent:hover > ul
+	{
+		visibility: visible;
+		opacity: 1;
+		width: 250px;
+		font-size: 13px;
+
+		-webkit-transition: all ease 0.7s;
+		transition: all ease 0.7s;
+	}
+
+	[dir="rtl"] #menu .menu > .parent:hover > ul > .parent > ul { right: 250px; }
+	[dir="ltr"] #menu .menu > .parent:hover > ul > .parent > ul { left: 250px; }
+
+	#menu .menu > li > ul > li > ul > li > a
+	{
+		display: inline-block;
+		width: 100%;
+		font-size: 0.8em;
+		line-height: 30px;
+	}
+
+	#menu .menu > li > ul > li > ul > li > a > .link-icon
+	{
+		display: inline-block;
+		width: 10%;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	#menu .menu > .parent > ul > li > ul > li > a > .link-text
+	{
+		display: inline-block;
+		width: 70%;
+		line-height: 30px;
+	}
+
+	[dir="rtl"] #menu .menu > li > ul > li > ul > li > a > .link-icon { margin-right: 10.04%; margin-left: 0.04%; }
+	[dir="ltr"] #menu .menu > li > ul > li > ul > li > a > .link-icon { margin-left: 10.04%; margin-right: 0.04%; }
+
+	#menu .menu > .parent > ul > .parent > ul > li > a
+	{
+		color: #777;
+		background-color: #eee;
+	}
+
+	#menu .menu > .parent > ul > .parent > ul > .active > a
+	{
+		color: #CDDC39;
+		background-color: #f5f5f5;
+	}
+
+	#menu .menu > .parent > ul > .parent > ul > li > a:hover , #menu .menu > .parent > ul > .parent > ul > .parent:hover > a
+	{
+		color: #222;
+		background-color: #fff;
+	}
+
+	#menu .menu > .parent > ul > .parent > ul > .active > a:hover , #menu .menu > .parent > ul > .parent > ul > .active:hover > a
+	{
+		color: #222;
+		background-color: #CDDC39;
+	}
+
+	/* showing */
+	#menu.showing .menu > li
+	{
+		display: inline;
+		width: 100%;
+		float: left;
+	}
+
+	#menu.showing .menu > li > a > .link-text
+	{
+		visibility: visible;
+		opacity: 1;
+		width: calc(100% - 70px);
+		font-size: 15px;
+	}
+
+	#menu.showing .menu > .parent > ul , #menu.showing .menu > .parent:hover > ul
+	{
+		width: 100%;
+		height: 0;
+		position: relative;
+		top: 0;
+		right: 0;
+		left: 0;
+		overflow: hidden;
+	}
+
+	#menu.showing .menu > .parent > ul.showing
+	{
+		display: inline;
+		visibility: visible;
+		opacity: 1;
+		height: auto;
+		font-size: 15px;
+	}
+
+	#menu.showing .menu > .parent > ul > li { float: left; }
+	#menu.showing .menu > .parent > ul > li > a { display: inherit; }
+
+	#menu.showing .menu > .parent > a > .link-text:before { content: '\e602'; }
+	#menu.showing .menu > .parent > a.showing-parent > .link-text:before { content: '\e600'; }
+
+	#menu.showing .menu > .parent > ul > .parent > ul , #menu.showing .menu > .parent:hover > ul > .parent:hover > ul
+	{
+		width: 100%;
+		height: 0;
+		position: relative;
+		top: 0;
+		right: 0;
+		left: 0;
+		overflow: hidden;
+	}
+
+	[dir="rtl"] #menu.showing .menu > .parent:hover > ul > .parent > ul { right: 0; }
+	[dir="ltr"] #menu.showing .menu > .parent:hover > ul > .parent > ul { left: 0; }
+
+	#menu.showing .menu > .parent > ul > .parent > ul.showing
+	{
+		visibility: visible;
+		opacity: 1;
+		font-size: 15px;
+		height: auto;
+	}
+
+	#menu.showing .menu > .parent > ul > .parent > a > .link-text:before { content: '\e602'; }
+	#menu.showing .menu > .parent > ul > .parent > a.showing-parent > .link-text:before { content: '\e600'; }
+}

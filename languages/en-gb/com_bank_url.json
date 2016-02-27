@@ -1,0 +1,17 @@
+{
+	"COM_BANK_COMPONENT_BANK": "Bank",
+	"COM_BANK_VIEW_PAY": "Pay",
+	"COM_BANK_VIEW_BACK": "Back",
+
+	"COM_BANK_BANK_PAY": {
+		"0": "component",
+		"1": "id",
+		"2": "code"
+	},
+
+	"COM_BANK_BANK_BACK": {
+		"0": "component",
+		"1": "id",
+		"2": "name"
+	}
+}

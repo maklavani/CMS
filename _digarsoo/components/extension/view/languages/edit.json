@@ -1,0 +1,15 @@
+{
+	"check":
+	{
+		"name":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8"
+		},
+		"default_administrator":{ "defined": "true" } , 
+		"default_site":{ "defined": "true" } , 
+		"label":{ "kind": "text_with_space" } , 
+		"abbreviation":{ "kind": "text" }
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"check":
+	{
+		"count": { "kind": "numeric" }
+	}
+}

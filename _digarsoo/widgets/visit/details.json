@@ -1,0 +1,37 @@
+{
+	"type": "widget",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "visit",
+	"creation_date": "January 04 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "WID_VISIT_DESC",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "visit.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "js"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "wid_visit.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "wid_visit.json"
+		}
+	}
+}

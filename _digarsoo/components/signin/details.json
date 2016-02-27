@@ -1,0 +1,44 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "signin",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_SIGNIN_DESC",
+
+	"permission": "3",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "signin.php"
+	},
+
+	"folders":
+	{
+		"0": "model",
+		"1": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_signin.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_signin.json"
+		}
+	},
+
+	"view":
+	{
+		"default": "signin"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"check":
+	{
+		"1":
+		{
+			"min": "5",
+			"max": "254",
+			"kind": "text_or_email"
+		},
+		"2":
+		{
+			"min": "6",
+			"max": "32",
+			"kind": "password"
+		},
+		"3": { "kind": "captcha" },
+		"4": { "defined": "false" }
+	}
+}

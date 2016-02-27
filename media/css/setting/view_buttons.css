@@ -1,0 +1,38 @@
+.buttons
+{
+	height: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.buttons ul
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.buttons li
+{
+	display: inline-block;
+	width: 100%;
+	font-size: 13px;
+	line-height: 25px;
+	list-style-type: none;
+}
+
+[dir="rtl"] .buttons li { float: right; }
+[dir="ltr"] .buttons li { float: left; }
+
+.buttons li a
+{
+	display: inline-block;
+	width: 95%;
+	padding: 0px 2.5%;
+	text-decoration: none;
+	line-height: 25px;
+	color: #aaa;
+}
+
+.buttons .active a { color: #666; }
+.buttons li a:hover { color: #666; }
+.buttons .active a:hover { color: #000; }

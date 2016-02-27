@@ -1,0 +1,36 @@
+{
+	"type": "widget",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "login",
+	"creation_date": "January 04 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "WID_LOGIN_DESC",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "login.php"
+	},
+
+	"folders":
+	{
+		"0": "css"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "wid_login.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "wid_login.json"
+		}
+	}
+}

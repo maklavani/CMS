@@ -1,0 +1,9 @@
+﻿@font-face {
+	font-family: 'Nasim';
+	font-style: normal;
+	font-weight: 400;
+	src:	url(../../fonts/nasim.woff2) format('woff2'), 
+			url(../../fonts/nasim.woff) format('woff');
+}
+
+body { font-family: 'Nasim' , Arial , Sans-serif; }

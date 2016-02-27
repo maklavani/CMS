@@ -1,0 +1,18 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "system",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+
+	"permission": "3",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "system.php"
+	}
+}

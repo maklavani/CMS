@@ -1,0 +1,79 @@
+#visit-graph
+{
+	direction: ltr;
+	text-align: left;
+}
+
+.detail.count { color: rgba(194 , 24 , 91 , 0.9); }
+.detail.count-all { color: rgba(48 , 63 , 159 , 0.9); }
+
+.vertical-line , .horizontal-line
+{
+	stroke: rgba(0 , 0 , 0 , 0.1);
+	stroke-width: 1;
+	stroke-dasharray: 5 , 5;
+}
+
+.number-text , .dates-text
+{
+	fill: rgba(0 , 0 , 0 , 0.35);
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.polygon-count-all
+{
+	fill: rgba(63 , 81 , 181 , 0.5);
+	stroke: rgba(48 , 63 , 159 , 0.9);
+	stroke-width: 5;
+}
+
+.polygon-count
+{
+	fill: rgba(233 , 30 , 99 , 0.5);
+	stroke: rgba(194 , 24 , 91 , 0.9);
+	stroke-width: 5;
+}
+
+.visit-graph-circle
+{
+	cursor: help;
+	z-index: 100;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+.circle-count-all { fill: rgba(63 , 81 , 181 , 0.0); }
+.circle-count-all:hover { fill: rgba(63 , 81 , 181 , 1.0); }
+
+.circle-count { fill: rgba(233 , 30 , 99 , 0.0); }
+.circle-count:hover { fill: rgba(233 , 30 , 99 , 1.0); }
+
+.status-shadow
+{
+	height: 4px;
+	position: relative;
+	top: 8px;
+	background-color: #303F9F;
+}
+
+.status-value
+{
+	height: 4px;
+	position: absolute;
+	top: 8px;
+	background-color: #2196F3;
+	z-index: 2;
+}
+
+@media(min-width: 768px){
+	.number-text , .dates-text { font-size: 14px; }
+}
+
+@media(min-width: 992px){
+	.number-text , .dates-text { font-size: 12px; }
+}
+
+@media(min-width: 1200px){
+	.number-text , .dates-text { font-size: 10px; }
+}		

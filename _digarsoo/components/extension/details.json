@@ -1,0 +1,39 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "extension",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_EXTENSION_DESC",
+
+	"permission": "2",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "extension.php"
+	},
+
+	"folders":
+	{
+		"0": "model",
+		"1": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_extension.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_extension.json"
+		}
+	}
+}

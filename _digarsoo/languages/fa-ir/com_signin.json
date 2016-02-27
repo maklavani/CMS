@@ -1,0 +1,21 @@
+{
+	"COM_SIGNIN": "ورود کاربران",
+	"COM_SIGNIN_DESC": "کامپوننت ورود کاربران ساخته شده توسط دیگرسو",
+
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_1": "نام کاربری",
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_2": "گذر واژه",
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_3": "من را به یاد داشته باش",
+	"COM_SIGNIN_SIGNIN_FORM_INPUT_4": "عبارت امنیتی",
+
+	"COM_SIGNIN_CHECK": "بررسی",
+	"COM_SIGNIN_EMAIL_USERNAME": "نام کاربری یا ایمیل",
+
+	"COM_SIGNIN_SIGNOUT": "خارج شدن کاربران",
+
+	"COM_SIGNIN_WELCOME": "%s به سایت خوش آمدید",
+	"COM_SIGNIN_FIRST_SIGNIN": "شما هنوز وارد نشده اید که می خواهید خارج شوید",
+	"COM_SIGNIN_SIGNOUT_SUCCESS": "شما با موفقیت از سایت خارج شدید",
+
+	"COM_SIGNIN_ERROR_USER_HAVENT_PERMISSION": "شما دسترسی به بخش مدیریت را ندارید",
+	"COM_SIGNIN_ERROR_BANNED_IP": "به دلیل اشتباهات مکرر ip شما به مدت %s دقیقه مسدود شده است لطفا بعدا مراجعه فرمایید."
+}

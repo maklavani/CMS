@@ -1,0 +1,42 @@
+{
+	"check":
+	{
+		"title":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "tinymce"
+		},
+		"status": { "kind": "tf" },
+		"special": { "kind": "tf" },
+		"category": { "kind": "numeric" },
+		"permission": { "kind": "numeric" },
+		"content": { "kind": "tinymce" },
+		"code": { "defined": "true" },
+		"setting_title": { "kind": "tf_b" },
+		"setting_heading": { "kind": "tf_b" },
+		"setting_author": { "kind": "tf_b" },
+		"setting_publish_date": { "kind": "tf_b" },
+		"setting_views": { "kind": "tf_b" },
+		"setting_tags": { "kind": "tf_b" },
+		"setting_likes": { "kind": "tf_b" },
+		"setting_likes_permission": { "kind": "tf_b" },
+		"setting_comments": { "kind": "tf_b" },
+		"setting_comments_permission": { "kind": "tf_b" },
+		"setting_comments_confirmation": { "kind": "tf_b" },
+		"setting_code": { "kind": "tf_b" },
+		"setting_article_info": { "kind": "tf_b" },
+		"meta_tag": { "kind": "textarea" },
+		"meta_desc": { "kind": "textarea" },
+		"tags": { "defined": "false" },
+		"heading":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "tinymce",
+			"empty": "true"
+		},
+		"image": { "defined": "true" },
+		"publish_date": { "defined": "true" }
+	}
+}

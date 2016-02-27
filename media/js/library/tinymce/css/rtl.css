@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'A Google';
+	font-style: normal;
+	font-weight: 400;
+	src:	local('Megrim'), 
+			local('PoiretOne-Regular'),
+			url(../../../../fonts/a_google.woff) format('woff');
+}
+
+body
+{
+	direction: rtl;
+	text-align: right;
+	font-family: 'A Google';
+	font-size: 13px;
+	line-height: 25px;
+}
+
+td , pre , p , span , i
+{
+	font-family: 'A Google';
+	padding: 0;
+	margin: 0;
+}

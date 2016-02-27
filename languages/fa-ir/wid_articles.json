@@ -1,0 +1,26 @@
+{
+	"WID_ARTICLES": "مطالب",
+	"WID_ARTICLES_DESC": "ویجت مطالب ساخته شده توسط دیگرسو",
+
+	"WID_ARTICLES_CATEGORIES": "مجموعه ها",
+	"WID_ARTICLES_SETTING_LIMIT": "تعداد مطالب",
+	"WID_ARTICLES_SETTING_COUNTDESC": "تعداد کاراکترهای خلاصه مطلب",
+	"WID_ARTICLES_SETTING_ARTICLE_HEADING": "سر صفحه مطلب",
+	"WID_ARTICLES_SETTING_SHOW": "نمایش",
+	"WID_ARTICLES_SETTING_HIDE": "عدم نمایش",
+	"WID_ARTICLES_SETTING_SORT": "ترتیب مطالب",
+	"WID_ARTICLES_SETTING_LAST_PUBLISH": "جدیدترین مطلب منتشر شده",
+	"WID_ARTICLES_SETTING_FIRST_PUBLISH": "قدیمی ترین مطلب منتشر شده",
+	"WID_ARTICLES_SETTING_ALPHABET_TITLE_ASC": "الفبا",
+	"WID_ARTICLES_SETTING_ALPHABET_TITLE_DESC": "برعکس الفبا",
+	"WID_ARTICLES_SETTING_VIEWS_DESC": "بیشترین بازدید",
+	"WID_ARTICLES_SETTING_VIEWS_ASC": "کمترین بازدید",
+	"WID_ARTICLES_SETTING_LAST_ID": "آخرین شناسه",
+	"WID_ARTICLES_SETTING_FIRST_ID": "اولین شناسه",
+	"WID_ARTICLES_SETTING_LIMIT": "تعداد مطالب",
+
+	"WID_ARTICLES_WD_SETTING_LIMIT": "تعداد مطالب",
+	"WID_ARTICLES_WD_SETTING_COUNTDESC": "تعداد کاراکترهای خلاصه مطلب",
+
+	"WID_ARTICLES_ALL": "تمام مطالب"
+}

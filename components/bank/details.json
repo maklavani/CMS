@@ -1,0 +1,51 @@
+{
+	"type": "component",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "bank",
+	"creation_date": "January 05 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_BANK_DESC",
+
+	"permission": "4",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "bank.php"
+	},
+
+	"folders":
+	{
+		"0": "css",
+		"1": "images",
+		"2": "model",
+		"3": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_bank.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_bank.json"
+		},
+		"2":
+		{
+			"name": "en-gb",
+			"src": "com_bank_url.json"
+		},
+		"3":
+		{
+			"name": "fa-ir",
+			"src": "com_bank_url.json"
+		}
+	}
+}

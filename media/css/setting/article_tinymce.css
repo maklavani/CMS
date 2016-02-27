@@ -1,0 +1,16 @@
+.article_tinymce
+{
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	color: #ddd;
+	background-color: #C2185B;
+}
+
+.article_tinymce:hover
+{
+	color: #f5f5f5;
+	background-color: #E91E63;
+}

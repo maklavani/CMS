@@ -1,0 +1,41 @@
+{
+	"COM_CONTENT": "Content",
+	"COM_CONTENT_DESC": "Content Component Create by Digarsoo",
+
+	"COM_CONTENT_ARTICLE": "Article",
+	"COM_CONTENT_CATEGORY": "Category",
+
+	"COM_CONTENT_CATEGORY_NOT_FOUND": "Category not found",
+	"COM_CONTENT_ARTICLE_PUBLISH_DATE": "Release date",
+	"COM_CONTENT_ARTICLE_VIEW": "Views",
+	"COM_CONTENT_ARTICLE_USER": "Author",
+
+	"COM_CONTENT_PREV": "Prev",
+	"COM_CONTENT_NEXT": "Next",
+	"COM_CONTENT_NEWSFEED": "Newsfeed",
+	"COM_CONTENT_SEARCH": "Search",
+
+	"COM_CONTENT_NAME": "Name",
+	"COM_CONTENT_EMAIL": "Email",
+	"COM_CONTENT_COMMENT": "Comment",
+	"COM_CONTENT_CAPTCHA": "Captcha",
+	"COM_CONTENT_SEND": "Send",
+
+	"COM_CONTENT_SEND_COMMENT": "Send Comment",
+	"COM_CONTENT_UNKNOWN": "Unknown",
+	"COM_CONTENT_COMMMENTS": "Comments",
+	"COM_CONTENT_COMMMENTS_VERIFY": "Verfied",
+	"COM_CONTENT_COMMMENTS_DELETED": "Deleted",
+	"COM_CONTENT_COMMMENTS_ANSWER": "Answer to comment",
+
+	"COM_CONTENT_ERROR_FIRST_LOGIN": "First you must be login",
+	"COM_CONTENT_ERROR_COMMENT": "You have already commented",
+	"COM_CONTENT_ERROR_CAPTCHA": "Captcha incorrect",
+	"COM_CONTENT_ERROR_COMMENT_INPUT": "Write some text in comment",
+	"COM_CONTENT_ERROR_COMMENT_INPUT_FORMAT": "Comment format incorrect",
+	"COM_CONTENT_ERROR_COMMENT_FOUND": "Not Found Comment",
+
+	"ERROR_NOT_EXIST_ARTICLE": "Content can not be found.",
+	"ERROR_NOT_EXIST_CATEGORY": "Category can not be found.",
+	"ERROR_NOT_EMPTY_CATEGORY": "Do something for this category yet!."
+}
