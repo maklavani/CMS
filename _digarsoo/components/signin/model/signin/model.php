@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		12/04/2015
+	*	last edit		05/07/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -25,17 +25,19 @@ class SigninModel extends Model {
 	{
 		$rand_str = Regex::random_string(100);
 		$time = 21600;
+
 		if($remember){
 			$time = 1209600;
-			Cookies::set_cookie('remember' , '1' , time() + $time);
+			Cookies::set_cookie("remember_admin" , '1' , time() + $time);
 		} else {
-			Cookies::remove_cookie('remember');
+			Cookies::delete_cookie("remember_admin");
 		}
 
-		Cookies::set_cookie('enter_key' , $rand_str , time() + $time);
-		Sessions::set_session($rand_str);
+		Cookies::set_cookie("enter_key_admin" , $rand_str , time() + $time);
+		Sessions::set_session("enter_key_admin" , $rand_str);
+		Sessions::set_session($rand_str , time() + $time);
 
-		$this->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip) , array('logged' , $rand_str)))->where('`id` = ' . $id)->process();
+		$this->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip) , array('logged_admin' , $rand_str)))->where('`id` = ' . $id)->process();
 	}
 
 	public function has_permission($group , $permission)

@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	12/30/2015
-	*	last edit		01/05/2016
+	*	last edit		05/10/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -18,7 +18,7 @@ class SettingModel extends Model {
 		{
 			$file = $_FILES['field_input_file'];
 
-			if($file['type'] == "application/zip")
+			if(in_array($file['type'] , array("application/zip" , "application/x-zip-compressed")))
 			{
 				$free = System::free_space(_SRC_SITE);
 

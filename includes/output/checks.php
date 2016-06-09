@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		01/31/2016
+	*	last edit		04/05/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -242,7 +242,7 @@ class Checks {
 	{
 		if(preg_match('/[a-z\d._%+-]+@[a-z\d.-]+\.[a-z]{2,4}\b/i' , $text))
 			return true;
-		else if(preg_match('/^[a-zA-Z0-9_]*$/' , $text))
+		else if(preg_match('/^[a-z0-9_\.]*$/i' , $text))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEXT_OR_EMAIL') , Language::_(strtoupper($this->component . $field))));

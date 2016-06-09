@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		12/03/2015
+	*	last edit		05/08/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -58,42 +58,57 @@ class User {
 	// aya login ast
 	public static function is_login()
 	{
-		if($key = Cookies::get_cookie('enter_key'))
+		$key = $key_session = Sessions::get_session("enter_key_admin");
+		$key_cookie = "";
+
+		if($key_session == "")
+			$key = $key_cookie = Cookies::get_cookie("enter_key_admin");
+
+		if($key)
 		{
-			if(Regex::cs($key , "ansi"))
+			if($key_session)
+				$time = Sessions::get_session($key) - time();
+			else if($key_cookie)
+				$time = 1;
+
+			if(Regex::cs($key , "ansi") && $time >= 0)
 			{
 				$db = new Database;
-				$db->table('users')->where('`status` = 0 AND `logged` = "' . $key . '"')->select()->process();
+				$db->table('users')->where('`status` = 0 AND `logged_admin` = "' . $key . '"')->select()->process();
 				$user = $db->output();
 
 				if(count($user) == 1)
 				{
 					if($user[0]->ip == Site::$ip){
 						$session = Sessions::get_session($key);
+						$time = 21600;
+
+						if($remember = Cookies::get_cookie("remember_admin"))
+							$time = 1209600;
 
 						if($session && !$user[0]->change_logged)
 						{
-							Sessions::set_session($key);
-
+							Cookies::set_cookie("enter_key_admin" , $key , time() + $time);
+							Sessions::set_session($key , time() + $time);
 							$db->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip)))->where('`id` = ' . $user[0]->id)->process();
 						} else {
-							if($session)
+							if($session){
+								Sessions::delete_session("enter_key_admin");
 								Sessions::delete_session($key);
+							}
 
 							$rand_str = Regex::random_string(100);
 
-							$time = 21600;
-							if($remember = Cookies::get_cookie('remember')){
-								$time = 1209600;
-								Cookies::set_cookie('remember' , '1' , time() + $time);
-							} else {
-								Cookies::remove_cookie('remember');
-							}
+							if($remember = Cookies::get_cookie("remember_admin"))
+								Cookies::set_cookie("remember_admin" , '1' , time() + $time);
+							else
+								Cookies::delete_cookie("remember_admin");
 
-							Cookies::set_cookie('enter_key' , $rand_str , time() + $time);
-							Sessions::set_session($rand_str);
+							Cookies::set_cookie("enter_key_admin" , $rand_str , time() + $time);
+							Sessions::set_session('enter_key_admin' , $rand_str);
+							Sessions::set_session($rand_str , time() + $time);
 
-							$db->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip) , array('logged' , $rand_str) , array('change_logged' , '0')))->where('`id` = ' . $user[0]->id)->process();
+							$db->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip) , array('logged_admin' , $rand_str) , array('change_logged' , '0')))->where('`id` = ' . $user[0]->id)->process();
 						}
 
 						self::$login = true;
@@ -105,14 +120,15 @@ class User {
 						$db->table('users')->update(array(array('change_logged' , '1')))->where('`id` = ' . $user[0]->id)->process();
 				}
 				else if(count($user) > 1)
-					foreach ($user as $value){
-						$db->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip) , array('logged' , '')))->where('`id` = ' . $value->id)->process();
-					}
+					foreach ($user as $value)
+						$db->table('users')->update(array(array('visit' , Site::$datetime) , array('ip' , Site::$ip) , array('logged_admin' , '')))->where('`id` = ' . $value->id)->process();
 			}
 			
-			// remove cookie
-			Cookies::remove_cookie('enter_key');
-			Cookies::remove_cookie('remember');
+			// remove cookie and session
+			Cookies::delete_cookie("remember_admin");
+			Cookies::delete_cookie("enter_key_admin");
+			Sessions::delete_session("enter_key_admin");
+			Sessions::delete_session($key);
 		}
 
 		self::$login = false;

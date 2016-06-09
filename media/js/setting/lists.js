@@ -1,58 +1,74 @@
 jQuery(document).ready(function(){
-	var values = {};
-	var items = 0;
-	var twice = false;
+	var values = [];
+	var twice = [];
+	var items = [];
+	var number = 0;
 
-	if(jQuery('.details-parent').val() != ""){
-		values_b = jQuery.parseJSON(jQuery('.details-parent').val());
+	jQuery('.details-parent').each(function(){
+		values[number] = {};
+		twice[number] = false;
+		items[number] = 0;
+		jQuery(this).attr("item" , number);
 
-		for(i in values_b){
-			clone = jQuery('.details-append').children('tr').clone(true);
+		if(jQuery(this).val() != ""){
+			var values_b = jQuery.parseJSON(jQuery(this).val());
 
-			clone.find('[name]').each(function(){
-				jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + items);
+			for(i in values_b){
+				clone = jQuery(this).next(".details").find('.details-append').children('tr').clone(true);
 
-				// Detected Price
-				if(jQuery(this).hasClass('price'))
-					jQuery(this).parent().children('.price-field').attr('price' , jQuery(this).attr('name'));
+				clone.find('[name]').each(function(){
+					jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + items);
+
+					// Detected Price
+					if(jQuery(this).hasClass('price'))
+						jQuery(this).parent().children('.price-field').attr('price' , jQuery(this).attr('name'));
 
 
-				if(typeof values_b[i][jQuery(this).attr('name')] != 'undefined')
-				{
-					jQuery(this).val(values_b[i][jQuery(this).attr('name')]);
-					jQuery(this).attr('value' , values_b[i][jQuery(this).attr('name')]);
-				}
-			});
+					if(typeof values_b[i][jQuery(this).attr('name')] != 'undefined')
+					{
+						jQuery(this).val(values_b[i][jQuery(this).attr('name')]);
+						jQuery(this).attr('value' , values_b[i][jQuery(this).attr('name')]);
+					}
+				});
 
-			items++;
-			jQuery('.details-tbody').append(clone).trigger('change');
+				items[number]++;
+				jQuery(this).attr("items" , items);
+				jQuery(this).next(".details").find('.details-tbody').append(clone).trigger('change');
+			}
 		}
-	}
+
+		number++;
+	});
+
 
 	jQuery('.details-new').click(function(){
-		clone = jQuery('.details-append').children('tr').clone(true);
+		var item_number = Number(jQuery(this).parent().prev(".details-parent").attr("item"));
+		clone = jQuery(this).next(".details-tables").find('.details-append').children('tr').clone(true);
 
 		clone.find('[name]').each(function(){
-			jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + items);
+			jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + items[item_number]);
 		});
 
-		items++;
-		jQuery('.details-tbody').append(clone).trigger('change');
-		twice = false;
+		items[item_number]++;
+		jQuery(this).prev().find('.details-tbody').append(clone).trigger('change');
+		twice[item_number] = false;
 	});
 
 	jQuery(document).on('click' , '.details-item-delete' , function(){
-		jQuery(this).parent().parent().remove();
-		jQuery('.details-tbody').trigger('change');
+		var item = jQuery(this).parent().parent();
+		item.remove();
+		item.parent().trigger('change');
 	});
 
 	jQuery('.details-tbody').change(function(){
 		// set Default
-		values = {};
+		var item_number = Number(jQuery(this).parent().parent().prev(".details-parent").attr("item"));
+		values[item_number] = {};
 
 		// Detected Select2
 		jQuery(this).find('.select2-container').remove();
 		jQuery(this).find('.select2-hidden-accessible').removeClass('select2-hidden-accessible');
+
 		jQuery(this).find('select').each(function(){
 			jQuery(this).removeAttr('class');
 			jQuery(this).attr('id' , jQuery(this).attr('name'));
@@ -71,16 +87,16 @@ jQuery(document).ready(function(){
 				tr_arr[jQuery(this).attr('name')] = jQuery(this).val();
 			});
 
-			values[jQuery(this).index()] = tr_arr;
+			values[item_number][jQuery(this).index()] = tr_arr;
 		});
 
 		// Set Value
-		jQuery('.details-parent').val(JSON.stringify(values));
-		jQuery('.details-parent').attr('value' , JSON.stringify(values));
+		jQuery(this).parent().parent().parent().find('.details-parent').val(JSON.stringify(values[item_number]));
+		jQuery(this).parent().parent().parent().find('.details-parent').attr('value' , JSON.stringify(values[item_number]));
 
-		if(!twice){
-			twice = true;
-			jQuery('.details-tbody').trigger('change');
+		if(!twice[item_number]){
+			twice[item_number] = true;
+			jQuery(this).trigger('change');
 		}
 	});
 });

@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	12/05/2015
-	*	last edit		12/08/2015
+	*	last edit		06/09/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -59,8 +59,13 @@ class AllVisitUsersJob Extends Jobs {
 
 			$db->table('users_all_visit')->edit_table('ALTER' , 'auto_increment = 1')->process();
 
-			foreach ($days as $key => $value)
-				$db->table('users_all_visit')->insert(array('date' , 'count' , 'count_all') , array($key , $value['count'] , $value['count_all']))->process();
+			foreach ($days as $key => $value){
+				$db->table('users_all_visit')->select("COUNT(*)" , false)->where('`date` = "' . $key . '"')->process();
+				$count = $db->output("asooc");
+
+				if(isset($count[0]["COUNT(*)"]) || $count[0]["COUNT(*)"] == 0)
+					$db->table('users_all_visit')->insert(array('date' , 'count' , 'count_all') , array($key , $value['count'] , $value['count_all']))->process();
+			}
 
 			$db->table('users_today_visit')->delete()->process();
 		}

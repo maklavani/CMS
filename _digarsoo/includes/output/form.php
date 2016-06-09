@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		07/12/2015
+	*	last edit		04/07/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -87,9 +87,8 @@ class Form {
 
 		echo "\n\t\t\t<form id=\"" . $this->name . "-form\" action=\"" . $this->action . "\" method=\"" . $this->method . "\" ";
 		if(is_array($this->attributes))
-			foreach ($attributes as $key => $value) {
+			foreach ($this->attributes as $key => $value)
 				echo " " . $key . "=\"" . $value . "\"";
-			}
 		echo ">";
 			if(!empty($this->inputs))
 				foreach ($this->inputs as $value) {

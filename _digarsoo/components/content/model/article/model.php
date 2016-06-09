@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/06/2015
-	*	last edit		12/16/2015
+	*	last edit		05/07/2015
 	* --------------------------------------------------------------------------
 */
 
@@ -65,6 +65,7 @@ class ArticleModel extends Model {
 
 		$publish_input = explode("-" , $_POST['field_input_publish_date']);
 		$publish_date = $calendar->get_gregorian($publish_input[0] , $publish_input[1] , $publish_input[2]);
+		$now_time = new DateTime();
 
 		$this->table('article')
 					->insert(
@@ -74,7 +75,7 @@ class ArticleModel extends Model {
 								'create_date' , 'user') , 
 						array(	htmlspecialchars(trim($_POST['field_input_title'])) , $_POST['field_input_status'] , $_POST['field_input_special'] , $_POST['field_input_category'] , $_POST['field_input_permission'] , 
 								htmlentities($_POST['field_input_content']) , $code , $tags , $image , $_POST['field_input_meta_tag'] , 
-								$_POST['field_input_meta_desc'] , htmlspecialchars(trim($_POST['field_input_heading'])) , $setting , Site::$datetime , $publish_date->format('Y-m-d') . " 12:00:01" , 
+								$_POST['field_input_meta_desc'] , htmlspecialchars(trim($_POST['field_input_heading'])) , $setting , Site::$datetime , $publish_date->format('Y-m-d') . $now_time->format(" H:i:s") , 
 								Site::$datetime , User::$id)
 					)->process();
 
@@ -119,6 +120,7 @@ class ArticleModel extends Model {
 
 		$publish_input = explode("-" , $_POST['field_input_publish_date']);
 		$publish_date = $calendar->get_gregorian($publish_input[0] , $publish_input[1] , $publish_input[2]);
+		$now_time = new DateTime();
 
 		$this->table('article')
 				->update(array(
@@ -134,7 +136,7 @@ class ArticleModel extends Model {
 							array("meta_desc" , $_POST['field_input_meta_desc']) , 
 							array("heading" , htmlspecialchars(trim($_POST['field_input_heading']))) , 
 							array("setting" , $setting) , 
-							array("publish_date" , $publish_date->format('Y-m-d') . " 12:00:01") , 
+							array("publish_date" , $publish_date->format('Y-m-d') . $now_time->format(" H:i:s")) , 
 							array("edit_date" , Site::$datetime)
 						)
 				)->where('`id` = ' . $_GET['id'])->process();

@@ -15,11 +15,12 @@ jQuery(document).ready(function(){
 
 	function list_ajax(elm){
 		list = elm.attr('list');
-		jQuery(list).attr('list_change' , ".listajax_field_" + elm.attr('index'));
+		var elm_list = elm.parent().parent().parent().find(list);
+		elm_list.attr('list_change' , ".listajax_field_" + elm.attr('index'));
 
-		if(jQuery(list).length == 1 && jQuery(list).val() != "" && jQuery(list).val() != null){
+		if(elm_list.length == 1 && elm_list.val() != "" && elm_list.val() != null){
 			if((elm.val() == "" || elm.val() == null))
-				ajax_read(elm , elm.attr('ajax') , jQuery(list) , elm.attr('default'));
+				ajax_read(elm , elm.attr('ajax') , elm_list , elm.attr('default'));
 		}
 	}
 

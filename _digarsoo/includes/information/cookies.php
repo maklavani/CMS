@@ -26,7 +26,7 @@ class Cookies {
 	}
 
 	// pak kardane yek cookie
-	public static function remove_cookie($name)
+	public static function delete_cookie($name)
 	{
 		unset($_COOKIE[$name]);
 		return static::set_cookie($name , null , -1);

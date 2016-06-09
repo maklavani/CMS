@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/12/2015
-	*	last edit		12/25/2015
+	*	last edit		06/08/2015
 	* --------------------------------------------------------------------------
 */
 
@@ -115,7 +115,7 @@ class Url_friendlySystem extends SystemPlugins {
 		{
 			foreach ($srcs[1] as $value)
 			{
-				if(mb_strpos($value , Site::$base) === false && mb_strpos($value , 'http://') === false)
+				if(((Site::$base != "/" && mb_strpos($value , Site::$base) === false) || (Site::$base == "/" && mb_strpos($value , Site::$base) > 0)) && mb_strpos($value , 'http://') === false && mb_strpos($value , 'https://') === false && mb_strpos($value , 'data:image/') === false && mb_strpos($value , "download/") == 0)
 				{
 					$src = Site::$base . $value;
 					$buffer = str_replace('src="' . $value . '"' , 'src="' . $src . '"' , $buffer);

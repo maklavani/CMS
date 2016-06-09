@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		01/19/2016
+	*	last edit		06/01/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -89,6 +89,7 @@ class Database extends Configuration {
 		$this->insert = false;
 		$this->delete = false;
 		$this->edit_table = false;
+		$this->query = false;
 
 		return $this;
 	}
@@ -115,6 +116,7 @@ class Database extends Configuration {
 		$this->insert = false;
 		$this->delete = false;
 		$this->edit_table = false;
+		$this->query = false;
 
 		return $this;
 	}
@@ -163,6 +165,7 @@ class Database extends Configuration {
 		$this->update = false;
 		$this->delete = false;
 		$this->edit_table = false;
+		$this->query = false;
 
 		return $this;
 	}
@@ -176,6 +179,7 @@ class Database extends Configuration {
 		$this->update = false;
 		$this->insert = false;
 		$this->edit_table = false;
+		$this->query = false;
 
 		return $this;
 	}
@@ -189,6 +193,7 @@ class Database extends Configuration {
 		$this->update = false;
 		$this->insert = false;
 		$this->delete = false;
+		$this->query = false;
 
 		return $this;
 	}
@@ -197,6 +202,13 @@ class Database extends Configuration {
 	public function query($query = "")
 	{
 		$this->query = str_replace("`#__" , "`" . $this->prefix , $query);
+
+		$this->select = false;
+		$this->update = false;
+		$this->insert = false;
+		$this->delete = false;
+		$this->edit_table = false;
+
 		return $this;
 	}
 

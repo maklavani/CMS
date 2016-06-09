@@ -3,8 +3,13 @@
 	"COM_PROFILE_DESC": "Profile Component Create by Digarsoo",
 
 	"COM_PROFILE_USER": "User",
+
 	"COM_PROFILE_DETAILS": "Details",
 	"COM_PROFILE_EDIT": "Edit",
+	"COM_PROFILE_UPLOADED": "File uploaded successfully.",
+
+	"COM_PROFILE_USERS": "Users",
+	"COM_PROFILE_USERS_SIGNIN": "Signin",
 
 	"COM_PROFILE_USER_FIELD_INPUT_USER": "User",
 	"COM_PROFILE_USER_FIELD_INPUT_NAME": "Name",
@@ -17,8 +22,6 @@
 	"COM_PROFILE_USER_FIELD_INPUT_ADDRESS": "Address",
 	"COM_PROFILE_USER_FIELD_INPUT_FAVORITES": "Favorites",
 
-	"COM_CONTENT_UPLOADED": "File uploaded successfully.",
-
 	"COM_PROFILE_ERROR_EXIST_USERSNAME": "Please enter a valid username another name.",
 	"COM_PROFILE_ERROR_PASSWORD_DOES_NOT_MATCH": "Passwords are not the same.",
 
@@ -27,5 +30,6 @@
 
 	"COM_PROFILE_ERROR_UPLOAD": "Failure to upload files.",
 	"COM_PROFILE_ERROR_RESIZE": "Please re-upload the image cut failed.",
-	"COM_PROFILE_ERROR_RESIZE_SIZE": "Invalid size for the cropped image"
+	"COM_PROFILE_ERROR_RESIZE_SIZE": "Invalid size for the cropped image",
+	"COM_PROFILE_ERROR_LOGIN": "You must first login"
 }

@@ -23,6 +23,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-telegram:before { content: "\e663"; }
+.icon-printer:before { content: "\e662"; }
 .icon-star-empty:before { content: "\e661"; }
 .icon-feed:before { content: "\e660"; }
 .icon-advertisement:before { content: "\e65f"; }

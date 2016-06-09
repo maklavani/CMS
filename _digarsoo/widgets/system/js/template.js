@@ -17,10 +17,15 @@ jQuery(document).ready(function(){
 			type: "GET",
 			url: jQuery('#system').attr('ajax') ,
 			success: function(result){
-				jQuery('.system-percentage').text(result + '%');
-				cpu.shift();
-				cpu[num - 1] = result;
-				create_graph();
+				if(!isNaN(result)){
+					jQuery('.system-percentage').text(result + '%');
+					cpu.shift();
+					cpu[num - 1] = result;
+					create_graph();
+				} else {
+					clearInterval(inter);
+					jQuery('.system-percentage').text("");
+				}
 			}
 		});
 	}
@@ -30,7 +35,12 @@ jQuery(document).ready(function(){
 			type: "GET",
 			url: jQuery('.system-datetime').attr('ajax') ,
 			success: function(result){
-				jQuery('.system-datetime').text(result);
+				if(result.length <= 100)
+					jQuery('.system-datetime').text(result);
+				else {
+					clearInterval(interb);
+					jQuery('.system-datetime').text("connection was closed");
+				}
 			}
 		});	
 	}
@@ -41,13 +51,13 @@ jQuery(document).ready(function(){
 		for (i = 0;i < num + 1;i++){
 			x = parseInt(i * (1000 / num));
 			line = makeSVG('line' , {class: 'line-vertical-system' , x1: x , x2: x , y1: 0 , y2: 200});
-			document.getElementById('system-graph').appendChild(line);
+			jQuery("#system-graph")[0].appendChild(line);
 		}
 
 		for (i = 0;i < 5;i++){
 			y = i * 40;
 			line = makeSVG('line' , {class: 'line-horizontal-system' , x1: 0 , x2: 1000 , y1: y , y2: y});
-			document.getElementById('system-graph').appendChild(line);
+			jQuery("#system-graph")[0].appendChild(line);
 		}
 
 		points_cpu = '0 , 200 ';
@@ -60,7 +70,7 @@ jQuery(document).ready(function(){
 		points_cpu += ' 1000 , 200 0 , 200';
 
 		polygon = makeSVG('polygon' , {class: 'polygon-system' , points: points_cpu});
-		document.getElementById('system-graph').appendChild(polygon);
+		jQuery("#system-graph")[0].appendChild(polygon);
 	}
 
 	function makeSVG(tag , attrs) {

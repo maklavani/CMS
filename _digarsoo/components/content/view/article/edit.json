@@ -26,8 +26,16 @@
 		"setting_comments_confirmation": { "kind": "tf_b" },
 		"setting_code": { "kind": "tf_b" },
 		"setting_article_info": { "kind": "tf_b" },
-		"meta_tag": { "kind": "textarea" },
-		"meta_desc": { "kind": "textarea" },
+		"meta_tag":
+		{
+			"kind": "tinymce",
+			"empty": "true"
+		},
+		"meta_desc":
+		{
+			"kind": "tinymce",
+			"empty": "true"
+		},
 		"tags": { "defined": "false" },
 		"heading":
 		{

@@ -42,5 +42,5 @@ class Messages {
 
 if($messages = Cookies::get_cookie('messages_site')){
 	Messages::set_messages($messages);
-	Cookies::remove_cookie('messages_site');
+	Cookies::delete_cookie('messages_site');
 }

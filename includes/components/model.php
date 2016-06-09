@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		12/04/2015
+	*	last edit		04/06/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -232,13 +232,21 @@ class Model extends Database {
 						$this->build_tree_sort($items , $tree , $value->id , $sort , $sort_order);
 						break;
 					}
+
 	}
 
 	// get with id
-	public function get_with_id($id , $name)
+	public function get_with_id($id , $name , $read_item_check = false)
 	{
 		$this->table($name)->select()->where('`id` = ' . $id)->process();
-		return $this->output();
+		$output = $this->output();
+
+		if(!empty($output) && $read_item_check)
+			foreach ($output as $value)
+				if(isset($value->read_item) && $value->read_item)
+					$this->table($name)->update(array(array("read_item" , 0)))->where('`id` = ' . $value->id)->process();
+
+		return $output;
 	}
 
 	// aya item mad nazar vujud darad
@@ -269,8 +277,7 @@ class Model extends Database {
 	}
 
 	// set kardane block
-	public function set_block($ids , $table)
-	{
+	public function set_block($ids , $table){
 		$total_id = "";
 		$id = explode("," , $ids);
 		$parent = $this->exist_column('parent' , $table);

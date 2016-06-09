@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
 		buttons = jQuery.parseJSON(jQuery(this).parent().attr('buttons'));
 		icons = [];
 		icon_div = '';
-		val = [	'icon-star-empty' , 'icon-feed' , 
+		val = [	'icon-telegram' , 'icon-printer' , 'icon-star-empty' , 'icon-feed' , 
 				'icon-advertisement' , 'icon-aparat' , 'icon-vimeo' , 'icon-youtube' , 'icon-pinterest' , 'icon-twitter' , 'icon-instagram' , 'icon-google-plus' , 
 				'icon-facebook' , 'icon-speaker' , 'icon-laptop' , 'icon-desktop' , 'icon-tablet' , 'icon-mobile' , 'icon-product' , 'icon-digarsoo' , 
 				'icon-mail' , 'icon-telephone' , 'icon-book' , 'icon-cog' , 'icon-money' , 'icon-move' , 'icon-line' , 'icon-eye' , 

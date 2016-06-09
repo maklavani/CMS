@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	08/24/2015
-	*	last edit		01/31/2016
+	*	last edit		02/27/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -183,7 +183,7 @@ class ProfileController extends Controller {
 											if(!in_array($file , array("." , ".." , "index.html" , "." . _COPR)) && !in_array("uploads/" . $details->a . $file , $inners_check))
 												unlink(_SRC . "uploads/" . $details->a . $file);
 
-									echo json_encode(array('status' => true , 'message' => "<div class=\"message xa\"><span class=\"icon-success\"></span>" . Language::_('COM_CONTENT_UPLOADED') . "</div><div class=\"icon-close\"></div>") , JSON_UNESCAPED_UNICODE);
+									echo json_encode(array('status' => true , 'message' => "<div class=\"message xa\"><span class=\"icon-success\"></span>" . Language::_('COM_PROFILE_UPLOADED') . "</div><div class=\"icon-close\"></div>") , JSON_UNESCAPED_UNICODE);
 		  						}
 		  						else
 		  							echo json_encode(array('status' => false , 'message' => "<div class=\"message xa\"><span class=\"icon-error\"></span>" . Language::_('COM_PROFILE_ERROR_RESIZE_SIZE') . "</div><div class=\"icon-close\"></div>") , JSON_UNESCAPED_UNICODE);
@@ -200,25 +200,32 @@ class ProfileController extends Controller {
 	// khandane view
 	public function view($view)
 	{
-		$params = "";
-
-		if(is_array($view) && !empty($view))
+		if(User::$login)
 		{
-			$view_check = str_replace("-" , " " , $view[0]);
+			$params = "";
 
-			if($view_check == Language::_('COM_PROFILE_USER'))
-				Controller::$view = $view = 'user';
-		}
+			if(is_array($view) && !empty($view))
+			{
+				$view_check = str_replace("-" , " " , $view[0]);
 
-		if($view == 'user')
-		{
-			$model = self::model('user');
-			$params = json_encode($model->get_with_id(User::$id , 'users') , JSON_UNESCAPED_UNICODE);
-			View::read($params);
-			Templates::add_css(Site::$base . 'components/profile/css/profile.css');
+				if($view_check == Language::_('COM_PROFILE_USER'))
+					Controller::$view = $view = 'user';
+			}
+
+			if($view == 'user')
+			{
+				$model = self::model('user');
+				$params = json_encode($model->get_with_id(User::$id , 'users') , JSON_UNESCAPED_UNICODE);
+				View::read($params);
+			}
+			else
+				Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
 		}
 		else
-			Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
+		{
+			Messages::add_message('error' , Language::_('COM_PROFILE_ERROR_LOGIN'));
+			Site::goto_link(Site::$base . Language::_('COM_PROFILE_USERS') . '/' . str_replace(" " , "-" , Language::_('COM_PROFILE_USERS_SIGNIN')));
+		}
 	}
 
 	//check kardane form
