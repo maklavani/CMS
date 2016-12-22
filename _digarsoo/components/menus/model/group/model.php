@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		10/03/2016
+	*	last edit		12/22/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -68,7 +68,7 @@ class GroupModel extends Model {
 		$this->insert(	array(	'name' , 'status' , 'type' , 'link' , 'languages' , 'parent' , 'group_number' , 
 								'permission' , 'index_number' , 'icon' , 'homepage' , 'meta_tag' , 'meta_description' , 'setting' , 
 								'location') , 
-						array(	trim($_POST['field_input_name']) , $_POST['field_input_status'] , $_POST['field_input_type'] , htmlentities($_POST['field_input_link'] , ENT_COMPAT | ENT_QUOTES , "UTF-8") , $_POST['field_input_languages'] , $_POST['field_input_parent'] , $group[0]->id , 
+						array(	trim($_POST['field_input_name']) , $_POST['field_input_status'] , $_POST['field_input_type_link'] , htmlentities($_POST['field_input_link_link'] , ENT_COMPAT | ENT_QUOTES , "UTF-8") , $_POST['field_input_languages'] , $_POST['field_input_parent'] , $group[0]->id , 
 								$_POST['field_input_permission'] , $_POST['field_input_index'] , $_POST['field_input_icon'] , 0 , htmlentities($_POST['field_input_meta_tag']) , htmlentities($_POST['field_input_meta_description']) , htmlspecialchars(json_encode($setting , JSON_UNESCAPED_UNICODE)) , 
 								$group[0]->location));
 		$this->process();
@@ -100,8 +100,8 @@ class GroupModel extends Model {
 		$this->table('menu');
 		$this->update(	array(
 							array('name' , $_POST['field_input_name']) , 
-							array('type' , $_POST['field_input_type']) , 
-							array('link' , htmlentities($_POST['field_input_link'] , ENT_COMPAT | ENT_QUOTES , "UTF-8")) , 
+							array('type' , $_POST['field_input_type_link']) , 
+							array('link' , htmlentities($_POST['field_input_link_link'] , ENT_COMPAT | ENT_QUOTES , "UTF-8")) , 
 							array('languages' , $_POST['field_input_languages']) , 
 							array('parent' , $_POST['field_input_parent']) , 
 							array('permission' , $_POST['field_input_permission']) , 

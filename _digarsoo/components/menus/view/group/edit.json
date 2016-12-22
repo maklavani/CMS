@@ -12,12 +12,12 @@
 			"kind": "text_with_space_utf8",
 			"empty": "true"
 		},
-		"type":
+		"type_link":
 		{
 			"kind": "text",
 			"empty": "true"
 		},
-		"link":
+		"link_link":
 		{
 			"kind": "link",
 			"empty": "true"
