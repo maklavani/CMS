@@ -1,4 +1,6 @@
 {
 	"PLG_CAPTCHA_WAVE": "Wave Captcha",
-	"PLG_CAPTCHA_WAVE_DESC": "Wave Captcha Plugin Create by Digarsoo"
+	"PLG_CAPTCHA_WAVE_DESC": "Wave Captcha Plugin Create by Digarsoo",
+
+	"PLG_CAPTCHA_WAVE_NOT_ROBOT": "I'm not a robot, enter the phrase"
 }

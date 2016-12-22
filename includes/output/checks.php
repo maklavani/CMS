@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		04/05/2016
+	*	last edit		11/08/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -100,7 +100,7 @@ class Checks {
 	// ansi_kind
 	public function ansi_kind($text , $field)
 	{
-		if(Regex::cs($text , 'ansi'))
+		if($text == "0" || Regex::cs($text , 'ansi'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_ANSI') , Language::_(strtoupper($this->component . $field))));
@@ -110,7 +110,7 @@ class Checks {
 	// utf8_kind
 	public function utf8_kind($text , $field)
 	{
-		if(Regex::cs($text , 'utf8'))
+		if($text == "0" || Regex::cs($text , 'utf8'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_UTF8') , Language::_(strtoupper($this->component . $field))));
@@ -120,7 +120,7 @@ class Checks {
 	// numeric_kind
 	public function numeric_kind($text , $field)
 	{
-		if($text == 0 || Regex::cs($text , 'numeric'))
+		if($text == "0" || Regex::cs($text , 'numeric'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_NUMERIC') , Language::_(strtoupper($this->component . $field))));
@@ -130,7 +130,7 @@ class Checks {
 	// text_kind
 	public function text_kind($text , $field)
 	{
-		if(Regex::cs($text , 'text'))
+		if($text == "0" || Regex::cs($text , 'text'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEXT') , Language::_(strtoupper($this->component . $field))));
@@ -140,7 +140,7 @@ class Checks {
 	// text_utf8_kind
 	public function text_utf8_kind($text , $field)
 	{
-		if(Regex::cs($text , 'text_utf8'))
+		if($text == "0" || Regex::cs($text , 'text_utf8'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEXT_UTF8') , Language::_(strtoupper($this->component . $field))));
@@ -150,7 +150,7 @@ class Checks {
 	// text_with_space_kind
 	public function text_with_space_kind($text , $field)
 	{
-		if(Regex::cs($text , 'text_with_space'))
+		if($text == "0" || Regex::cs($text , 'text_with_space'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEXT_WITH_SPACE') , Language::_(strtoupper($this->component . $field))));
@@ -160,7 +160,7 @@ class Checks {
 	// text_with_space_kind
 	public function text_with_space_utf8_kind($text , $field)
 	{
-		if(Regex::cs($text , 'text_with_space_utf8'))
+		if($text == "0" || Regex::cs($text , 'text_with_space_utf8'))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEXT_WITH_SPACE_UTF8') , Language::_(strtoupper($this->component . $field))));
@@ -272,7 +272,7 @@ class Checks {
 	// textarea_kind
 	public function textarea_kind($text , $field)
 	{
-		if(preg_match('/^[a-zA-Z0-9\pL\s_\-+,!@#$%]*$/iu' , $text))
+		if(preg_match('/^[a-zA-Z0-9\pL\pN\pPd\s_\-+,!@#$%\*\.\(\)]*$/iu' , $text))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEXTAREA') , Language::_(strtoupper($this->component . $field))));

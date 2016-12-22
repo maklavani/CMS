@@ -1,4 +1,6 @@
 {
 	"PLG_CAPTCHA_MATH": "Math Captcha",
-	"PLG_CAPTCHA_MATH_DESC": "Math Captcha Plugin Create by Digarsoo"
+	"PLG_CAPTCHA_MATH_DESC": "Math Captcha Plugin Create by Digarsoo",
+
+	"PLG_CAPTCHA_MATH_NOT_ROBOT": "I'm not a robot, enter the phrase"
 }

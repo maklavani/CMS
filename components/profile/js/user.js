@@ -98,10 +98,219 @@ jQuery(document).ready(function(){
 	});
 
 	jQuery(document).on('click' , '.save-resize' , upload_done);
+
 	jQuery(document).on('click' , '.cancel-resize' , function(){
 		jQuery('#wrapper').removeClass('blur');
 		jQuery('.popup-image-resize').remove();
 	});
+
+	// Location
+	var $userLocation = jQuery(".user-location");
+	var $userList = $userLocation.find(".user-location-list");
+	var $userItems = $userList.find(".user-location-list-items");
+	var $userSelect = $userList.find(".user-location-list-select");
+	var $section = $userLocation.find("[name=\"location-section\"]");
+	var code = "";
+	var stepChange = true;
+	var timer = false;
+
+	// Init
+	ajaxRead($userItems , $userSelect);
+
+	jQuery(".user-location-button").click(function(){
+		if(!jQuery(this).hasClass("active")){
+			$userLocation.addClass("list-close").removeClass("list-open");
+			$userList.addClass("active");
+			jQuery(this).addClass("active");
+		}
+
+		if($userLocation.hasClass("list-close")){
+			if(stepChange)
+				ajaxRead($userItems , $userSelect);
+			else
+				$userLocation.addClass("list-open").removeClass("list-close");
+		} else
+			$userLocation.addClass("list-close").removeClass("list-open");
+	});
+
+
+	// Click on Item List
+	jQuery(document).on("click" , ".user-location-list-items .location-item" , function(){
+		var elm  = jQuery(this);
+
+		if(!elm.hasClass("hide")){
+			var item_code = elm.attr("code");
+			var text = elm.text();
+			var sectionValue = $section.val();
+
+			if(item_code != 0){
+				if(sectionValue != "neighborhood"){
+					// Location List
+					stepChange = true;
+					code = item_code;
+					$userSelect.find(".user-search").before("<div class=\"location-item xa s22 m125 l2\" section=\"" + $section.val() + "\" code=\"" + item_code + "\"><span class=\"xa\">" + text + "</span></div>");
+
+					elm.addClass("active");
+
+					if(sectionValue == "")
+						$section.val("province");
+					else if(sectionValue == "province")
+						$section.val("city");
+					else if(sectionValue == "city")
+						$section.val("neighborhood");
+					
+					ajaxRead($userItems , $userSelect);
+				} else {
+					if($userItems.find(".location-item.active").length && $userItems.find(".location-item.active").attr("code") != 0)
+						appendTextToLocation(true , text);
+					else 
+						appendTextToLocation(false , text);
+
+					$userItems.find(".location-item.active").removeClass("active");
+					elm.addClass("active");
+					$userLocation.addClass("list-close").removeClass("list-open");
+					updateValue($userSelect , $userItems);
+				}
+			} else {
+				if(!elm.hasClass("active"))
+				{
+					var size = $userSelect.find(".location-item").size();
+					$userItems.find(".location-item.active").removeClass("active");
+					elm.addClass("active");
+					jQuery(".user-location-button.active .user-location-text").find("span").eq(size).nextAll().remove();
+					jQuery(".user-location-button.active .user-location-text").find("span").eq(size).removeClass("hide");
+					updateValue($userSelect , $userItems);
+				}
+
+				$userLocation.addClass("list-close").removeClass("list-open");
+			}
+		}
+	});
+
+	// Click on Item Select
+	jQuery(document).on("click" , ".user-location-list-select .location-item" , function(){
+		var elm = jQuery(this);
+		var sectionAttr = elm.attr("section");
+		var ind = elm.index();
+
+		jQuery(".user-location-button.active .user-location-text").find("span").eq(ind + 1).nextAll().remove();
+		jQuery(".user-location-button.active .user-location-text").find("span").eq(ind + 1).remove();
+		jQuery(".user-location-button.active .user-location-text").find("span:last-child").removeClass("hide");
+
+		elm.nextAll().each(function(){
+			if(jQuery(this).hasClass("location-item"))
+				jQuery(this).remove();
+		});
+
+		$section.val(sectionAttr);
+		if(elm.prev().length)
+			code = elm.prev().attr("code");
+
+		elm.remove();
+		if(ind)
+			jQuery(".user-location-button.active .user-location-text").find("span").eq(ind).remove();
+
+		ajaxRead($userItems , $userSelect);
+	});
+
+	// Search on list Item
+	jQuery(document).on("keyup" , ".user-location-list.active .user-search input" , function(e){
+		clearTimeout(timer);
+
+		timer = setTimeout(function(){
+			var textSearch = $userSelect.find(".user-search input").val().toLowerCase();
+			
+			$userItems.find(".location-item").each(function(){
+				var textItem = jQuery(this).text();
+				jQuery(this).removeClass("search-hide");
+				
+				if(textSearch == ""){
+					jQuery(this).find("span").text(textItem);
+				} else {
+					if(textItem.toLowerCase().indexOf(textSearch) >= 0)
+						jQuery(this).find("span").html(textItem.replace(textSearch , "<small>" + textSearch + "</small>"));
+					else
+						jQuery(this).addClass("search-hide");
+				}
+			});
+		} , 500);
+	});
+
+	function ajaxRead($ajaxItems , $ajaxSelect){
+		jQuery.ajax({
+			type: "GET",
+			url: $userLocation.attr('ajax'),
+			data: {
+				section: $section.val(),
+				code: code
+			},
+			beforeSend: function(){ $userLocation.addClass("list-open").removeClass("list-close"); },
+			success: function(result){
+				if(result)
+					result = jQuery.parseJSON(result);
+
+				if(result.status && result.items && result.status == true){
+					var secondAppend = 1;
+
+					if($ajaxItems.find(".location-item.active").length){
+						secondAppend = 1000;
+						$ajaxItems.find(".location-item").addClass("hide");
+					}
+					
+					setTimeout(function(){
+						stepChange = false;
+						$ajaxItems.empty();
+						$userLocation.addClass("list-open").removeClass("list-close");
+
+						jQuery.each(result.items , function(ind , item){
+							$ajaxItems.append("<div class=\"location-item xa s5 m33\" code=\"" + item.code + "\"><span class=\"xa\">" + item.title + "</span></div>");
+						});
+
+						$ajaxItems.find(".location-item[code='0']").addClass("active");
+					} , secondAppend);
+
+					if(result.text)
+						appendTextToLocation(false , result.text , $ajaxSelect.find(".location-item").last().text());
+
+					updateValue($ajaxSelect , $ajaxItems);
+				}
+			},
+			error: function(result){}
+		});
+	}
+
+	function appendTextToLocation(lastRemove , text , pretext){
+		var $buttonItem = jQuery(".user-location-button .user-location-text");
+		$buttonItem.find("span").addClass("hide");
+
+		if(lastRemove)
+			$buttonItem.find("span:last-child").remove();
+		if(text)
+			$buttonItem.append("<span><h3>" + text + "</h3></span>");
+		if(pretext)
+			$buttonItem.find("span").last().prepend("<small>" + pretext + ", </small> ");
+	}
+
+	function updateValue($updateSelect , $updateItems){
+		$userLocation.find("[name=\"field_input_province\"]").val("");
+		$userLocation.find("[name=\"field_input_city\"]").val("");
+		$userLocation.find("[name=\"field_input_neighborhood\"]").val("");
+
+		$updateSelect.find(".location-item").each(function(){
+			$userLocation.find("[name=\"field_input_" + jQuery(this).attr("section") + "\"]").val(jQuery(this).attr("code")).trigger("change");
+		});
+
+		if($updateItems.find(".location-item.active").length && $updateItems.find(".location-item.active").attr("code") != 0 && !$updateItems.find(".location-item.active").hasClass("hide"))
+			$userLocation.find("[name=\"field_input_neighborhood\"]").val($updateItems.find(".location-item.active").attr("code")).trigger("change");
+
+		$updateSelect.find(".user-search input").val("");
+
+		$updateItems.find(".location-item").each(function(){
+			var textItem = jQuery(this).text();
+			jQuery(this).removeClass("search-hide");
+			jQuery(this).find("span").text(textItem);
+		});
+	}
 });
 
 function upload_start(name){

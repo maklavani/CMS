@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/04/2015
-	*	last edit		12/03/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -33,7 +33,7 @@ $db->table('widgets')->where('`type` = "menu"')->select()->process();
 $widgets = $db->output();
 
 foreach ($params as $key => $value) {
-	$db->table('menu')->where('`group` = ' . $value->id)->select()->process();
+	$db->table('menu')->where('`group_number` = ' . $value->id)->select()->process();
 	$menus = $db->output();
 	$hide = 0;
 	$show = 0;

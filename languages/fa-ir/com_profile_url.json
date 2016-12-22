@@ -1,7 +1,7 @@
 {
 	"COM_PROFILE_COMPONENT_PROFILE": "مشخصات",
-	"COM_PROFILE_VIEW_USER": "کاربر",
 	"COM_PROFILE_ACTION_EDIT": "ویرایش",
+	"COM_PROFILE_VIEW_USER": "کاربر",
 
 	"COM_PROFILE_PROFILE_USER": {
 		"0": "component",

@@ -1,0 +1,12 @@
+{
+	"check":
+	{
+		"status": { "kind": "tf" },
+		"redirect_to":
+		{
+			"min": "1",
+			"max": "500",
+			"kind": "url"
+		}
+	}
+}

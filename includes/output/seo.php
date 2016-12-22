@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	12/21/2015
-	*	last edit		01/10/2016
+	*	last edit		11/16/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -32,13 +32,23 @@ class SEO {
 		{
 			if(Configuration::$analytics != "")
 				$output .= "<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','" . Site::$base . "media/js/library/analytics.js','ga');
-			ga('create', '" . Configuration::$analytics . "', 'auto');
-			ga('send', 'pageview');
-\t\t</script>";
+			function gaTracker(id){
+				jQuery.getScript('" . Site::$base . "media/js/library/analytics.js');
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create' , id , 'auto');
+				ga('send', 'pageview');
+			}
+
+			gaTracker('" . Configuration::$analytics . "');
+			ga('send' , 'pageview');
+
+			function gaTrack(path , title) {
+				ga('set', {page: path , title: title});
+				ga('send' , 'pageview');
+			}
+
+			gaTrack(window.location.pathname , document.title);
+		</script>\n";
 
 			if(Configuration::$tag_manager != "")
 			{

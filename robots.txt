@@ -10,9 +10,7 @@ Disallow: /components/
 Disallow: /container/
 Disallow: /includes/
 Disallow: /languages/
-Disallow: /media/
 Disallow: /plugins/
 Disallow: /temp/
-Disallow: /templates/
 Disallow: /uploads/
 Disallow: /widgets/

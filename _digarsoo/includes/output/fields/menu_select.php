@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Makalvani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		12/03/2015
+	*	last edit		10/06/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -25,10 +25,10 @@ class Menu_selectField {
 
 		if(!empty($menus))
 			foreach ($menus as $key => $value) {
-				$db->table('menu')->where('`group` = ' . $value->id)->order('`index` ASC , `parent` ASC')->select()->process();
+				$db->table('menu')->where('`group_number` = ' . $value->id)->order('`index_number` ASC , `parent` ASC')->select()->process();
 				$menu = $db->output('assoc');
 
-				static::$menus[$key] = array('node' => array('name' => Language::_($value->name) , 'parent' => -1 , 'index' => 0) , 'child' => array() , 'class' => 'level-0');
+				static::$menus[$key] = array('node' => array('name' => Language::_($value->name) , 'parent' => -1 , 'index_number' => 0) , 'child' => array() , 'class' => 'level-0');
 				if(!empty($menu))
 					static::create_menu($menu , static::$menus[$key]['child'] , 0 , 0);
 			}
@@ -71,7 +71,7 @@ class Menu_selectField {
 				if(isset($value['node']['id']))
 					$output .= "item=\"" . $value['node']['id'] . "\"";
 
-				$output .= " parent=\"" . $value['node']['parent'] . "\" index=\"" . $value['node']['index'] . "\">";
+				$output .= " parent=\"" . $value['node']['parent'] . "\" index=\"" . $value['node']['index_number'] . "\">";
 				$output .= "<input class=\"select_checkbox\" type=\"checkbox\"><div class=\"select_button\">" . Language::_($value['node']['name']) . '</div>';
 
 				if($outputb != '')

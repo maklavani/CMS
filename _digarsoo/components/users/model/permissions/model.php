@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/09/2015
-	*	last edit		12/04/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -44,7 +44,7 @@ class PermissionsModel extends Model {
 
 	public function get_lock_permissions_id()
 	{
-		$this->table('permissions')->where('`lock` = 1')->select()->process();
+		$this->table('permissions')->where('`lock_key` = 1')->select()->process();
 		$ids = $this->output();
 		
 		$id = array();

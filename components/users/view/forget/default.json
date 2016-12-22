@@ -1,40 +1,7 @@
 {
 	"check":
 	{
-		"1":
-		{
-			"min": "2",
-			"max": "254",
-			"kind": "text_utf8",
-			"length": "even"
-		},
-		"2":
-		{
-			"min": "2",
-			"max": "254",
-			"kind": "text_utf8",
-			"length": "odd"
-		},
-		"3":
-		{
-			"min": "5",
-			"max": "254",
-			"kind": "text",
-			"length": "2n",
-			"utf_8": "true"
-		},
-		"4": { "kind": "email" },
-		"5":
-		{
-			"min": "6",
-			"max": "32",
-			"kind": "password"
-		},
-		"6":
-		{
-			"min": "6",
-			"max": "32",
-			"kind": "password"
-		}
+		"1": { "kind": "email" },
+		"2": { "kind": "captcha" }
 	}
 }

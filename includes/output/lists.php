@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/29/2015
-	*	last edit		07/04/2015
+	*	last edit		09/22/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -32,7 +32,7 @@ class Lists {
 	{
 		Templates::package('table');
 
-		echo "\n\t\t\t<form id=\"" . strtolower($this->name) . "-form\" class=\"xa\" action=\"" . $this->action . "\" method=\"" . $this->method . "\" result=\"" . Language::_('RESULT_FOUND') . "\" error-one-select=\"" . Language::_('ERROR_ONE_SELECT') . "\" error-more-select=\"" . Language::_('ERROR_MORE_SELECT') . "\" error-confirm-delete=\"" . Language::_('ERROR_CONFIRM_DELETE') . "\">";
+		echo "\n\t\t\t<form id=\"" . strtolower($this->name) . "-form\" class=\"xa\" action=\"" . $this->action . "\" class=\"xa\" method=\"" . $this->method . "\" result=\"" . Language::_('RESULT_FOUND') . "\" error-one-select=\"" . Language::_('ERROR_ONE_SELECT') . "\" error-more-select=\"" . Language::_('ERROR_MORE_SELECT') . "\" error-confirm-delete=\"" . Language::_('ERROR_CONFIRM_DELETE') . "\">";
 
 			echo "\n\t\t\t\t<table class=\"xa\">";
 				echo "\n\t\t\t\t\t<thead>";

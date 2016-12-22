@@ -3,7 +3,7 @@
 	"LANG_PERSIAN_DESC": "زبان فارسی ساخته شده توسط دیگرسو",
 
 	"SITE_COPYRIGHT": "دیگرسو",
-	"SITE_COPYRIGHT_DESC": "طراحی و ساخت دیگرسو",
+	"SITE_COPYRIGHT_DESC": "طراحی و سئو سایت دیگرسو",
 	"SITE_COPYRIGHT_POWERED": "قدرت گرفته از دیگرسو",
 
 	"HOME": "صفحه اصلی",
@@ -133,6 +133,7 @@
 	"NOT_INSERT": "چیزی هنوز ثبت نشده است.",
 	"PROGRAMMER": "برنامه نویس",
 	"PUBLIC": "عمومی",
+	"REDIRECTS": "ارجاع",
 	"REGISTERED": "ثبت نام کرده",
 	"RENAME": "تغییر نام",
 	"RESULT_FOUND": " عدد پیدا شده است",

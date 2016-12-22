@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	12/21/2015
-	*	last edit		01/19/2016
+	*	last edit		11/17/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -83,11 +83,77 @@ class SeoJob Extends Jobs {
 									$component = new $class();
 									$component->run();
 
-									fwrite($sitemap , "\t<sitemap>\n\t\t");
-									fwrite($sitemap , "<loc>" . $component->get_location() . "</loc>\n\t\t");
-									fwrite($sitemap , "<lastmod>" . $component->get_last_mod() . "</lastmod>\n\t\t");
-									fwrite($sitemap , "<priority>1</priority>\n\t");
-									fwrite($sitemap , "</sitemap>\n");
+									// Check Max Size
+									$src = str_replace(Site::get_address_site() , "" , $component->get_location());
+									$number_file = 1;
+
+									if(System::has_file($src) && $src == "sitemaps/advertisement_category.xml")
+									{
+										$size = filesize(_SRC_SITE . $src);
+										$max_size = 10485760;
+										$number_file = (int)($size / $max_size) + 1;
+									}
+
+									if($number_file == 1)
+									{
+										fwrite($sitemap , "\t<sitemap>\n\t\t");
+										fwrite($sitemap , "<loc>" . $component->get_location() . "</loc>\n\t\t");
+										fwrite($sitemap , "<lastmod>" . $component->get_last_mod() . "</lastmod>\n\t\t");
+										fwrite($sitemap , "</sitemap>\n");
+									}
+									else
+									{
+										$xml_file = simplexml_load_string(file_get_contents(_SRC_SITE . $src));
+										$number_url = count($xml_file);
+
+										$number_url_of_file = (int)($number_url / $number_file) + ((int)($number_url / $number_file) < ($number_url / $number_file) ? 1 : 0);
+										$number_url_out = 0;
+
+										if($number_url)
+										{
+											$xml_arr = array();
+											foreach ($xml_file->url as $url)
+												$xml_arr[] = $url;
+
+											for($i = 1; $i < $number_file + 1; $i++)
+											{
+												$file = str_replace(".xml" , "_" . $i . ".xml" , $src);
+
+												fwrite($sitemap , "\t<sitemap>\n\t\t");
+												fwrite($sitemap , "<loc>" . Site::get_address_site() . $file . "</loc>\n\t\t");
+												fwrite($sitemap , "<lastmod>" . $component->get_last_mod() . "</lastmod>\n\t\t");
+												fwrite($sitemap , "</sitemap>\n");
+
+												if(!System::has_file($file) || (!isset($component->create_new_sub_file) || $component->create_new_sub_file))
+												{
+													// Delete File
+													System::delete_files(array($file));
+
+													// Open Sitemap Child File
+													$sitemap_child = fopen(_SRC_SITE . $file , "w");
+													fwrite($sitemap_child , "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n"); 
+
+													for($j = 0; $j < $number_url_of_file; $j++ , $number_url_out++)
+														if($number_url_out < $number_url)
+														{
+															$txt = "";
+															foreach ($xml_arr[$number_url_out] as $xml_arr_key => $xml_arr_item)
+																$txt .= "\n\t\t<" . $xml_arr_key . ">" . $xml_arr_item . "</" . $xml_arr_key . ">";
+
+															fwrite($sitemap_child , "\t<url>" . $txt . "\n\t</url>\n");
+														}
+														else
+															break;
+
+													// Close Sitemap Child File
+													fwrite($sitemap_child , "</urlset>");
+													fclose($sitemap_child);
+												}
+												else
+													$number_url_out += $number_url_of_file;
+											}
+										}
+									}
 								}
 							}
 					}

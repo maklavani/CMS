@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/04/2015
-	*	last edit		12/24/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -29,14 +29,14 @@ foreach ($language as $value)
 	$languages[$value->label] = Language::_($value->label);
 
 // menus
-$db->table('menu')->where('`group` = ' . $params[0]->group)->order('`index` ASC , `parent` ASC')->select()->process();
+$db->table('menu')->where('`group_number` = ' . $params[0]->group_number)->order('`index_number` ASC , `parent` ASC')->select()->process();
 $menu = $db->output();
 
 $menus = array();
 if($menu)
 	foreach($menu as $value)
 		if($value->id != $params[0]->id && $value->parent != $params[0]->id)
-			$menus[$value->id] = array('name' => Language::_($value->name) , 'parent' => $value->parent , 'index' => $value->index);
+			$menus[$value->id] = array('name' => Language::_($value->name) , 'parent' => $value->parent , 'index' => $value->index_number);
 
 require_once _INC . 'output/fields.php';
 
@@ -57,7 +57,7 @@ $category = array(
 					6 => array('type' => 'icons' , 'name' => 'icon' , 'default' => $params[0]->icon)
 				);
 
-$position = array(0 => array('type' => 'menu_position' , 'name' => 'position' , 'default' => array('parent' => $params[0]->parent , 'index' => $params[0]->index) , 'children' => $menus));
+$position = array(0 => array('type' => 'menu_position' , 'name' => 'position' , 'default' => array('parent' => $params[0]->parent , 'index' => $params[0]->index_number) , 'children' => $menus));
 $setting = json_decode(htmlspecialchars_decode($params[0]->setting));
 
 $show = array(

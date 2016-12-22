@@ -6,7 +6,6 @@
 	"WID_LOGIN_SIGNUP": "Signup",
 	"WID_LOGIN_HELLO": "Hello",
 
-	"WID_LOGIN_TRANSACTIONS": "Transactions",
 	"WID_LOGIN_USER": "User",
 	"WID_LOGIN_LOGOUT": "Logout"
 }

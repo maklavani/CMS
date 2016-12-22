@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/28/2015
-	*	last edit		01/25/2016
+	*	last edit		11/05/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -221,16 +221,42 @@ class Preload {
 						else if($menu[0]->homepage)
 							$has_component = true;
 
-						self::$active_menu_group_homepage = $menu[0]->group;
+						self::$active_menu_group_homepage = $menu[0]->group_number;
 						self::$active_menu_homepage = $menu[0]->id;
 					}
 				}
+
 				if(!$has_component && isset($checks[0]) && Regex::cs($checks[0] , "text_utf8"))
 				{
 					$db->table('components')->where('`status` = 0 AND `location` = "' . _LOC . '"')->select()->process();
 					$components = $db->output();
 
 					if(!empty($components))
+					{
+						$found_component = false;
+
+						foreach ($components as $value)
+							if(User::has_permission($value->permission))
+							{
+								$language = array();
+
+								if(System::has_file('languages/' . Language::$lang . '/com_' . $value->type . '_url.json'))
+									foreach (json_decode(file_get_contents(_LANG . Language::$lang . '/com_' . $value->type . '_url.json')) as $keyb => $valueb)
+										$language[$keyb] = $valueb;
+
+								if(in_array(str_replace("-" , " " , $checks[0]) , $language) || $checks[0] == $value->type)
+									$found_component = true;
+							}
+
+						if(!$found_component)
+						{
+							$_POST['not_found_page'] = true;
+							$checks[0] = Language::_("ADVERTISEMENT");
+						}
+					}
+
+					if(!empty($components))
+					{
 						foreach ($components as $value)
 							if(User::has_permission($value->permission))
 							{
@@ -250,7 +276,7 @@ class Preload {
 									Components::$name = $value->type;
 									Components::$permission_id = $value->permission;
 									Components::$location = $value->location;
-									Components::$setting = json_decode(htmlspecialchars_decode($value->setting));;
+									Components::$setting = json_decode(htmlspecialchars_decode($value->setting));
 
 									array_shift($checks);
 									$view = "check";
@@ -267,6 +293,7 @@ class Preload {
 									break;
 								}
 							}
+					}
 				}
 			}
 
@@ -295,7 +322,7 @@ class Preload {
 							break;
 						}
 
-				self::$active_menu_group_homepage = $menu_active->group;
+				self::$active_menu_group_homepage = $menu_active->group_number;
 				self::$active_menu_homepage = $menu_active->id;
 
 				// set kardane title
@@ -317,7 +344,38 @@ class Preload {
 			{
 				// set kardane peyghame error
 				self::$error = true;
-				Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
+
+				$db = New Database;
+				$db->table("components")->select(array("setting"))->where("`type` = 'redirects' AND `location` = 'administrator'")->process();
+				$setting = $db->output();
+
+				if(!empty($setting[0]))
+				{
+					$setting = json_decode(htmlspecialchars_decode($setting[0]->setting));
+
+					if(isset($setting->redirects->setting_status) && !$setting->redirects->setting_status)
+					{
+						$db->table("redirects")->select()->where("`url` = '" . Site::$full_link_text . "'")->process();
+						$redirect = $db->output();
+
+						if(!empty($redirect[0]))
+						{
+							$db->table("redirects")->update(array(array("views" , $redirect[0]->views + 1)))->where("`id` = " . $redirect[0]->id)->process();
+
+							if(!$redirect[0]->status && !empty($redirect[0]->redirect_to))
+								Site::goto_link($redirect[0]->redirect_to);
+						}
+						else
+						{
+							Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
+							$db->table("redirects")->insert(array('url' , 'views' , 'update_date' , 'create_date') , array(Site::$full_link_text , 1 , Site::$datetime , Site::$datetime))->process();
+						}
+					}
+					else
+						Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
+				}
+				else
+					Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
 			}
 		}
 	}

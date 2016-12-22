@@ -1,0 +1,35 @@
+{
+	"type": "component",
+	"location": "site",
+	"method": "upgrade",
+
+	"name": "redirects",
+	"creation_date": "October 03 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_REDIRECTS_DESC",
+
+	"permission": "5",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "redirects.php"
+	},
+
+	"folders": {},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_redirects.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_redirects.json"
+		}
+	}
+}

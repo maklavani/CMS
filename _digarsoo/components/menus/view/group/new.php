@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/04/2015
-	*	last edit		12/21/2015
+	*	last edit		10/06/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -29,13 +29,13 @@ foreach ($language as $value)
 	$languages[$value->label] = Language::_($value->label);
 
 // menus
-$db->table('menu')->where('`group` = ' . $params[0]->id)->order('`index` ASC , `parent` ASC')->select()->process();
+$db->table('menu')->where('`group_number` = ' . $params[0]->id)->order('`index_number` ASC , `parent` ASC')->select()->process();
 $menu = $db->output();
 
 $menus = array();
 if($menu)
 	foreach($menu as $value)
-		$menus[$value->id] = array('name' => Language::_($value->name) , 'parent' => $value->parent , 'index' => $value->index);
+		$menus[$value->id] = array('name' => Language::_($value->name) , 'parent' => $value->parent , 'index' => $value->index_number);
 
 require_once _INC . 'output/fields.php';
 

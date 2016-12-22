@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		01/30/2016
+	*	last edit		09/28/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -19,7 +19,7 @@ class UserModel extends Model {
 
 	public function update_users()
 	{
-		$code = $_POST['field_input_code'];
+		$code = User::$code;
 
 		if($_POST['field_input_password'] != "")
 		{
@@ -36,7 +36,21 @@ class UserModel extends Model {
 			$this->process();
 		}
 
-		$profile = array('tel' => $_POST['field_input_tel'] , 'address' => $_POST['field_input_address'] , 'favorites' => $_POST['field_input_favorites']);
+
+		$escapers = array("\\" , "/" , "\"" , "\n" , "\r" , "\t" , "\x08" , "\x0c");
+		$replacements = array("\\\\" , "\\/" , "\\\"" , "\\n" , "\\r" , "\\t" , "\\f" , "\\b");
+
+		$profile = array('tel' => $_POST['field_input_tel'] , 'address' => str_replace($escapers , $replacements , $_POST['field_input_address']) , 'favorites' => str_replace($escapers , $replacements , $_POST['field_input_favorites']) , 'province' => $_POST['field_input_province'] , 'city' => $_POST['field_input_city'] , 'neighborhood' => $_POST['field_input_neighborhood']);
+
+		if(in_array(User::$group , array(1 , 2 , 3 , 4 , 7)))
+		{
+			$profile['legal_name'] = $_POST['field_input_legal_name'];
+			$profile['legal_manager'] = $_POST['field_input_legal_manager'];
+			$profile['legal_register_number'] = $_POST['field_input_legal_register_number'];
+			$profile['legal_tel'] = $_POST['field_input_legal_tel'];
+			$profile['legal_fax'] = $_POST['field_input_legal_fax'];
+			$profile['legal_address'] = str_replace($escapers , $replacements , $_POST['field_input_legal_address']);
+		}
 
 		$this->table('users');
 		$this->update(	array(

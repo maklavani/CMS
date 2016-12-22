@@ -15,8 +15,8 @@
 		},
 		"username":
 		{
-			"min": "1",
-			"max": "254",
+			"min": "6",
+			"max": "100",
 			"kind": "username"
 		},
 		"password":
@@ -27,15 +27,22 @@
 			"empty": "true"
 		},
 		"repassword":
-		{ 
+		{
 			"min": "6",
 			"max": "32",
 			"kind": "password",
 			"empty": "true"
 		},
-		"mobile": { "kind": "tel_b" },
+		"mobile":
+		{
+			"min": "11",
+			"max": "11",
+			"kind": "tel_b"
+		},
 		"tel":
 		{
+			"min": "4",
+			"max": "15",
 			"kind": "tel_b",
 			"empty": "true"
 		},
@@ -49,6 +56,45 @@
 			"kind": "textarea",
 			"empty": "true"
 		},
-		"code": { "defined": "true" }
+		"legal_name":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8",
+			"empty": "true"
+		},
+		"legal_manager":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8",
+			"empty": "true"
+		},
+		"legal_register_number":
+		{
+			"min": "1",
+			"max": "254",
+			"kind": "text_with_space_utf8",
+			"empty": "true"
+		},
+		"legal_tel":
+		{
+			"min": "4",
+			"max": "15",
+			"kind": "tel_b",
+			"empty": "true"
+		},
+		"legal_fax":
+		{
+			"min": "4",
+			"max": "15",
+			"kind": "tel_b",
+			"empty": "true"
+		},
+		"legal_address":
+		{
+			"kind": "textarea",
+			"empty": "true"
+		}
 	}
 }

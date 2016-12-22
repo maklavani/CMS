@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/09/2015
-	*	last edit		01/30/2016
+	*	last edit		11/15/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -47,7 +47,7 @@ $users = array(
 				1 => array('type' => 'text' , 'name' => 'family' , 'default' => $params[0]->family),
 				2 => array('type' => 'radio' , 'name' => 'status' , 'default' => $params[0]->status , 'children' => array(0 => 'active' , 1 => 'deactivate')),
 				3 => array('type' => 'text' , 'name' => 'username' , 'default' => $params[0]->username),
-				4 => array('type' => 'list' , 'name' => 'group' , 'default' => $params[0]->group , 'children' => $groups , 'language' => false),
+				4 => array('type' => 'list' , 'name' => 'group' , 'default' => $params[0]->group_number , 'children' => $groups , 'language' => false),
 				5 => array('type' => 'password' , 'name' => 'password'),
 				6 => array('type' => 'password' , 'name' => 'repassword'),
 				7 => array('type' => 'text' , 'name' => 'email' , 'default' => $params[0]->email),

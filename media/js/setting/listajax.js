@@ -40,8 +40,10 @@ jQuery(document).ready(function(){
 			url: ajax ,
 			data: {
 				"list": list.val() ,
+				"self": elm.attr("self")
 			},
 			success: function(result){
+				// console.log(result);
 				if(result)
 					result = jQuery.parseJSON(result);
 

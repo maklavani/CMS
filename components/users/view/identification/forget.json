@@ -1,0 +1,18 @@
+{
+	"check":
+	{
+		"1":
+		{ 
+			"min": "6",
+			"max": "32",
+			"kind": "password"
+		},
+		"2":
+		{ 
+			"min": "6",
+			"max": "32",
+			"kind": "password"
+		},
+		"3": { "kind": "captcha" }
+	}
+}

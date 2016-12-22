@@ -12,38 +12,57 @@
 	"COM_USERS_SIGNUP_FORM_INPUT_1": "نام",
 	"COM_USERS_SIGNUP_FORM_INPUT_2": "نام خانوادگی",
 	"COM_USERS_SIGNUP_FORM_INPUT_3": "نام کاربری",
-	"COM_USERS_SIGNUP_FORM_INPUT_4": "ایمیل",
-	"COM_USERS_SIGNUP_FORM_INPUT_5": "گذر واژه",
-	"COM_USERS_SIGNUP_FORM_INPUT_6": "تکرار گذر واژه",
-	"COM_USERS_SIGNUP_FORM_INPUT_7": "عبارت امنیتی",
+	"COM_USERS_SIGNUP_FORM_INPUT_4": "موبایل",
+	"COM_USERS_SIGNUP_FORM_INPUT_5": "ایمیل",
+	"COM_USERS_SIGNUP_FORM_INPUT_6": "گذر واژه",
+	"COM_USERS_SIGNUP_FORM_INPUT_7": "تکرار گذر واژه",
+	"COM_USERS_SIGNUP_FORM_INPUT_8": "عبارت امنیتی",
 
 	"COM_USERS_FORGET": "بازیابی",
 	"COM_USERS_FORGET_FORM_INPUT_1": "ایمیل",
-	"COM_USERS_FORGET_FORM_INPUT_2": "موبایل",
-	"COM_USERS_SEND_PASSWORD": "ارسال گذرواژه",
+	"COM_USERS_FORGET_FORM_INPUT_2": "عبارت امنیتی",
+	"COM_USERS_SEND_EMAIL": "ارسال ایمیل",
+	"COM_USERS_FORGET_MESSAGE": "برای بازیابی نام کاربری یا گذرواژه کلیک کنید",
 
 	"COM_USERS_SIGNOUT": "خروج کاربران",
 
+	"COM_USERS_IDENTIFICATION_FORM_INPUT_1": "گذر واژه",
+	"COM_USERS_IDENTIFICATION_FORM_INPUT_2": "تکرار گذر واژه",
+	"COM_USERS_IDENTIFICATION_FORM_INPUT_3": "عبارت امنیتی",
+	"COM_USERS_SAVE_PASSWORD": "ذخیر گذرواژه",
+
 	"COM_USERS_EMAIL_USERNAME": "نام کاربری یا ایمیل",
 	"COM_USERS_CHECK": "بررسی",
+	"COM_USERS_ENTER": "وارد شو",
 
 	"COM_USERS_WELCOME": "%s به سایت خوش آمدید",
 	"COM_USERS_FIRST_SIGNOUT": "ابتدا باید خارج شوید تا بتوانید نام کاربری ایجاد کنید",
+	"COM_USERS_FIRST_SIGNOUT_FORGET": "برای بازیابی ابتدا باید خارج شوید",
 	"COM_USERS_FIRST_SIGNIN": "شما هنوز وارد نشده اید که می خواهید خارج شوید",
 
 	"COM_USERS_IDENTIFICATION": "تعیین هویت",
 	"COM_USERS_SIGNUP_COMPELETE": "شما با موفقیت مراحل ثبت نام را به اتمام رسانده اید.",
 
+	"COM_USERS_PROFILE": "مشخصات",
+	"COM_USERS_PROFILE_USER": "کاربر",
+	"COM_USERS_PROFILE_ADVERTISEMENT": "آگهی های من",
+
 	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "گذرواژه ها با هم یکسان نیستند",
 	"COM_USERS_ERROR_EXIST_USERSNAME": "نام کاربری معتبر نیست لطفا نام دیگری وارد کنید",
 	"COM_USERS_ERROR_EXIST_EMAIL": "ایمیل وجود دارد لطفا ایمیل دیگری وارد کنید",
-	"COM_USERS_ERROR_BANNED_IP": "به دلیل اشتباهات مکرر ip شما به مدت %s دقیقه مسدود شده است لطفا بعدا مراجعه فرمایید.",
+	"COM_USERS_ERROR_BANNED_IP": "به دلیل اشتباهات مکرر ip شما به مدت %s دقیقه مسدود شده است لطفا بعدا مراجعه فرمایید",
+	"COM_USERS_ERROR_IDENTIFICATION": "خطای شناسایی کاربر",
+	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "گذرواژه ها با هم یکسان نیستند",
 
 	"COM_USERS_SUCCESS": "اطلاعات شما با موفقیت در بانک اطلاعاتی سامانه ثبت شد , برای فعالسازی حساب کاربری ایمیل خود را بررسی کنید",
 	"COM_USERS_SIGNOUT_SUCCESS": "شما با موفقیت از سایت خارج شدید",
+	"COM_USERS_FORGET_SEND": "در صورت صحت ایمیل, ایمیل بازیابی برای شما ارسال می شود",
 
 	"COM_USERS_MESSAGE_SIGNUP_HELLO": "سلام %s , از ثبت نام شما در سایت %s متشکریم.",
+	"COM_USERS_MESSAGE_FORGET_HELLO": "سلام %s.",
 	"COM_USERS_MESSAGE_IDENTIFICATION": "جهت فعال سازی حساب کاربری خود روی لینک زیر کلیک کنید.<br><small>%s<small>",
+	"COM_USERS_MESSAGE_IDENTIFICATION_FORGET": "جهت بازیابی حساب کاربری خود روی لینک زیر کلیک کنید.<br><small>%s<small>",
 	"COM_USERS_MESSAGE_VALIDITY": "این لینک به مدت %s روز از تاریخ %s معتبر است.",
-	"COM_USERS_MESSAGE_AUTOMATIC": "این ایمیل به صورت خودکار ارسال شده است از جواب به آن خودداری نمایید."
+	"COM_USERS_MESSAGE_AUTOMATIC": "این ایمیل به صورت خودکار ارسال شده است از جواب به آن خودداری نمایید.",
+	"COM_USERS_MESSAGE_PASSWORD_CHANGED": "گذرواژه با موفقیت تغییر کرد"
 }

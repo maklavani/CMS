@@ -104,7 +104,7 @@ class MenusController extends Controller {
 			if($action == 'default' && isset($_GET['id']) && Regex::cs($_GET['id'] , 'number'))
 			{
 				$model = self::model('group');
-				$menus = json_encode($model->get('menu' , 'menus' , true , '`group` = ' . $_GET['id'] , 'index') , JSON_UNESCAPED_UNICODE);
+				$menus = json_encode($model->get('menu' , 'menus' , true , '`group_number` = ' . $_GET['id'] , 'index_number') , JSON_UNESCAPED_UNICODE);
 				View::read($menus);
 			}
 			else if($action == 'new')
@@ -150,7 +150,7 @@ class MenusController extends Controller {
 					return Site::$base . _ADM . 'index.php?component=menus&view=groups&action=edit&id=' . $_POST['form-values'];
 				else if($_POST['form-button'] == 'delete' && Regex::cs($_POST['form-values'] , 'status') && $model->has_item($_POST['form-values'] , 'menu_group'))
 				{
-					if($model->has_item($_POST['form-values'] , 'menu' , 'group' , true))
+					if($model->has_item($_POST['form-values'] , 'menu' , 'group_number' , true))
 						Messages::add_message('warning' , sprintf(Language::_('WARNING_DELETE') , Language::_('COM_MENUS_GROUPS') , Language::_('COM_MENUS_MENU')));
 					else
 						$model->delete_items($_POST['form-values'] , 'menu_group');

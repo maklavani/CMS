@@ -51,12 +51,20 @@ jQuery(document).ready(function(e) {
 		});
 	});
 
-	function size_text(text , element){
-		html_org = element.html();
-		html_calc = '<span>' + text + '</span>';
-		element.html(html_calc);
-		width = element.find('span:first').width();
-		element.html(html_org);
-		return width;
-	};
+	jQuery(document).on('click' , '.messages .icon-close' , function(){
+		jQuery(this).parent().remove();
+	});
+
+	jQuery('.messages').each(function(){
+		messages = jQuery(this);
+		if(typeof messages.attr('times') == 'undefined')
+		{
+			index = jQuery(this).index();
+			messages.attr('times' , index);
+
+			setTimeout(function(){
+				jQuery('.messages[times="' + index + '"]').remove().trigger('remove');
+			} , 60000);
+		}
+	});
 });

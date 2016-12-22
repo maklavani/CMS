@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	12/05/2015
-	*	last edit		12/21/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -85,6 +85,9 @@ class RootJob Extends Jobs {
 				}
 			}
 
+		// Update Bad Jobs
+		$db->table('jobs')->update(array(array("event_number" , -1) , array("last_execute_status" , 0)))->process();
+
 		// Check Seo Job
 		if(Configuration::$seo)
 		{
@@ -107,8 +110,11 @@ class RootJob Extends Jobs {
 			}
 		}
 		else
-		{
 			System::delete_files(array('sitemap.xml' , 'sitemaps/'));
-		}
+
+		// Remove Identification
+		$db->table('identification')->delete()->where("`expire` < NOW()")->process();
+		// Remove Banned
+		$db->table('banned')->delete()->where("`expire` < NOW()")->process();
 	}
 }

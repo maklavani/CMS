@@ -5,13 +5,13 @@
 		{
 			"min": "2",
 			"max": "254",
-			"kind": "text_utf8"
+			"kind": "text_utf8_with_space"
 		},
 		"2":
 		{
 			"min": "2",
 			"max": "254",
-			"kind": "text_utf8"
+			"kind": "text_utf8_with_space"
 		},
 		"3":
 		{
@@ -19,19 +19,26 @@
 			"max": "254",
 			"kind": "text"
 		},
-		"4": { "kind": "email" },
-		"5":
+		"4":
 		{
-			"min": "6",
-			"max": "32",
-			"kind": "password"
+			"min": "11",
+			"max": "11",
+			"empty": "true",
+			"kind": "numeric"
 		},
+		"5": { "kind": "email" },
 		"6":
 		{
 			"min": "6",
 			"max": "32",
 			"kind": "password"
 		},
-		"7": { "kind": "captcha" }
+		"7":
+		{
+			"min": "6",
+			"max": "32",
+			"kind": "password"
+		},
+		"8": { "kind": "captcha" }
 	}
 }

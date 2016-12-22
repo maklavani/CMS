@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/12/2015
-	*	last edit		06/08/2015
+	*	last edit		11/05/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -26,12 +26,19 @@ class Url_friendlySystem extends SystemPlugins {
 
 			$allmenu = array();
 			if($menu)
-				foreach ($menu as $key => $value) {
+				foreach ($menu as $key => $value)
 					$allmenu[$value->link] = $value;
-				}
 
 			foreach ($urls[1] as $value)
 			{
+				$abbreviation = false;
+
+				if(Language::$abbreviation != "" && mb_strpos($value , Language::$abbreviation . '/') !== false && mb_strpos($value , Language::$abbreviation . '/') == 0)
+				{
+					$abbreviation = true;
+					$value = str_replace(Language::$abbreviation . '/' , "" , $value);
+				}
+
 				if(mb_strpos($value , 'index.php') > -1 && mb_strpos($value , "/") === false && Regex::cs($value , 'text_d'))
 				{
 					$value_test = str_replace("&amp;" , "&" , $value);
@@ -103,7 +110,10 @@ class Url_friendlySystem extends SystemPlugins {
 							$link_out = $link_out . $link_component;
 					}
 
-					$buffer = str_replace('href="' . $value . '"' , 'href="' . $link_out . '"' , $buffer);
+					if($abbreviation)
+						$buffer = str_replace('href="' . Language::$abbreviation . '/' . $value . '"' , 'href="' . $link_out . '"' , $buffer);
+					else
+						$buffer = str_replace('href="' . $value . '"' , 'href="' . $link_out . '"' , $buffer);
 				}
 			}
 		}

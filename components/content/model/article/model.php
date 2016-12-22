@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/13/2015
-	*	last edit		02/20/2016
+	*	last edit		10/07/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -33,7 +33,7 @@ class ArticleModel extends Model {
 
 			if($menu = $this->output())
 			{
-				Preload::$active_menu_group_homepage = $menu[0]->group;
+				Preload::$active_menu_group_homepage = $menu[0]->group_number;
 				Preload::$active_menu_homepage = $menu[0]->id;
 			}
 		}

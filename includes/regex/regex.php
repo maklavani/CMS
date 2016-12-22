@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		01/25/2016
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -91,7 +91,7 @@ class Regex {
 			$result += !preg_match('/^[a-z0-9_\.]*$/i' , $str);
 
 		else if($type == 'url')
-			$result += !preg_match('/^[a-z0-9_\-\pL?;&=\.]*$/iu' , $str);
+			$result += !preg_match('/^(http:\/\/)?(https:\/\/)?(www.)?[a-z-_0-9\pL]{2,}(\.[a-z]{2,})?[a-z0-9\pL\/\-\._\%\=\&\?]*$/iu' , $str);
 
 		else if($type == 'search')
 			$result += !preg_match('/^[a-z0-9\s\pL]*$/ui' , $str);

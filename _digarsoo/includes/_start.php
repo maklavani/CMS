@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/28/2015
-	*	last edit		08/21/2015
+	*	last edit		10/30/2015
 	* --------------------------------------------------------------------------
 */
 
@@ -32,14 +32,14 @@ class Start extends Preload {
 			$buffer = ob_get_clean();
 
 			// jaygozini component
-			$buffer = preg_replace('@<digarsoo\s*type="component"\s*\/?>@iu' , Components::$output_buffer , $buffer);
+			$buffer = preg_replace('@<digarsoo\s*type="component"\s*\/?>@i' , Components::$output_buffer , $buffer);
 
-			preg_match_all('@<digarsoo\s*type="widget"\s*name="([^"]+)"\s*\/?>@iU' , $buffer , $widgets);
+			preg_match_all('@<digarsoo\s*type="widget"\s*name="([^"]+)"\s*\/?>@i' , $buffer , $widgets);
 
 			if(isset($widgets[1]) && is_array($widgets[1]) && !empty($widgets[1]))
 				foreach ($widgets[1] as $value){
 					Widgets::add_files_read($value);
-					$buffer = preg_replace('@<digarsoo\s*type="widget"\s*name="' . $value . '"\s*\/?>@iU' , Widgets::get($value) , $buffer);
+					$buffer = preg_replace('@<digarsoo\s*type="widget"\s*name="' . $value . '"\s*\/?>@i' , Widgets::get($value) , $buffer);
 				}
 
 			// khandane file plugins
@@ -47,9 +47,9 @@ class Start extends Preload {
 			Plugins::read(Components::$output_buffer , 'components');
 
 			// jaygozini head
-			$buffer = preg_replace('@<digarsoo\s*type="head"\s*\/?>@iu' , Templates::output() , $buffer);
+			$buffer = preg_replace('@<digarsoo\s*type="head"\s*\/?>@i' , Templates::output() , $buffer);
 			// jaygozini message
-			$buffer = preg_replace('@<digarsoo\s*type="message"\s*\/?>@iu' , Messages::output() , $buffer);
+			$buffer = preg_replace('@<digarsoo\s*type="message"\s*\/?>@i' , Messages::output() , $buffer);
 
 			Plugins::read($buffer);
 

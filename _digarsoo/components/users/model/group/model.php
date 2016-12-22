@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/08/2015
-	*	last edit		12/04/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -24,7 +24,7 @@ class GroupModel extends Model {
 
 	public function get_lock_group_id()
 	{
-		$this->table('group')->where('`lock` = 1')->select()->process();
+		$this->table('group')->where('`lock_key` = 1')->select()->process();
 		$ids = $this->output();
 		
 		$id = array();

@@ -3,7 +3,7 @@
 	"LANG_ENGLISH_DESC": "English Language Create by Digarsoo",
 
 	"SITE_COPYRIGHT": "Digarsoo",
-	"SITE_COPYRIGHT_DESC": "Design By Digarsoo",
+	"SITE_COPYRIGHT_DESC": "Design and Seo Site By Digarsoo",
 	"SITE_COPYRIGHT_POWERED": "Powered By Digarsoo",
 
 	"HOME": "Home",
@@ -133,6 +133,7 @@
 	"NOT_INSERT": "Not Insert",
 	"PROGRAMMER": "Programmer",
 	"PUBLIC": "Public",
+	"REDIRECTS": "Redirects",
 	"REGISTERED": "Registered",
 	"RENAME": "Rename",
 	"RESULT_FOUND": "Result Found ",

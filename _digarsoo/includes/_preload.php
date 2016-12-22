@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/28/2015
-	*	last edit		01/16/2016
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -102,7 +102,7 @@ class Preload {
 
 					$has_component = true;
 
-					self::$active_menu_group_homepage = $menu[0]->group;
+					self::$active_menu_group_homepage = $menu[0]->group_number;
  					self::$active_menu_homepage = $menu[0]->id;
 
 					// set kardane title

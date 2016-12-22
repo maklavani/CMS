@@ -1,7 +1,7 @@
 {
 	"COM_PROFILE_COMPONENT_PROFILE": "Profile",
-	"COM_PROFILE_VIEW_USER": "User",
 	"COM_PROFILE_ACTION_EDIT": "Edit",
+	"COM_PROFILE_VIEW_USER": "User",
 
 	"COM_PROFILE_PROFILE_USER": {
 		"0": "component",

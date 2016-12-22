@@ -11,6 +11,12 @@
 	"COM_PROFILE_USERS": "کاربران",
 	"COM_PROFILE_USERS_SIGNIN": "ورود کاربران",
 
+	"COM_PROFILE_NEW": "جدید",
+	"COM_PROFILE_BACK": "بازگشت",
+	"COM_PROFILE_SAVE": "ذخیره",
+	"COM_PROFILE_NONE": "نا مشخص",
+	"COM_PROFILE_LEGAL": "مشخصات حقوقی",
+
 	"COM_PROFILE_USER_FIELD_INPUT_USER": "کاربر",
 	"COM_PROFILE_USER_FIELD_INPUT_NAME": "نام",
 	"COM_PROFILE_USER_FIELD_INPUT_FAMILY": "نام خانوادگی",
@@ -21,10 +27,16 @@
 	"COM_PROFILE_USER_FIELD_INPUT_TEL": "تلفن",
 	"COM_PROFILE_USER_FIELD_INPUT_ADDRESS": "آدرس",
 	"COM_PROFILE_USER_FIELD_INPUT_FAVORITES": "علاقه مندی ها",
+	"COM_PROFILE_USER_FIELD_INPUT_LOCATION": "محل سکونت",
+	"COM_PROFILE_USER_FIELD_INPUT_LEGAL_NAME": "نام برند یا شرکت",
+	"COM_PROFILE_USER_FIELD_INPUT_LEGAL_MANAGER": "نام مدیریت",
+	"COM_PROFILE_USER_FIELD_INPUT_LEGAL_REGISTER_NUMBER": "شماره ثبت",
+	"COM_PROFILE_USER_FIELD_INPUT_LEGAL_TEL": "تلفن",
+	"COM_PROFILE_USER_FIELD_INPUT_LEGAL_FAX": "فکس",
+	"COM_PROFILE_USER_FIELD_INPUT_LEGAL_ADDRESS": "آدرس",
 
 	"COM_PROFILE_ERROR_EXIST_USERSNAME": "نام کاربری معتبر نیست لطفا نام دیگری وارد کنید.",
 	"COM_PROFILE_ERROR_PASSWORD_DOES_NOT_MATCH": "گذرواژه ها با هم یکسان نیستند.",
-
 	"COM_PROFILE_ERROR_SIZE": "سایز فایل %s باید کمتر از %s باشد.",
 	"COM_PROFILE_ERROR_TYPE": "تایپ فایل %s برای بارگذاری معتبر نیست. تایپ های معتبر عبارتند از : %s",
 

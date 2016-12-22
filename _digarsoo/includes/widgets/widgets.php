@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/28/2015
-	*	last edit		12/03/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -250,7 +250,7 @@ class Widgets {
 				if(Templates::$title == '')
 					Templates::$title = Language::_($menu[0]->name);
 
-				self::$active_menu_group = $menu[0]->group;
+				self::$active_menu_group = $menu[0]->group_number;
 				self::$active_menu = $menu[0]->id;
 			}
 		}

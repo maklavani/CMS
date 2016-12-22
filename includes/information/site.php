@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		12/21/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -103,7 +103,7 @@ class Site {
 	// dadane nam domain site
 	public static function get_domain_name()
 	{
-		return 'http://' . $_SERVER['HTTP_HOST'] . '/';
+		return isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://' . $_SERVER['HTTPS_HOST'] . '/' : 'http://' . $_SERVER['HTTP_HOST'] . '/';
 	}
 
 	// unset kardane $_POST
@@ -151,7 +151,7 @@ class Site {
 				$strs = json_encode($strs , JSON_UNESCAPED_UNICODE);
 				$strs = htmlentities($strs , ENT_COMPAT | ENT_QUOTES , "UTF-8");
 
-				$db->table('banned')->where('`ip` = "' . $ip . '"')->update(array(array('count' , 1) , array('message' , $strs) , array('date' , self::$datetime)))->process();
+				$db->table('banned')->where('`ip` = "' . $ip . '"')->update(array(array('count' , 1) , array('message' , $strs) , array('date' , self::$datetime) , array('expire' , date("Y-m-d H:i:s" , strtotime('+7 day')))))->process();
 			}
 			else
 			{
@@ -160,14 +160,14 @@ class Site {
 				$strs = json_encode($message , JSON_UNESCAPED_UNICODE);
 				$strs = htmlentities($strs , ENT_COMPAT | ENT_QUOTES , "UTF-8");
 
-				$db->table('banned')->where('`ip` = "' . $ip . '"')->update(array(array('count' , ($banned[0]->count + 1)) , array('message' , $strs) , array('date' , self::$datetime)))->process();
+				$db->table('banned')->where('`ip` = "' . $ip . '"')->update(array(array('count' , ($banned[0]->count + 1)) , array('message' , $strs) , array('date' , self::$datetime) , array('expire' , date("Y-m-d H:i:s" , strtotime('+7 day')))))->process();
 			}
 		} else {
 			$strs = array(self::$datetime => $str);
 			$strs = json_encode($strs , JSON_UNESCAPED_UNICODE);
 			$strs = htmlentities($strs , ENT_COMPAT | ENT_QUOTES , "UTF-8");
 
-			$db->table('banned')->insert(array('ip' , 'message' , 'date') , array(self::$ip , $strs , self::$datetime))->process();
+			$db->table('banned')->insert(array('ip' , 'message' , 'date' , 'expire') , array(self::$ip , $strs , self::$datetime , date("Y-m-d H:i:s" , strtotime('+7 day'))))->process();
 		}
 	}
 
@@ -185,7 +185,7 @@ class Site {
 			$now_date = strtotime(Site::$datetime);
 			$diff = $now_date - $date;
 
-			if(($output[0]->count > 10 && $diff < 3600) || ($output[0]->count > 2 && $diff < 900))
+			if(($output[0]->count > 20 && $diff < 3600) || ($output[0]->count > 10 && $diff < 900))
 			{
 				$banned = $output[0]->count;
 				static::$banned_time = $diff;

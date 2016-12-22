@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/07/2015
-	*	last edit		12/04/2015
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -65,7 +65,7 @@ class UsersModel extends Model {
 
 		$this->table('users');
 		$this->insert(
-						array(	'name' , 'family' , 'username' , 'code' , 'group' , 'email' , 
+						array(	'name' , 'family' , 'username' , 'code' , 'group_number' , 'email' , 
 								'mobile' , 'image' , 'register' , 'status' , 'profile') , 
 						array(	trim($_POST['field_input_name']) , trim($_POST['field_input_family']) , trim($_POST['field_input_username']) , $code , $_POST['field_input_group'] , $_POST['field_input_email'] , 
 								$_POST['field_input_mobile'] , $images , Site::$datetime , $_POST['field_input_status'] , htmlspecialchars(json_encode($profile , JSON_UNESCAPED_UNICODE)))
@@ -137,7 +137,7 @@ class UsersModel extends Model {
 							array('name' , trim($_POST['field_input_name'])),
 							array('family' , trim($_POST['field_input_family'])),
 							array('username' , trim($_POST['field_input_username'])),
-							array('group' , $_POST['field_input_group']),
+							array('group_number' , $_POST['field_input_group']),
 							array('email' , $_POST['field_input_email']),
 							array('mobile' , $_POST['field_input_mobile']),
 							array('image' , $images),

@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/28/2015
-	*	last edit		12/30/2015
+	*	last edit		12/11/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -19,7 +19,7 @@ class Menus {
 		$this->menus = array(0 => array('node' => null , 'child' => array() , 'class' => ''));
 
 		$db = New Database;
-		$db->table('menu')->where('`status` = 0 AND `group` = "' . $menu_group .'"')->order('`index` ASC , `parent` ASC')->select()->process();
+		$db->table('menu')->where('`status` = 0 AND `group_number` = "' . $menu_group .'"')->order('`index_number` ASC , `parent` ASC')->select()->process();
 		$menus = $db->output();
 
 		if(_LOC == 'administrator'){
@@ -36,7 +36,7 @@ class Menus {
 
 				if(!empty($homepages))
 					foreach ($homepages as $valueb)
-						if($valueb->group == $value->id)
+						if($valueb->group_number == $value->id)
 							if($class != "")
 								$class .= ' flag-' . $valueb->languages;
 							else
@@ -80,7 +80,7 @@ class Menus {
 								if(class_exists($class))
 								{
 									$component = new $class();
-									$menus = array_merge($menus , $component->output(2001 + $key));
+									$menus = array_merge($menus , $component->output(2001 + $key , $menu_group));
 								}
 							}
 					}

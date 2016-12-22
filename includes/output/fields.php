@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		04/05/2016
+	*	last edit		09/22/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -38,7 +38,7 @@ class Fields {
 				$attributes .= " " . $key . "=\"" . $value ."\"";
 
 		$output = "";
-		$output .= "\n\t\t\t<form id=\"" . strtolower($this->name) . "-form\" action=\"" . $this->action . "\" method=\"" . $this->method . "\"" . ($attributes != "" ? " " . $attributes : "") . ">";
+		$output .= "\n\t\t\t<form id=\"" . strtolower($this->name) . "-form\" action=\"" . $this->action . "\" class=\"xa\" method=\"" . $this->method . "\"" . ($attributes != "" ? " " . $attributes : "") . ">";
 			$output .= $this->get_buttons();
 			$output .= "\n\t\t\t\t<div class=\"fileds-pages xa\">";
 				foreach ($this->pages as $key => $value) {

@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		05/08/2016
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -169,7 +169,7 @@ class User {
 		self::$family = $user->family;
 		self::$username = $user->username;
 		self::$code = $user->code;
-		self::$group = $user->group;
+		self::$group = $user->group_number;
 		self::$email = $user->email;
 		self::$visit = $user->visit;
 		self::$ip = $user->ip;

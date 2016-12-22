@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	12/30/2015
-	*	last edit		05/10/2016
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -123,9 +123,9 @@ class SettingModel extends Model {
 
 			// Update Server
 			if(!empty($update))
-				$this->table('extension')->update(array(array('update' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
+				$this->table('extension')->update(array(array('update_date' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
 			else
-				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update' , 'create' , 'location') , 
+				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update_date' , 'create_date' , 'location') , 
 													array($max_id , $details->name , $details->type , Site::$datetime , Site::$datetime , $details->location)
 											)->process();
 
@@ -167,10 +167,10 @@ class SettingModel extends Model {
 
 			// Update Server
 			if(!empty($update))
-				$this->table('extension')->update(array(array('update' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
+				$this->table('extension')->update(array(array('update_date' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
 			else
 			{
-				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update' , 'create' , 'location') , 
+				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update_date' , 'create_date' , 'location') , 
 													array($max_id , $details->name , $details->type , Site::$datetime , Site::$datetime , $details->location)
 											)->process();
 
@@ -225,10 +225,10 @@ class SettingModel extends Model {
 
 			// Update Server
 			if(!empty($update))
-				$this->table('extension')->update(array(array('update' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
+				$this->table('extension')->update(array(array('update_date' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
 			else
 			{
-				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update' , 'create' , 'location') , 
+				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update_date' , 'create_date' , 'location') , 
 													array($max_id , $details->name , $details->type , Site::$datetime , Site::$datetime , $details->location)
 											)->process();
 
@@ -289,10 +289,10 @@ class SettingModel extends Model {
 
 			// Update Server
 			if(!empty($update))
-				$this->table('extension')->update(array(array('update' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
+				$this->table('extension')->update(array(array('update_date' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
 			else
 			{
-				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update' , 'create' , 'location') , 
+				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update_date' , 'create_date' , 'location') , 
 													array($max_id , $details->name , $details->type , Site::$datetime , Site::$datetime , $details->location)
 											)->process();
 
@@ -346,10 +346,10 @@ class SettingModel extends Model {
 
 			// Update Server
 			if(!empty($update))
-				$this->table('extension')->update(array(array('update' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
+				$this->table('extension')->update(array(array('update_date' , Site::$datetime)))->where('`id` = ' . $update[0]->id)->process();
 			else
 			{
-				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update' , 'create' , 'location') , 
+				$this->table('extension')->insert(	array('id' , 'name' , 'type' , 'update_date' , 'create_date' , 'location') , 
 													array($max_id , $details->name , $details->type , Site::$datetime , Site::$datetime , $details->location)
 											)->process();
 
@@ -553,7 +553,7 @@ class SettingModel extends Model {
 
 				$items[$key] = $this->output();
 
-				if($value->lock)
+				if($value->lock_key)
 					$has_lock = true;
 			}
 

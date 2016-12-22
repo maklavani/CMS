@@ -10,6 +10,7 @@ jQuery(document).ready(function(){
 		items[number] = 0;
 		jQuery(this).attr("item" , number);
 
+
 		if(jQuery(this).val() != ""){
 			var values_b = jQuery.parseJSON(jQuery(this).val());
 
@@ -17,7 +18,7 @@ jQuery(document).ready(function(){
 				clone = jQuery(this).next(".details").find('.details-append').children('tr').clone(true);
 
 				clone.find('[name]').each(function(){
-					jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + items);
+					jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + i);
 
 					// Detected Price
 					if(jQuery(this).hasClass('price'))
@@ -49,6 +50,8 @@ jQuery(document).ready(function(){
 			jQuery(this).attr('name' , jQuery(this).attr('name') + '_' + items[item_number]);
 		});
 
+		console.log(item_number , items[item_number]);
+
 		items[item_number]++;
 		jQuery(this).prev().find('.details-tbody').append(clone).trigger('change');
 		twice[item_number] = false;
@@ -56,8 +59,9 @@ jQuery(document).ready(function(){
 
 	jQuery(document).on('click' , '.details-item-delete' , function(){
 		var item = jQuery(this).parent().parent();
+		var parent = item.parent();
 		item.remove();
-		item.parent().trigger('change');
+		parent.trigger('change');
 	});
 
 	jQuery('.details-tbody').change(function(){
@@ -71,8 +75,8 @@ jQuery(document).ready(function(){
 
 		jQuery(this).find('select').each(function(){
 			jQuery(this).removeAttr('class');
-			jQuery(this).attr('id' , jQuery(this).attr('name'));
-			jQuery('#' + jQuery(this).attr('name')).select2();
+			jQuery(this).attr('id' , jQuery(this).attr('name') + jQuery(this).index());
+			jQuery('#' + jQuery(this).attr('name') + jQuery(this).index()).select2();
 		});
 
 		// Detected Price

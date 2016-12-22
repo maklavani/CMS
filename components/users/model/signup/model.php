@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		12/04/2015
+	*	last edit		10/28/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -37,17 +37,17 @@ class SignupModel extends Model {
 
 		$this->table('users');
 		$this->insert(
-						array(	'name' , 'family' , 'username' , 'code' , 'group' , 'email' , 
-								'register' , 'status' , 'profile') , 
-						array(	$_POST['form_input_1'] , $_POST['form_input_2'] , $_POST['form_input_3'] , $code , 5 , $_POST['form_input_4'] , 
-								Site::$datetime , 1 , htmlspecialchars(json_encode($profile , JSON_UNESCAPED_UNICODE)))
+						array(	'name' , 'family' , 'username' , 'code' , 'group_number' , 'email' , 
+								'mobile' , 'register' , 'status' , 'profile') , 
+						array(	$_POST['form_input_1'] , $_POST['form_input_2'] , $_POST['form_input_3'] , $code , 5 , $_POST['form_input_5'] , 
+								$_POST['form_input_4'] , Site::$datetime , 1 , htmlspecialchars(json_encode($profile , JSON_UNESCAPED_UNICODE)))
 					);
 		$this->process();
 
 		$last_id = $this->last_insert_id;
 		$this->table('users');
 		$this->update(	array(
-							array('password' , Hash::create('sha512' , $_POST['form_input_5'] , 1000 + $last_id)) , 
+							array('password' , Hash::create('sha512' , $_POST['form_input_6'] , 1000 + $last_id)) , 
 							array('password_edit' , Site::$datetime)
 							)
 					);
@@ -66,16 +66,16 @@ class SignupModel extends Model {
 			fclose($html_file);
 		}
 
-		if(!System::has_file('uploads/component/user') && mkdir(_SRC_SITE . "uploads/component/user" , 0755 , true))
+		if(!System::has_file('uploads/component/user') && mkdir(_SRC_SITE . "uploads/component/users" , 0755 , true))
 		{
-			$html_file = fopen(_SRC_SITE . "uploads/component/user/index.html" , "w");
+			$html_file = fopen(_SRC_SITE . "uploads/component/users/index.html" , "w");
 			fwrite($html_file , "<!DOCTYPE html><title></title>");
 			fclose($html_file);
 		}
 
-		if(!System::has_file('uploads/component/user/' . $code) && mkdir(_SRC_SITE . "uploads/component/user/" . $code , 0755 , true))
+		if(!System::has_file('uploads/component/user/' . $code) && mkdir(_SRC_SITE . "uploads/component/users/" . $code , 0755 , true))
 		{
-			$html_file = fopen(_SRC_SITE . "uploads/component/user/" . $code . "/index.html" , "w");
+			$html_file = fopen(_SRC_SITE . "uploads/component/users/" . $code . "/index.html" , "w");
 			fwrite($html_file , "<!DOCTYPE html><title></title>");
 			fclose($html_file);
 		}
@@ -105,7 +105,7 @@ class SignupModel extends Model {
 		$link = "<a href=\"" . Site::$domain_name . Language::_('COM_USERS') . "/" . str_replace(" " , "-" , Language::_('COM_USERS_IDENTIFICATION')) . "/" . $code . "\">" . Language::_('COM_USERS_IDENTIFICATION') . "</a>";
 
 		$mail = new Mail;
-		$mail->to = $_POST['form_input_4'];
+		$mail->to = $_POST['form_input_5'];
 		$mail->from = Configuration::$email;
 		$mail->subject = Language::_('COM_USERS_SIGNUP');
 		$mail->message = 
@@ -116,8 +116,8 @@ class SignupModel extends Model {
 		$mail->send();
 
 		$this->table('identification');
-		$this->insert(	array('code' , 'component' , 'val' , 'expire') , 
-						array($code , 'users' , $id , date("Y-m-d H:i:s" , strtotime('+7 day')))
+		$this->insert(	array('code' , 'section' , 'val' , 'expire') , 
+						array($code , 'signup' , $id , date("Y-m-d H:i:s" , strtotime('+7 day')))
 					);
 		$this->process();
 	}

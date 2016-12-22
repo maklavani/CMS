@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	08/24/2015
-	*	last edit		02/27/2016
+	*	last edit		10/03/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -202,7 +202,7 @@ class ProfileController extends Controller {
 	{
 		if(User::$login)
 		{
-			$params = "";
+			$params = array();
 
 			if(is_array($view) && !empty($view))
 			{
@@ -215,8 +215,8 @@ class ProfileController extends Controller {
 			if($view == 'user')
 			{
 				$model = self::model('user');
-				$params = json_encode($model->get_with_id(User::$id , 'users') , JSON_UNESCAPED_UNICODE);
-				View::read($params);
+				$params = $model->get_with_id(User::$id , 'users');
+				View::read(json_encode($params , JSON_UNESCAPED_UNICODE));
 			}
 			else
 				Messages::add_message('error' , Language::_('ERROR_INVLAID_LINK'));
@@ -238,6 +238,9 @@ class ProfileController extends Controller {
 			if($view_check == Language::_('COM_PROFILE_USER'))
 				Controller::$view = $view = 'user';
 		}
+
+		if(is_array($view))
+			return false;
 
 		if($view == 'user') 
 		{

@@ -4,7 +4,7 @@
 	*	@author			Hossein Mohammadi Maklavani
 	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
 	*	creation date	07/12/2015
-	*	last edit		05/31/2016
+	*	last edit		10/28/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -31,6 +31,16 @@ class CaptchaPlugins {
 		if($this->plugin->location == "all" || $this->plugin->location == $location)
 		{
 			require_once _PLG . 'captcha/' . $captcha . '/' . $captcha . '.php';
+
+			if(System::has_file('plugins/captcha/' . $captcha . '/details.json')){
+				$details = json_decode(file_get_contents(_PLG . '/captcha/' . $captcha . '/details.json'));
+
+				if(isset($details->language))
+					foreach ($details->language as $lang)
+						if($lang->name == Language::$lang && System::has_file('languages/' . $lang->name . '/' . $lang->src))
+							Language::add_ini_file(_SRC_SITE . 'languages/' . $lang->name . '/' . $lang->src);
+			} 
+
 			$class_name = ucwords($captcha) . 'Captcha';
 			$class = new $class_name();
 

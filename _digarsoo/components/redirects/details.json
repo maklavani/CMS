@@ -1,0 +1,57 @@
+{
+	"type": "component",
+	"location": "administrator",
+	"method": "upgrade",
+
+	"name": "redirects",
+	"creation_date": "October 03 , 2016",
+	"author": "Hossein Mohammadi Maklavani",
+	"version": "1.0.0",
+	"description": "COM_REDIRECTS_DESC",
+
+	"permission": "3",
+
+	"files":
+	{
+		"0": "details.json",
+		"1": "redirects.php"
+	},
+
+	"folders":
+	{
+		"0": "model",
+		"1": "view"
+	},
+
+	"language":
+	{
+		"0":
+		{
+			"name": "en-gb",
+			"src": "com_redirects.json"
+		},
+		"1":
+		{
+			"name": "fa-ir",
+			"src": "com_redirects.json"
+		}
+	},
+
+	"fields":
+	{
+		"redirects":
+		{
+			"0":
+			{
+				"name": "setting_status",
+				"type": "radio",
+				"default": "1",
+				"children":
+				{
+					"0": "setting_on",
+					"1": "setting_off"
+				}
+			}
+		}
+	}
+}
