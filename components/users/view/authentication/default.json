@@ -1,0 +1,7 @@
+{
+	"check":
+	{
+		"1": { "kind": "email" },
+		"2": { "kind": "captcha" }
+	}
+}

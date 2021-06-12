@@ -2,7 +2,7 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Makalvani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	02/01/2016
 	*	last edit		02/01/2016
 	* --------------------------------------------------------------------------

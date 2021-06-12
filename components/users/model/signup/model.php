@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		10/28/2016
+	*	last edit		05/17/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -40,7 +40,7 @@ class SignupModel extends Model {
 						array(	'name' , 'family' , 'username' , 'code' , 'group_number' , 'email' , 
 								'mobile' , 'register' , 'status' , 'profile') , 
 						array(	$_POST['form_input_1'] , $_POST['form_input_2'] , $_POST['form_input_3'] , $code , 5 , $_POST['form_input_5'] , 
-								$_POST['form_input_4'] , Site::$datetime , 1 , htmlspecialchars(json_encode($profile , JSON_UNESCAPED_UNICODE)))
+								$_POST['form_input_4'] , Site::$datetime , !Components::$setting->user->login_after_authentication , htmlspecialchars(json_encode($profile , JSON_UNESCAPED_UNICODE)))
 					);
 		$this->process();
 

@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		11/08/2016
+	*	last edit		12/22/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -72,7 +72,7 @@ class Checks {
 	// min
 	public function min($text , $number , $field)
 	{
-		if(strlen($text) >= $number)
+		if(mb_strlen($text) >= $number)
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_MIN') , Language::_(strtoupper($this->component . $field)) , $number));
@@ -82,7 +82,7 @@ class Checks {
 	// min
 	public function max($text , $number , $field)
 	{
-		if(strlen($text) <= $number)
+		if(mb_strlen($text) <= $number)
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_MAX') , Language::_(strtoupper($this->component . $field)) , $number));
@@ -317,7 +317,7 @@ class Checks {
 	// tel_kind
 	public function tel_kind($text , $field)
 	{
-		if(preg_match('/^([0-9]+)+:+(?!0)+([0-9]*)$/' , $text))
+		if(preg_match('/^[0-9\s-+]*$/' , $text))
 			return true;
 
 		Messages::add_message('error' , sprintf(Language::_('ERROR_FIELD_TEL') , Language::_(strtoupper($this->component . $field))));
@@ -359,7 +359,7 @@ class Checks {
 	{
 		if ($type == 'even')
 		{
-			$remain = strlen($text) % 2;
+			$remain = mb_strlen($text) % 2;
 			if(!$remain)
 				return true;
 
@@ -369,7 +369,7 @@ class Checks {
 
 		else if ($type == 'odd')
 		{
-			$remain = strlen($text) % 2;
+			$remain = mb_strlen($text) % 2;
 			if($remain)
 				return true;
 
@@ -389,7 +389,7 @@ class Checks {
 			else
 				$b = '+0';
 
-			$remain = strlen($text);
+			$remain = mb_strlen($text);
 
 			if (is_int(($remain + $b) / $a)) 
 				return true;

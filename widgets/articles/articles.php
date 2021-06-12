@@ -2,7 +2,7 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	09/07/2015
 	*	last edit		01/28/2016
 	* --------------------------------------------------------------------------
@@ -13,7 +13,7 @@ defined('_ALLOW') or die("access denied!");
 require_once _INC . 'system/calendar.php';
 $calendar = new Calendar('shamsi');
 
-Templates::add_css(Site::base() . 'widgets/articles/css/template.css');
+Templates::add_css(Site::$base . 'widgets/articles/css/template.css');
 
 // Setting
 $limit = is_numeric($setting->setting_limit) ? $setting->setting_limit : 10;

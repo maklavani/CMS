@@ -65,7 +65,7 @@ jQuery(document).ready(function(){
 					points = [];
 
 					for(i in vals.points)
-						points[i] = new google.maps.LatLng(vals.points[i].G , vals.points[i].K);
+						points[i] = new google.maps.LatLng(vals.points[i].latitude , vals.points[i].longitude);
 
 					// Construct the polygon.
 					polygon = new google.maps.Polygon({
@@ -129,9 +129,13 @@ jQuery(document).ready(function(){
 	function change_vals(){
 		if(new_shape.type == 'marker'){
 			pos = new_shape.getPosition();
-			change_filed_marker(pos.G , pos.K , map.zoom);
+			change_filed_marker(pos.lat() , pos.lng() , map.zoom);
 		} else if(new_shape.type == 'polygon'){
-			change_filed_polygon(new_shape.getPath().getArray() , map.zoom);
+			arr = new_shape.getPath().getArray();
+			points = [];
+			for(i in arr)
+				points.push({latitude: arr[i].lat() , longitude: arr[i].lng()});
+			change_filed_polygon(points , map.zoom);
 		}
 	}
 

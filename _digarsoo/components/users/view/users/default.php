@@ -2,15 +2,27 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	07/07/2015
-	*	last edit		10/03/2016
+	*	last edit		05/17/2017
 	* --------------------------------------------------------------------------
 */
 
 defined('_ALLOW') or die("access denied!");
 
 require_once _INC . 'output/lists.php';
+
+Templates::add_css('
+.status-span
+{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+}
+
+.status-span.icon-correct { color: #388E3C; }
+.status-span.icon-close { color: #D32F2F; }
+' , true);
 
 $list = new Lists;
 $list->name = 'users';
@@ -60,7 +72,7 @@ if(!empty($params))
 							'family' => array('type' => 'text' , 'value' => '<a href="' . Site::$base . _ADM . 'index.php?component=users&amp;view=users&amp;action=edit&amp;id=' . $value->id . '">' . $value->family . '</a>') ,
 							'status' => array('type' => 'status' , 'value' => array("id" => $value->id , "status" => $value->status)) , 
 							'username' => array('type' => 'text' , 'value' => '<a href="' . Site::$base . _ADM . 'index.php?component=users&amp;view=users&amp;action=edit&amp;id=' . $value->id . '">' . $value->username . '</a>'),
-							'email' => array('type' => 'text' , 'value' => $value->email),
+							'email' => array('type' => 'text' , 'value' => $value->email . " <span class=\"status-span icon-" . (!$value->authentication ? "correct" : "close") . "\"></span>"),
 							'group' => array('type' => 'text' , 'value' => $groups[$value->group_number]),
 							'id' => array('type' => 'text' , 'value' => $value->id)
 						);

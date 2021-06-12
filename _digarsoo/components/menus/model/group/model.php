@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		12/22/2016
+	*	last edit		03/02/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -59,7 +59,7 @@ class GroupModel extends Model {
 
 		if($menus = $this->output())
 			foreach ($menus as $value)
-				if($value->index >= $_POST['field_input_index'])
+				if($value->index_number >= $_POST['field_input_index'])
 					$this->table('menu')->update(array(array('index_number' , $value->index_number + 1)))->where('`id` = ' . $value->id)->process();
 
 		$setting = array('title' => $_POST['field_input_title'] , 'show_status' => $_POST['field_input_show_status'] , 'class' => $_POST['field_input_class']);
@@ -92,7 +92,7 @@ class GroupModel extends Model {
 
 		if($menus = $this->output())
 			foreach ($menus as $value)
-				if($value->index >= $_POST['field_input_index'])
+				if($value->index_numebr >= $_POST['field_input_index'])
 					$this->table('menu')->update(array(array('index_number' , $value->index_number + 1)))->where('`id` = ' . $value->id)->process();
 
 		$setting = array('title' => $_POST['field_input_title'] , 'show_status' => $_POST['field_input_show_status'] , 'class' => $_POST['field_input_class']);

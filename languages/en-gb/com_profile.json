@@ -43,5 +43,7 @@
 	"COM_PROFILE_ERROR_UPLOAD": "Failure to upload files.",
 	"COM_PROFILE_ERROR_RESIZE": "Please re-upload the image cut failed.",
 	"COM_PROFILE_ERROR_RESIZE_SIZE": "Invalid size for the cropped image",
-	"COM_PROFILE_ERROR_LOGIN": "You must first login"
+	"COM_PROFILE_ERROR_LOGIN": "You must first login",
+
+	"COM_PROFILE_WARNING_FIRST_IDENTITY": "You must first verify your <a href=\"index.php?component=users&view=authentication\">identity</a>"
 }

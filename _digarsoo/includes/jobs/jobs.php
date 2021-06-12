@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	12/05/2015
-	*	last edit		05/11/2015
+	*	last edit		12/28/2016
 	* --------------------------------------------------------------------------
 */
 
@@ -20,7 +20,7 @@ class Jobs {
 		$this->jobs = array();
 
 		$this->db = new Database;
-		$this->db->table('jobs')->select()->where('`next_execute` < NOW() AND `event_number` != 0 AND (`event_number` = -1 OR `event_number` > `execute_number`)')->process();
+		$this->db->table('jobs')->select()->where('`next_execute` < "' . Site::$datetime . '" AND `event_number` != 0 AND (`event_number` = -1 OR `event_number` > `execute_number`)')->process();
 		$output = $this->db->output();
 
 		if(!empty($output))

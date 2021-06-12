@@ -2,7 +2,7 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	06/17/2015
 	*	last edit		02/11/2016
 	* --------------------------------------------------------------------------
@@ -332,7 +332,7 @@ class Templates {
 			if(!System::has_file('minify/.htaccess'))
 			{
 				$htaccess_file = fopen(_SRC_SITE . "minify/.htaccess" , "w");
-				fwrite($htaccess_file , "# --------------------------------------------------------------------------\n#\tauthor\t\t\tHossein Mohammadi Maklavani\n#\tcopyright\t\tCopyright (C) 2014 - 2016 Digarsoo. All rights reserved.\n#\tcreation date\t12/12/2015\n# --------------------------------------------------------------------------\n\nRewriteRule .*.json.*$ index.html [L]");
+				fwrite($htaccess_file , "# --------------------------------------------------------------------------\n#\tauthor\t\t\tHossein Mohammadi Maklavani\n#\tcopyright\t\tCopyright (C) 2014 - 2017 Digarsoo. All rights reserved.\n#\tcreation date\t12/12/2015\n# --------------------------------------------------------------------------\n\nRewriteRule .*.json.*$ index.html [L]");
 				fclose($htaccess_file);
 			}
 

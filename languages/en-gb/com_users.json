@@ -47,16 +47,21 @@
 	"COM_USERS_PROFILE_USER": "User",
 	"COM_USERS_PROFILE_ADVERTISEMENT": "My Advertisement",
 
+	"COM_USERS_AUTHENTICATION": "Authentication",
+	"COM_USERS_AUTHENTICATION_FORM_INPUT_1": "Email",
+	"COM_USERS_AUTHENTICATION_FORM_INPUT_2": "Captcha",
+
+	"COM_USERS_SUCCESS": "You have successfully registered information in the database system, to activate your account check email.",
+	"COM_USERS_SUCCCOM_AUTHENTICATIONESS": "To activate your account check email.",
+	"COM_USERS_SIGNOUT_SUCCESS": "You have successfully logged out of the site",
+	"COM_USERS_FORGET_SEND": "If it is the e-mail will be sent to your recovery",
+
 	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "Passwords are not the same",
 	"COM_USERS_ERROR_EXIST_USERSNAME": "Please enter a valid username another name",
 	"COM_USERS_ERROR_EXIST_EMAIL": "Please enter another email",
 	"COM_USERS_ERROR_BANNED_IP": "Due to frequent errors Your IP blocked for %s minutes, please check back again soon",
 	"COM_USERS_ERROR_IDENTIFICATION": "Identification user error",
 	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "Passwords do not match",
-
-	"COM_USERS_SUCCESS": "You have successfully registered information in the database system, to activate your account check email.",
-	"COM_USERS_SIGNOUT_SUCCESS": "You have successfully logged out of the site",
-	"COM_USERS_FORGET_SEND": "If it is the e-mail will be sent to your recovery",
 
 	"COM_USERS_MESSAGE_SIGNUP_HELLO": "Hello %s, Thank you for your registration on %s.",
 	"COM_USERS_MESSAGE_IDENTIFICATION": "To activate your account click on the following link.<br><small>%s<small>",

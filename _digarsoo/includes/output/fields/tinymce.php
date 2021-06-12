@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	07/04/2015
-	*	last edit		08/31/2015
+	*	last edit		06/15/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -14,19 +14,20 @@ class TinymceField {
 	public static function output($name , $tabindex , $default , $children , $attributes , $fields_name , $placeholder)
 	{
 		Templates::package('tinymce');
+
 		Templates::add_js("
 			tinymce.init({
 				mode : 'textareas' ,
 				selector: '.tinymce-content-" . $name . "',
-			    toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-			    toolbar2: 'print preview media | forecolor backcolor emoticons',
-			    plugins: [
-			        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-			        'searchreplace wordcount visualblocks visualchars code fullscreen',
-			        'insertdatetime media nonbreaking save table contextmenu directionality',
-			        'emoticons template paste textcolor colorpicker textpattern'
-			    ],
-			    height: 400,
+				toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+				toolbar2: 'print preview media | forecolor backcolor emoticons',
+				plugins: [
+					'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+					'searchreplace wordcount visualblocks visualchars code fullscreen',
+					'insertdatetime media nonbreaking save table contextmenu directionality',
+					'emoticons template paste textcolor colorpicker textpattern'
+				],
+				height: 400,
  				document_base_url: '" . Site::$base . "'
 				" . ((Language::$direction == 'rtl') ? " , content_css: '" . Site::$base . "media/js/library/tinymce/css/rtl.css'" : "") . "
 			});

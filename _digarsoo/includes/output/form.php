@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	06/15/2015
-	*	last edit		04/07/2016
+	*	last edit		01/09/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -63,8 +63,8 @@ class Form {
 
 			if($this->label)
 			{
-				$output .= "\n\t\t\t\t\t<div class=\"form-label x3 s25 m3 l25\">" . $label . "</div>\n\t\t\t\t\t<div class=\"form-input x7 s75 m7 l75\">\n\t\t\t\t\t\t";
-				$output .= $input_class::output($this->number , $default , $attrs , $children) . "\n\t\t\t\t\t</div>";
+				$output .= "\n\t\t\t\t\t<div class=\"form-input x7 s75 m7 l75 after-float\">\n\t\t\t\t\t\t";
+				$output .= $input_class::output($this->number , $default , $attrs , $children) . "\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"form-label x3 s25 m3 l25 after-float\">" . $label . "</div>";
 			}
 			else
 			{

@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	08/24/2015
-	*	last edit		10/03/2016
+	*	last edit		05/17/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -202,6 +202,9 @@ class ProfileController extends Controller {
 	{
 		if(User::$login)
 		{
+			if(User::$authentication)
+				Messages::add_message('warning' , Language::_('COM_PROFILE_WARNING_FIRST_IDENTITY'));
+
 			$params = array();
 
 			if(is_array($view) && !empty($view))

@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	07/28/2015
-	*	last edit		09/28/2016
+	*	last edit		05/17/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -20,9 +20,9 @@ if($expire - $now > 0)
 	if($identification->section == "signup")
 	{
 		$db = new Database;
-		$db->table('users')->where('`id` = ' . $identification->val)->update(array(array('status' , 0)))->process();
+		$db->table('users')->where('`id` = ' . $identification->val)->update(array(array('status' , 0) , array('authentication' , 0)))->process();
 		Messages::add_message('success' , Language::_('COM_USERS_SIGNUP_COMPELETE'));
-		Site::goto_link(Site::$base);
+		Site::goto_link(Site::$base . Language::_('COM_USERS') . "/" . str_replace(" " , "-" , Language::_('COM_USERS_SIGNIN')));
 
 		$db->table('identification')->where('`id` = ' . $identification->id)->delete()->process();
 	}
@@ -54,5 +54,5 @@ else
 {
 	Messages::add_message('error' , Language::_('ERROR_EXPIRE_IDENTIFICATION'));
 	$db->table('identification')->where('`id` = ' . $identification->id)->delete()->process();
-	Site::goto_link(Site::$base);
+	Site::goto_link(Site::$base . Language::_('COM_USERS') . "/" . str_replace(" " , "-" , Language::_('COM_USERS_SIGNIN')));
 }

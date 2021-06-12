@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		10/03/2016
+	*	last edit		05/17/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -20,6 +20,8 @@ class User {
 	public static $code;
 	public static $group;
 	public static $email;
+	public static $mobile;
+	public static $authentication;
 	public static $visit;
 	public static $ip;
 	public static $register;
@@ -171,6 +173,8 @@ class User {
 		self::$code = $user->code;
 		self::$group = $user->group_number;
 		self::$email = $user->email;
+		self::$mobile = $user->mobile;
+		self::$authentication = $user->authentication;
 		self::$visit = $user->visit;
 		self::$ip = $user->ip;
 		self::$register = $user->register;

@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'Icon Digarsoo';
-	src:url(../../fonts/icondigarsoo.eot?-ndmoqk);
-	src:url(../../fonts/icondigarsoo.eot?#iefix-ndmoqk) format('embedded-opentype'),
-		url(../../fonts/icondigarsoo.ttf?-ndmoqk) format('truetype'),
-		url(../../fonts/icondigarsoo.woff?-ndmoqk) format('woff'),
-		url(../../fonts/icondigarsoo.svg?-ndmoqk#icondigarsoo) format('svg');
+	src:url(../../fonts/icondigarsoo.eot?icon);
+	src:url(../../fonts/icondigarsoo.eot?#iefixicon) format('embedded-opentype'),
+		url(../../fonts/icondigarsoo.ttf?icon) format('truetype'),
+		url(../../fonts/icondigarsoo.woff?icon) format('woff'),
+		url(../../fonts/icondigarsoo.svg?icon#icondigarsoo) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cart:before { content: "\e665"; }
 .icon-globe:before { content: "\e664"; }
 .icon-telegram:before { content: "\e663"; }
 .icon-printer:before { content: "\e662"; }

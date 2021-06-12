@@ -55,5 +55,23 @@
 			"title": "IPVisitUsers",
 			"source": "jobs/ip_visit.php"
 		}
+	},
+
+	"fields":
+	{
+		"user":
+		{
+			"0":
+			{
+				"name": "login_after_authentication",
+				"type": "radio",
+				"default": "0",
+				"children":
+				{
+					"0": "setting_yes",
+					"1": "setting_no"
+				}
+			}
+		}
 	}
 }

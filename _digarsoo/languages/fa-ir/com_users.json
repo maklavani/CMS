@@ -21,6 +21,10 @@
 	"COM_USERS_DATE": "آخرین درخواست",
 	"COM_USERS_NOT_LOGIN": "هنوز وارد نشده است",
 
+	"COM_USERS_LOGIN_AFTER_AUTHENTICATION": "وارد شدن وابسته به تایید هویت",
+	"COM_USERS_SETTING_YES": "بله",
+	"COM_USERS_SETTING_NO": "خیر",
+
 	"COM_USERS_USERS_FIELD_INPUT_USER": "کاربران",
 	"COM_USERS_USERS_FIELD_INPUT_PROFILE": "پروفایل",
 	"COM_USERS_USERS_FIELD_INPUT_NAME": "نام",

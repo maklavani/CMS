@@ -46,6 +46,15 @@
 	"COM_USERS_PROFILE": "مشخصات",
 	"COM_USERS_PROFILE_USER": "کاربر",
 	"COM_USERS_PROFILE_ADVERTISEMENT": "آگهی های من",
+	
+	"COM_USERS_AUTHENTICATION": "تایید هویت",
+	"COM_USERS_AUTHENTICATION_FORM_INPUT_1": "ایمیل",
+	"COM_USERS_AUTHENTICATION_FORM_INPUT_2": "کد امنیتی",
+
+	"COM_USERS_SUCCESS": "اطلاعات شما با موفقیت در بانک اطلاعاتی سامانه ثبت شد , برای فعالسازی حساب کاربری ایمیل خود را بررسی کنید. اگر ایمیل را نمی بینید به spam مراجعه کنید.",
+	"COM_USERS_SUCCESS_AUTHENTICATION": "برای فعالسازی حساب کاربری ایمیل خود را بررسی کنید. اگر ایمیل را نمی بینید به spam مراجعه کنید.",
+	"COM_USERS_SIGNOUT_SUCCESS": "شما با موفقیت از سایت خارج شدید",
+	"COM_USERS_FORGET_SEND": "در صورت صحت ایمیل, ایمیل بازیابی برای شما ارسال می شود",
 
 	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "گذرواژه ها با هم یکسان نیستند",
 	"COM_USERS_ERROR_EXIST_USERSNAME": "نام کاربری معتبر نیست لطفا نام دیگری وارد کنید",
@@ -53,10 +62,6 @@
 	"COM_USERS_ERROR_BANNED_IP": "به دلیل اشتباهات مکرر ip شما به مدت %s دقیقه مسدود شده است لطفا بعدا مراجعه فرمایید",
 	"COM_USERS_ERROR_IDENTIFICATION": "خطای شناسایی کاربر",
 	"COM_USERS_ERROR_PASSWORD_DOES_NOT_MATCH": "گذرواژه ها با هم یکسان نیستند",
-
-	"COM_USERS_SUCCESS": "اطلاعات شما با موفقیت در بانک اطلاعاتی سامانه ثبت شد , برای فعالسازی حساب کاربری ایمیل خود را بررسی کنید",
-	"COM_USERS_SIGNOUT_SUCCESS": "شما با موفقیت از سایت خارج شدید",
-	"COM_USERS_FORGET_SEND": "در صورت صحت ایمیل, ایمیل بازیابی برای شما ارسال می شود",
 
 	"COM_USERS_MESSAGE_SIGNUP_HELLO": "سلام %s , از ثبت نام شما در سایت %s متشکریم.",
 	"COM_USERS_MESSAGE_FORGET_HELLO": "سلام %s.",

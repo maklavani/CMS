@@ -43,5 +43,7 @@
 	"COM_PROFILE_ERROR_UPLOAD": "شکست در آپلود فایل.",
 	"COM_PROFILE_ERROR_RESIZE": "بریدن تصویر با شگست مواجه شد لطفا دوباره بارگذاری نمایید.",
 	"COM_PROFILE_ERROR_RESIZE_SIZE": "سایز نا معتبر برای بریدن تصویر",
-	"COM_PROFILE_ERROR_LOGIN": "ابتدا باید وارد شوید"
+	"COM_PROFILE_ERROR_LOGIN": "ابتدا باید وارد شوید",
+
+	"COM_PROFILE_WARNING_FIRST_IDENTITY": "شما ابتدا باید هویت خود را <a href=\"index.php?component=users&view=authentication\">تایید</a> نمایید"
 }

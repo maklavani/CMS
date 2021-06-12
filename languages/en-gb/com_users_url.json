@@ -5,6 +5,7 @@
 	"COM_USERS_VIEW_FORGET": "Forget",
 	"COM_USERS_VIEW_SIGNOUT": "Signout",
 	"COM_USERS_VIEW_IDENTIFICATION": "Identification",
+	"COM_USERS_VIEW_AUTHENTICATION": "Authentication",
 
 	"COM_USERS_USERS_SIGNUP": {
 		"0": "component",
@@ -30,5 +31,10 @@
 		"0": "component",
 		"1": "view",
 		"2": "validity"
+	},
+
+	"COM_USERS_USERS_AUTHENTICATION": {
+		"0": "component",
+		"1": "view"
 	}
 }

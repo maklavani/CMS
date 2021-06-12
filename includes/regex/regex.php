@@ -2,9 +2,9 @@
 /**
 	* --------------------------------------------------------------------------
 	*	@author			Hossein Mohammadi Maklavani
-	*	@copyright		Copyright (C) 2014 - 2016 Digarsoo. All rights reserved.
+	*	@copyright		Copyright (C) 2014 - 2017 Digarsoo. All rights reserved.
 	*	creation date	03/29/2015
-	*	last edit		10/03/2016
+	*	last edit		01/04/2017
 	* --------------------------------------------------------------------------
 */
 
@@ -70,7 +70,7 @@ class Regex {
 			$result += !preg_match('/^[a-z0-9]*$/i' , $str);
 
 		else if($type == 'utf8')
-			$result += !preg_match('/^[a-z0-9\pL]*$/iu' , $str);
+			$result += !preg_match('/^[a-z0-9\pL\p{Arabic}]*$/iu' , $str);
 
 		else if($type == 'numeric')
 			$result += !is_numeric($str);
@@ -79,22 +79,22 @@ class Regex {
 			$result += !preg_match('/^[a-z0-9_\-]*$/i' , $str);
 
 		else if($type == 'text_utf8')
-			$result += !preg_match('/^[a-z0-9_\-\pL]*$/iu' , $str);
+			$result += !preg_match('/^[a-z0-9_\-\pL\p{Arabic}]*$/iu' , $str);
 
 		else if($type == 'text_with_space')
 			$result += !preg_match('/^[a-z0-9_\-\s]*$/i' , $str);
 
 		else if($type == 'text_with_space_utf8')
-			$result += !preg_match('/^[a-z0-9_\-\s\pL]*$/iu' , $str);
+			$result += !preg_match('/^[a-z0-9_\-\s\pL\p{Arabic}]*$/iu' , $str);
 
 		else if($type == 'username')
 			$result += !preg_match('/^[a-z0-9_\.]*$/i' , $str);
 
 		else if($type == 'url')
-			$result += !preg_match('/^(http:\/\/)?(https:\/\/)?(www.)?[a-z-_0-9\pL]{2,}(\.[a-z]{2,})?[a-z0-9\pL\/\-\._\%\=\&\?]*$/iu' , $str);
+			$result += !preg_match('/^(http:\/\/)?(https:\/\/)?(www.)?[a-z-_0-9\pL\p{Arabic}]{2,}(\.[a-z]{2,})?[a-z0-9\pL\p{Arabic}\/\-\._\%\=\&\?]*$/iu' , $str);
 
 		else if($type == 'search')
-			$result += !preg_match('/^[a-z0-9\s\pL]*$/ui' , $str);
+			$result += !preg_match('/^[a-z0-9\s\pL\p{Arabic}]*$/ui' , $str);
 
 		else if($type == 'status')
 			$result += !preg_match('/^[0-9,]*$/' , $str);
